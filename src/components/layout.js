@@ -1,8 +1,6 @@
 /**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
+ * Layout: wraps the entire site.
  *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
 import React from "react"
@@ -10,7 +8,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-// import "./layout.css"
+import TOC from "./toc"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,9 +23,15 @@ const Layout = ({ children }) => {
 
   return (
     // This div wraps the entire page
-    <div className="max-w-5xl px-8 mx-auto">
+    <div className="max-w-5xl px-4 mx-auto bg-red-200 sm:px-8">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      {/* The main flexbox for nav + content */}
+      <div className="flex bg-yellow-200">
+        <div className="hidden w-1/4 bg-blue-200 sm:block">
+          <TOC />
+        </div>
+        <main className="bg-gray-200 sm:w-3/4">{children}</main>
+      </div>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}

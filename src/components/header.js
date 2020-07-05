@@ -4,7 +4,7 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   // The whole header
-  <div className="pt-4 pb-1 mb-8 font-sans text-gray-800 border-b-2 border-orange-400">
+  <div className="pt-4 pb-1 mb-8 font-sans text-gray-800 bg-red-300 border-b-2 border-orange-400">
     {/* J•D vs. Johnny•Decimal */}
     <span className="mr-8 font-bold text-orange-800 md:hidden">J•D</span>
     <span className="hidden pb-2 mr-8 font-bold text-orange-800 border-b-2 border-orange-700 md:inline">
