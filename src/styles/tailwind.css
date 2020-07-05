@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+div.blog-post h1 {
+  @apply mb-4 text-xl border-b-4 border-gray-700;
+}
