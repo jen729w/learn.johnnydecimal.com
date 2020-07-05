@@ -96,9 +96,31 @@ You've got your headers, they're fine for now. This is all you needed to do.
 
 Next: build a site which has the 'Learn' header (always active) and pulls in Markdown files. Then you gotta do some basic styling on each of the posts it renders. Publish this file there as a demo.
 
-# 2020-07-04 17:56
+---
+
+# 2020-07-04
 
 Moved the `tailwind.css` import to `gatsby-browser.js` because then you never have to remember to import it per-file (thx [Benjamin](https://lannonbr.com/blog/2020-04-05-tailwind-in-gatsby)).
+
+---
+
+# 2020-07-05 Getting back in to it
+
+## Messing about with the header
+
+Let's fit a very basic header in to the existing Gatsby `<Layout>` and `<SEO>` framework. I assume that's useful for all sorts of things, so it would be silly to 'throw it out'.
+
+Did some of that, played around with some Tailwind, but if we get carried away we'll spend all day trying to get a border just-so. Not a good use of time: move on for now.
+
+**Don't forget to commit and change branches.**
+
+## Getting some Markdown pages in here
+
+Next is to import the old content and have it displaying. Onwards with Markdown!
+
+Do [this](https://www.gatsbyjs.org/docs/adding-markdown-pages/).
+
+Yep, follow that and you get generated pages. No styling yet, how do we figure that out?
 
 ---
 
