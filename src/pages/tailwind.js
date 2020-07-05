@@ -1,7 +1,5 @@
 import React from "react"
 
-import "../styles/tailwind.css"
-
 const LearnHeader = () => (
   <>
     {/* J•D is active */}
@@ -31,6 +29,7 @@ const LearnHeader = () => (
       <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
       <span className="">App</span>
     </div>
+
     <div>And now the rest</div>
   </>
 )

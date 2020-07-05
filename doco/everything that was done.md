@@ -96,6 +96,12 @@ You've got your headers, they're fine for now. This is all you needed to do.
 
 Next: build a site which has the 'Learn' header (always active) and pulls in Markdown files. Then you gotta do some basic styling on each of the posts it renders. Publish this file there as a demo.
 
+# 2020-07-04 17:56
+
+Moved the `tailwind.css` import to `gatsby-browser.js` because then you never have to remember to import it per-file (thx [Benjamin](https://lannonbr.com/blog/2020-04-05-tailwind-in-gatsby)).
+
+---
+
 # Documentation
 
 Somewhere for you to keep your notes, worth mentioning that this is a thing that you do.
