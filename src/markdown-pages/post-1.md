@@ -4,7 +4,7 @@ date: "2019-05-04"
 title: "A system to organise projects"
 ---
 
-<!-- # A system to organise projects -->
+# A system to organise projects
 
 When we kept everything on paper, organised people had these things called filing cabinets. They stored all of their documents in them in a structured way so that they could find them again.
 

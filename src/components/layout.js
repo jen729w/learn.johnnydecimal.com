@@ -23,16 +23,20 @@ const Layout = ({ children }) => {
 
   return (
     // This div wraps the entire page
-    <div className="max-w-5xl px-4 mx-auto bg-red-200 sm:px-8">
+    <div className="max-w-5xl px-2 mx-autosm:px-8">
       <Header siteTitle={data.site.siteMetadata.title} />
       {/* The main flexbox for nav + content */}
-      <div className="flex bg-yellow-200">
-        <div className="hidden w-1/4 bg-blue-200 sm:block">
+      <div className="flex">
+        <div className="hidden w-1/4 sm:block">
           <TOC />
         </div>
-        <main className="bg-gray-200 sm:w-3/4">{children}</main>
+        <main className="sm:w-3/4">{children}</main>
       </div>
-      <footer>
+      {/* Show the TOC below the content but only on small screens */}
+      <div className="sm:hidden">
+        <TOC />
+      </div>
+      <footer className="bg-green-100">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>

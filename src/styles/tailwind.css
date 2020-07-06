@@ -3,11 +3,11 @@
 @tailwind components;
 
 div.blog-post h1 {
-  @apply mb-4 text-xl border-b-4 border-gray-700;
+  @apply mb-4 text-2xl border-b-4 border-gray-800;
 }
 
 div.blog-post h2 {
-  @apply mb-4 text-xl border-b-4 border-gray-700;
+  @apply mb-4 text-xl border-b-2 border-gray-500;
 }
 
 div.blog-post p {
