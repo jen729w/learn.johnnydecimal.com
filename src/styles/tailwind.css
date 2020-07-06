@@ -3,8 +3,7 @@
 @tailwind components;
 
 body {
-  font-family: "Fira Sans";
-  /* font-weight: 400; */
+  @apply font-johnnydecimal;
 }
 
 div.blog-post h1 {
