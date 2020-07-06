@@ -10,6 +10,8 @@ When we kept everything on paper, organised people had these things called filin
 
 Now those same people store all of their files in arbitrarily named folders on their company’s shared drive and wonder why they can’t find anything.
 
+<p class="font-thin">This should be thin, if it's all tied together.</p>
+
 ## Nobody can find anything any more
 
 Thousands of emails. Hundreds of files. File structures created on a whim and six layers deep. Duplication of content, lost content. **We thought search would save us from this nightmare, but we were wrong.**

@@ -2,6 +2,11 @@
 
 @tailwind components;
 
+body {
+  font-family: "Fira Sans";
+  font-weight: 300;
+}
+
 div.blog-post h1 {
   @apply mb-4 text-2xl border-b-4 border-gray-800;
 }
