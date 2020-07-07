@@ -10,7 +10,9 @@ Let’s look again at the format of our numbers. It’s crucial that you underst
 
 Just as a reminder, every Johnny.Decimal number looks like this.
 
-**TABLE**
+<div class="font-mono bg-red-500">
+23.24   31.70
+</div>
 
 In words, we have any two digits, followed by a decimal point, followed by two more digits.
 
@@ -48,3 +50,21 @@ We start like this:
   category, and work our way up through the numbers.
 
 Let’s use a small company as an example, and write it out without the numbers.
+
+**BOX**
+
+All we really do with Johnny.Decimal—and if at this point you’ve realised this and are thinking, “hang on, all he’s done is put numbers in front of things,” well then you’re not far wrong—is put numbers in front of things.
+
+**But this transforms the way you think about and use everything.** Trust me.
+
+Let’s put numbers in front of the system we just built above.
+
+**BOX**
+
+## So long, cursed alphabet
+
+What does this achieve? For one, it’s removed our dependence on the alphabet. The alphabet is a fine thing but it’s a terrible way to sort your files because things move around. Today we have:
+
+**BOX**
+
+…and tomorrow the exports department come along and do this:
