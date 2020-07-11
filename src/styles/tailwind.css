@@ -2,12 +2,19 @@
 
 @tailwind components;
 
+/* Stuff you came up with while experimenting
+
+- H1 box that pops of the page.
+@apply px-4 mb-4 text-4xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
+
+*/
+
 div.spec-post h1 {
-  @apply mb-4 text-2xl border-b-4 border-gray-800;
+  @apply px-4 mb-4 text-4xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
 }
 
 div.spec-post h2 {
-  @apply mb-4 text-xl border-b-2 border-gray-500;
+  @apply px-4 py-1 mb-4 mr-6 text-2xl bg-gray-200 border border-b-2 border-gray-600 rounded-md shadow-sm;
 }
 
 div.spec-post h3 {
@@ -15,7 +22,7 @@ div.spec-post h3 {
 }
 
 div.spec-post p {
-  @apply mb-4;
+  @apply mb-4 ml-4 mr-6;
 }
 
 div.spec-post strong {

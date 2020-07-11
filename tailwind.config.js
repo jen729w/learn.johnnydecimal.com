@@ -2,7 +2,8 @@ module.exports = {
   purge: [],
   theme: {
     fontFamily: {
-      johnnydecimal: ["Fira\\ Sans"],
+      jdbody: ["Fira\\ Sans"],
+      jdmono: ["Fira\\ Code"],
     },
     extend: {},
   },

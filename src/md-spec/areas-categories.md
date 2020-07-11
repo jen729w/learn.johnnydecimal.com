@@ -4,15 +4,15 @@ slug: "/concepts/areas-categories/"
 title: "Areas & categories"
 ---
 
+# Areas & categories
+
 Let’s look again at the format of our numbers. It’s crucial that you understand why they look like they do.
 
 ## The complete Johnny.Decimal number
 
 Just as a reminder, every Johnny.Decimal number looks like this.
 
-<div class="font-mono bg-red-500">
-23.24   31.70
-</div>
+<div class="inline-block p-2 ml-2 border border-orange-600 font-jdmono">23.24 31.70</div>
 
 In words, we have any two digits, followed by a decimal point, followed by two more digits.
 
@@ -39,15 +39,16 @@ When we decide to organise something with Johnny.Decimal, we don’t _start_ wit
 We start like this:
 
 - First, we divide everything in our system in to (at most) ten large buckets of stuff. We call those our **areas**, and we assign each area a range like
-  <span className={styles.johnnyDecimal_boxed}>10-19</span>,{' '}
-  <span className={styles.johnnyDecimal_boxed}>20-29</span> …{' '}
-  <span className={styles.johnnyDecimal_boxed}>90-99</span>.
+  <span className={styles.johnnyDecimal_boxed}>10-19</span>, <span
+  className={styles.johnnyDecimal_boxed}
+  > 20-29
+  > </span> … <span className={styles.johnnyDecimal_boxed}>90-99</span>.
 - Then, within each area, we break things up again in to (at most) ten more buckets. We call them **categories** and we assign them numbers like <span className={styles.johnnyDecimal_boxed}>11</span>
   , <span className={styles.johnnyDecimal_boxed}>12</span> …{' '}
   <span className={styles.johnnyDecimal_boxed}>19</span>.
 - Finally, we assign each individual thing in our system to a category, and give it a unique number. We start at
-  <span className={styles.johnnyDecimal_boxed}>.01</span> within each
-  category, and work our way up through the numbers.
+  <span className={styles.johnnyDecimal_boxed}>.01</span> within each category, and
+  work our way up through the numbers.
 
 Let’s use a small company as an example, and write it out without the numbers.
 

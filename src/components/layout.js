@@ -23,11 +23,11 @@ const Layout = ({ children }) => {
 
   return (
     // This div wraps the entire page
-    <div className="max-w-5xl px-2 mx-autosm:px-8">
+    <div className="max-w-5xl pl-4 pr-8 leading-relaxed text-gray-900 bg-gray-100 mx-autosm:px-8 font-jdbody">
       <Header siteTitle={data.site.siteMetadata.title} />
       {/* The main flexbox for nav + content */}
       <div className="flex">
-        <div className="hidden w-1/4 sm:block">
+        <div className="hidden w-1/4 mr-4 sm:block">
           <TOC />
         </div>
         <main className="sm:w-3/4">{children}</main>
