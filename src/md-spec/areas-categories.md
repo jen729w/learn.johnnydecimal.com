@@ -6,13 +6,20 @@ title: "Areas & categories"
 
 # Areas & categories
 
-Let’s look again at the format of our numbers. It’s crucial that you understand why they look like they do.
+Let’s look again at the format of our numbers. It’s crucial that you understand _why_ they look like they do.
 
 ## The complete Johnny.Decimal number
 
 Just as a reminder, every Johnny.Decimal number looks like this.
 
-<div class="inline-block p-2 ml-2 border border-orange-600 font-jdmono">23.24 31.70</div>
+<div class="inline-block p-2 mb-4 ml-4 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md font-jdmono">23.24   31.70
+22.39   13.04
+31.71   21.02
+22.38   13.03
+23.21   23.22
+32.56   12.34
+12.35   21.01
+32.55   23.23</div>
 
 In words, we have any two digits, followed by a decimal point, followed by two more digits.
 

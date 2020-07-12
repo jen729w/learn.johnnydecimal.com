@@ -32,4 +32,4 @@ It’s worth mentioning at this point that **all of this is free,** and it’s p
 
 This forces you to group things quite broadly, but that’s the point.
 
-**We call these buckets your areas.** An area might be Finance.
+**We call these buckets your areas.** An area might be <span class="px-1 whitespace-pre bg-orange-200 border border-orange-600 rounded-md font-jdmono">Finance</span>.
