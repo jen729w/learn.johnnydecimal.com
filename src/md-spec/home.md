@@ -162,17 +162,18 @@ Click on the Start button. Type a Johnny.Decimal number in the Search box. Press
 
 Tab completion becomes a joy when your folders start with structured, predictable numbers. Build a <Link to="/concepts/working-at-the-terminal/">small Bash script</Link> to pop you in to any folder instantly:
 
+<!-- Wrap this in some sort of a11y indicator? -->
 <div class="ml-4 mr-6 bg-gray-300 rounded-t-md sm:max-w-sm">
   <span class="inline-block w-4 h-4 mt-2 ml-2 text-xs bg-red-700 rounded-full"></span>
   <span class="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-orange-500 rounded-full"></span>
   <span class="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-green-500 rounded-full"></span>
 </div>
 
-<div class="p-2 mb-8 ml-4 mr-6 text-orange-400 whitespace-pre-wrap bg-black rounded-b-lg shadow-md font-jdmono sm:max-w-sm"><span class="font-bold">~ $</span> cjd 12.03
-<span class="font-bold">12.03 Payroll for 2018 $</span> <span class="blinking-cursor">|</span></div>
+<div class="p-2 mb-8 ml-4 mr-6 text-orange-400 bg-black rounded-b-lg shadow-md font-jdmono sm:max-w-sm">
+  <span class="font-bold whitespace-pre-wrap">~ $</span> cjd 12.03
+  <br/>
+  <span class="font-bold whitespace-pre-wrap">12.03 Payroll for 2018 $</span> <span class="blinking-cursor">|</span>
 </div>
-
-<!-- </div> -->
 
 ## Fix your email
 
