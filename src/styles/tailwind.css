@@ -2,33 +2,37 @@
 
 @tailwind components;
 
-/* Stuff you came up with while experimenting
+body {
+  @apply bg-gray-100;
+}
 
-- H1 box that pops of the page.
-@apply px-4 mb-4 text-4xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
-
-*/
-
+/* === Headers === === === === === === === === === === === === === === ===   */
 /* Tiny screen default */
 .spec-post h1 {
   @apply px-4 mb-4 text-2xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
 }
-
 /* Increase font size on larger screens */
 @screen sm {
   .spec-post h1 {
-    @apply text-3xl;
+    @apply mr-0 text-3xl;
   }
 }
 
 .spec-post h2 {
-  @apply px-4 py-1 mb-4 mr-6 text-2xl bg-gray-200 border border-b-2 border-gray-600 rounded-md shadow-sm;
+  @apply px-4 py-1 mb-4 mr-6 text-xl bg-gray-200 border border-b-2 border-gray-600 rounded-md shadow-sm;
+}
+/* Increase font size on larger screens */
+@screen sm {
+  .spec-post h1 {
+    @apply text-2xl;
+  }
 }
 
 .spec-post h3 {
   @apply mb-4 text-lg border-b-2 border-gray-400;
 }
 
+/* === Paragraph + body text === === === === === === === === === === === === */
 .spec-post p {
   @apply mb-4 ml-4 mr-6;
 }
@@ -38,8 +42,88 @@
   @apply font-semibold;
 }
 
+/* === Lists === === === === === === === === === === === === === === === === */
 ol {
   @apply mb-4 ml-8 mr-6 list-decimal list-outside;
 }
+
+/* === Dividers === === === === === === === === === === === === === === ===  */
+hr {
+  border: 0;
+  height: 1px;
+  background: #555;
+  background-image: linear-gradient(to right, #ccc, #555, #ccc);
+  @apply my-6;
+}
+
+/* === Decimal === === === === === === === === === === === === === === ===   */
+.jd-inline {
+  @apply px-1 whitespace-pre bg-orange-200 border border-orange-600 rounded-md font-jdmono;
+}
+
+/* === Blinking cursor === === === === === === === === === === === === ===   */
+/* Stolen: https://codepen.io/ArtemGordinsky/pen/GnLBq */
+.blinking-cursor {
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+  }
+}
+
+@-o-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+  }
+}
+
+/* === END === === === === === === === === === === === === === === === ===   */
 
 @tailwind utilities;

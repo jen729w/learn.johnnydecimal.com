@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const TOC = () => (
-  <nav className="my-32 border border-gray-300 rounded-lg shadow">
+  <nav className="border border-gray-300 rounded-lg shadow">
     <Link
       to="/spec/home"
       activeClassName="font-bold"

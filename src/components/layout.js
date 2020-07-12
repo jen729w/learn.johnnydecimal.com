@@ -23,18 +23,14 @@ const Layout = ({ children }) => {
 
   return (
     // This div wraps the entire page
-    <div className="max-w-5xl pl-4 pr-8 leading-relaxed text-gray-900 bg-gray-100 mx-autosm:px-8 font-jdbody">
+    <div className="max-w-5xl px-4 mx-auto leading-relaxed text-gray-900 sm:px-8 font-jdbody">
       <Header siteTitle={data.site.siteMetadata.title} />
       {/* The main flexbox for nav + content */}
-      <div className="flex">
-        <div className="hidden w-1/4 mr-4 sm:block">
+      <div className="flex flex-col-reverse sm:flex-row">
+        <div className="mr-4 sm:w-1/4">
           <TOC />
         </div>
-        <main className="sm:w-3/4">{children}</main>
-      </div>
-      {/* Show the TOC below the content but only on small screens */}
-      <div className="sm:hidden">
-        <TOC />
+        <main className="flex-grow sm:w-3/4">{children}</main>
       </div>
       <footer className="bg-green-100">
         © {new Date().getFullYear()}, Built with

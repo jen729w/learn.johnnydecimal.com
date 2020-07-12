@@ -1,5 +1,5 @@
 ---
-slug: "/spec/home"
+slug: "/test2"
 date: "2019-05-04"
 title: "A system to organise projects"
 ---
@@ -16,8 +16,6 @@ Now those same people store all of their files in arbitrarily named folders on t
 ## Nobody can find anything any more
 
 Thousands of emails. Hundreds of files. File structures created on a whim and six layers deep. Duplication of content, lost content. **We thought search would save us from this nightmare, but we were wrong.**
-
-The frustration I see in organisations is palpable. The time and energy wasted is unimaginable.
 
 ---
 
@@ -67,14 +65,8 @@ We also know that <span class="jd-inline">42</span> will not be a finance-relate
 
 A Johnny.Decimal number looks like this:
 
-<!-- <div class="flex mx-4 sm:hidden">
-<div class="text-2xl jd-inline">42.18</div>
-<div class="text-2xl jd-inline">12.03</div>
-<div class="text-2xl jd-inline">63.17</div>
-</div> -->
-
-<span class="mr-4 text-2xl sm:text-4xl jd-inline">42.18</span>
-<span class="mr-4 text-2xl sm:text-4xl jd-inline">12.03</span>
+<span class="mr-5 text-2xl sm:text-4xl jd-inline">42.18</span>
+<span class="mr-5 text-2xl sm:text-4xl jd-inline">12.03</span>
 <span class="text-2xl sm:text-4xl jd-inline">63.17</span>
 
 They’re short, memorable, and can be spoken out loud. **They’re always two digits, a decimal point, and two more digits.**
@@ -100,6 +92,8 @@ The 3rd thing you’ve saved in your <span class="jd-inline">12 Payroll</span> c
 
 **The ID doesn’t have any relevance to the item itself** – remember, it’s just a counter.
 
+---
+
 # I get the idea, but why bother?
 
 Many, many reasons.
@@ -107,88 +101,3 @@ Many, many reasons.
 ## Organise your files. Properly
 
 The most obvious use of Johnny.Decimal is in organising your folder structure.
-
-<!-- <Grid stackable doubling columns={2} className={styles.grid_twoColumn}>
-  <Grid.Column>
-    <Image
-      src={img_finder_sampleCompany_category12_expanded}
-      alt="Screenshot of macOS Finder folder structure."
-      bordered
-      rounded
-      style={{ width: '305px' }}
-    />
-  </Grid.Column>
-  <Grid.Column>
-
-      This is a folder structure for a small company. (The reasoning behind
-      the folder naming structure will be explained later.)
-
-  </Grid.Column>
-</Grid> -->
-
-Notice how we have four areas, each with a couple of categories. None of the areas or categories overlap. **There’s only one place anything can ever be.**
-
-Even if you weren’t familiar with this folder structure, you’d be able to find your way to the sales proposals directory.
-
-## Nothing is more than two clicks away, ever
-
-An important restriction of the system is that **you’re not allowed to create any folders inside a Johnny.Decimal folder.**
-
-This means that you’ll never get lost in layers upon layers of folders. It also makes you create quite specific folders for each thing, ensuring that you can always find what you want.
-
-## Tell people where things are
-
-“Hey Kristy, where can I find the payroll schedule?”
-<br />
-“Twelve dot oh-three.”
-
-Thanks, Kristy.
-
-## Open files and folders instantly
-
-Because your folders contain the Johnny.Decimal number, you can open them without reaching for the mouse.
-
-### Mac users
-
-Press ⌘+space to bring up <a href="https://support.apple.com/en-au/HT204014">Spotlight</a>. Type a Johnny.Decimal number. Press Return.
-
-(If you like this sort of thing, check out <a href="https://www.alfredapp.com/">Alfred</a>.)
-
-### Windows users
-
-Click on the Start button. Type a Johnny.Decimal number in the Search box. Press Return.
-
-### Command line users
-
-Tab completion becomes a joy when your folders start with structured, predictable numbers. Build a <Link to="/concepts/working-at-the-terminal/">small Bash script</Link> to pop you in to any folder instantly:
-
-<div class="mb-8 ml-4 mr-6 bg-black rounded-lg shadow-lg sm:max-w-sm">
-  <div class="bg-gray-300 border border-gray-300 rounded-t-md">
-    <span class="inline-block w-4 h-4 mt-2 ml-2 text-xs bg-red-700 rounded-full"></span>
-    <span class="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-orange-500 rounded-full"></span>
-    <span class="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-green-500 rounded-full"></span>
-  </div>
-
-  <div class="p-2 text-orange-400 whitespace-pre-wrap rounded-b-lg shadow-md font-jdmono"><span class="font-bold">~ $</span> cjd 12.03
-<span class="font-bold">12.03 Payroll for 2018 $</span> <span class="blinking-cursor">|</span></div>
-</div>
-
-</div>
-
-## Fix your email
-
-Put the Johnny.Decimal number in your email subject and you’ve instantly categorised everything. Your colleagues will think you have mystical powers because <Link to="/concepts/managing-email/">you’ll actually be able to find email again</Link>.
-
-## Display it on printed copies
-
-Rather than including the complete file path on printed documentation, just add the Johnny.Decimal number.
-
-## Tag things in real life
-
-Managing physical objects? Just write the Johnny.Decimal number on a sticky note.
-
----
-
-# Sold? Let’s go
-
-By now you either <Link to="/concepts/">see the power of this and want more</Link>, or you’re <a href="https://start.duckduckgo.com/?q=dogs+wearing+clothes&iar=images&iax=images&ia=images&kp=1">confused and sad</a>.
