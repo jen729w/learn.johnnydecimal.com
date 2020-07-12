@@ -9,13 +9,15 @@
 
 */
 
+/* Tiny screen default */
 .spec-post h1 {
-  @apply px-4 mb-4 text-3xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
+  @apply px-4 mb-4 text-2xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
 }
 
+/* Increase font size on larger screens */
 @screen sm {
   .spec-post h1 {
-    /* @apply text-red-700; */
+    @apply text-3xl;
   }
 }
 

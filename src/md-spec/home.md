@@ -4,7 +4,9 @@ date: "2019-05-04"
 title: "A system to organise projects"
 ---
 
-# A system to organise projects
+<!-- # A system to organise projects -->
+<h1 class="hidden sm:block">A system to organise projects</h1>
+<h1 class="sm:hidden">A system to<br/>organise projects</h1>
 
 When we kept everything on paper, organised people had these things called filing cabinets. They stored all of their documents in them in a structured way so that they could find them again.
 
