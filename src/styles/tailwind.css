@@ -3,7 +3,7 @@
 @tailwind components;
 
 body {
-  @apply bg-gray-100;
+  @apply text-lg bg-gray-100;
 }
 
 /* === Headers === === === === === === === === === === === === === === ===   */
@@ -58,7 +58,7 @@ hr {
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
 .jd-inline {
-  @apply px-1 whitespace-pre bg-orange-200 border border-orange-600 rounded-md font-jdmono;
+  @apply px-1 whitespace-pre bg-orange-200 border border-orange-400 rounded-sm font-jdmono;
 }
 
 /* === Blinking cursor === === === === === === === === === === === === ===   */
@@ -80,7 +80,6 @@ hr {
     color: transparent;
   }
   50% {
-    color: orange;
   }
 }
 
