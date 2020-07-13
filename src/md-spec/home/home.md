@@ -67,12 +67,6 @@ We also know that <span class="jd-inline">42</span> will not be a finance-relate
 
 A Johnny.Decimal number looks like this:
 
-<!-- <div class="flex mx-4 sm:hidden">
-<div class="text-2xl jd-inline">42.18</div>
-<div class="text-2xl jd-inline">12.03</div>
-<div class="text-2xl jd-inline">63.17</div>
-</div> -->
-
 <span class="mr-4 text-2xl sm:text-4xl jd-inline">42.18</span>
 <span class="mr-4 text-2xl sm:text-4xl jd-inline">12.03</span>
 <span class="text-2xl sm:text-4xl jd-inline">63.17</span>
@@ -99,6 +93,8 @@ In these examples, <span class="jd-inline">42.18</span> is the 18th thing you’
 The 3rd thing you’ve saved in your <span class="jd-inline">12 Payroll</span> category might be <span class="jd-inline">12.03 Payroll schedule 2018</span>.
 
 **The ID doesn’t have any relevance to the item itself** – remember, it’s just a counter.
+
+---
 
 # I get the idea, but why bother?
 
@@ -170,9 +166,9 @@ Tab completion becomes a joy when your folders start with structured, predictabl
 </div>
 
 <div class="p-2 mb-8 ml-4 mr-6 text-orange-400 bg-black rounded-b-lg shadow-md font-jdmono sm:max-w-sm">
-  <span class="font-bold whitespace-pre-wrap">~ $</span> cjd 12.03
+  <span class="pl-2 font-bold whitespace-pre-wrap">~ $</span> cjd 12.03
   <br/>
-  <span class="font-bold whitespace-pre-wrap">12.03 Payroll for 2018 $</span> <span class="blinking-cursor">|</span>
+  <span class="pl-2 font-bold whitespace-pre-wrap">12.03 Payroll for 2018 $</span> <span class="blinking-cursor">|</span>
 </div>
 
 ## Fix your email
