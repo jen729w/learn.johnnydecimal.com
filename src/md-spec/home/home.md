@@ -104,23 +104,11 @@ Many, many reasons.
 
 The most obvious use of Johnny.Decimal is in organising your folder structure.
 
-<!-- <Grid stackable doubling columns={2} className={styles.grid_twoColumn}>
-  <Grid.Column>
-    <Image
-      src={img_finder_sampleCompany_category12_expanded}
-      alt="Screenshot of macOS Finder folder structure."
-      bordered
-      rounded
-      style={{ width: '305px' }}
-    />
-  </Grid.Column>
-  <Grid.Column>
+<div class="max-w-2xl">
+![macOS Finder, expanded on a category](./Finder_category12-min.png)
+</div>
 
-      This is a folder structure for a small company. (The reasoning behind
-      the folder naming structure will be explained later.)
-
-  </Grid.Column>
-</Grid> -->
+This is a folder structure for a small company. (The reasoning behind the folder naming structure will be explained later.)
 
 Notice how we have four areas, each with a couple of categories. None of the areas or categories overlap. **There’s only one place anything can ever be.**
 

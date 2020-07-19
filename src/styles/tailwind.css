@@ -123,6 +123,12 @@ hr {
   }
 }
 
+/* === Images === === === === === === === === === === === === === === ===    */
+.spec-post img {
+  @apply border-4 border-blue-500;
+  width: 305px !;
+}
+
 /* === END === === === === === === === === === === === === === === === ===   */
 
 @tailwind utilities;
