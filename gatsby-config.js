@@ -23,6 +23,11 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    /**
+     * gatsby-remark-images: removing for now 2020-07-19 as it's not scaling
+     * images properly, but leaving as a reminder that it should probably come
+     * back at some point. 
+     * https://github.com/gatsbyjs/gatsby/issues/20262)
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -37,6 +42,7 @@ module.exports = {
         ],
       },
     },
+    */
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
