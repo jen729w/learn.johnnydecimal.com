@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         <div className="mr-4 sm:w-1/4">
           <TOC />
         </div>
-        <main className="flex-grow sm:w-3/4">{children}</main>
+        <main className="flex-grow mb-8 sm:w-3/4">{children}</main>
       </div>
       <footer className="bg-green-100">
         © {new Date().getFullYear()}, Built with

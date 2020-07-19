@@ -1,10 +1,8 @@
 ---
 slug: "/spec/home"
 date: "2019-05-04"
-title: "A system to organise projects"
+title: "Home"
 ---
-
-<!-- # A system to organise projects -->
 
 <h1 class="hidden sm:block">A system to organise projects</h1>
 <h1 class="sm:hidden">A system to<br/>organise projects</h1>
@@ -105,7 +103,9 @@ Many, many reasons.
 The most obvious use of Johnny.Decimal is in organising your folder structure.
 
 <div class="max-w-2xl">
-![macOS Finder, expanded on a category](./Finder_category12-min.png)
+
+![A screenshot of a macOS Finder window, showing a nested folder structure.](./Finder_category-12.png)
+
 </div>
 
 This is a folder structure for a small company. (The reasoning behind the folder naming structure will be explained later.)
@@ -153,7 +153,7 @@ Tab completion becomes a joy when your folders start with structured, predictabl
   <span class="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-green-500 rounded-full"></span>
 </div>
 
-<div class="p-2 mb-8 ml-4 mr-6 text-orange-400 bg-black rounded-b-lg shadow-md font-jdmono sm:max-w-sm">
+<div class="p-2 mb-8 ml-4 mr-6 text-orange-400 bg-gray-900 shadow-md rounded-b-md font-jdmono sm:max-w-sm">
   <span class="pl-2 font-bold whitespace-pre-wrap">~ $</span> cjd 12.03
   <br/>
   <span class="pl-2 font-bold whitespace-pre-wrap">12.03 Payroll for 2018 $</span> <span class="blinking-cursor">|</span>
@@ -175,4 +175,4 @@ Managing physical objects? Just write the Johnny.Decimal number on a sticky note
 
 # Sold? Let’s go
 
-By now you either <Link to="/concepts/">see the power of this and want more</Link>, or you’re <a href="https://start.duckduckgo.com/?q=dogs+wearing+clothes&iar=images&iax=images&ia=images&kp=1">confused and sad</a>.
+By now you either [see the power of this and want more](/contents), or you’re [confused and sad](https://start.duckduckgo.com/?q=dogs+wearing+clothes&iar=images&iax=images&ia=images&kp=1).

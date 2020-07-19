@@ -14,22 +14,23 @@ body {
 /* Increase font size on larger screens */
 @screen sm {
   .spec-post h1 {
-    @apply mr-0 text-3xl;
+    @apply mr-0 text-5xl;
   }
 }
 
 .spec-post h2 {
-  @apply px-4 py-1 mb-4 mr-6 text-xl bg-gray-200 border border-b-2 border-gray-600 rounded-md shadow-sm;
+  @apply px-4 py-1 mt-6 mb-4 mr-6 text-xl bg-gray-200 border border-b-2 border-gray-600 rounded-md shadow-sm;
 }
+
+.spec-post h3 {
+  @apply px-4 py-1 mt-6 mb-4 mr-6 text-lg bg-gray-200 border border-t-0 border-b-2 border-r-0 border-gray-400 rounded-md shadow-sm;
+}
+
 /* Increase font size on larger screens */
 @screen sm {
   .spec-post h1 {
     @apply text-2xl;
   }
-}
-
-.spec-post h3 {
-  @apply mb-4 text-lg border-b-2 border-gray-400;
 }
 
 /* === Paragraph + body text === === === === === === === === === === === === */
@@ -54,6 +55,27 @@ hr {
   background: #555;
   background-image: linear-gradient(to right, #ccc, #555, #ccc);
   @apply my-6;
+}
+
+/* === Links === === === === === === === === === === === === === === === === */
+a {
+  @apply text-orange-700 underline;
+}
+
+a:visited {
+  @apply text-orange-500 no-underline;
+}
+
+a:hover {
+  @apply text-white bg-orange-500;
+}
+
+a:active {
+  @apply bg-orange-500;
+}
+
+a:focus {
+  @apply bg-orange-500;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
@@ -124,9 +146,8 @@ hr {
 }
 
 /* === Images === === === === === === === === === === === === === === ===    */
-.spec-post img {
-  @apply border-4 border-blue-500;
-  width: 305px !;
+.gatsby-resp-image-wrapper {
+  @apply mb-6 border border-gray-400 rounded-sm shadow-md;
 }
 
 /* === END === === === === === === === === === === === === === === === ===   */
