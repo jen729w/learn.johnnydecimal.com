@@ -14,7 +14,7 @@ body {
 /* Increase font size on larger screens */
 @screen sm {
   .spec-post h1 {
-    @apply mr-0 text-5xl;
+    @apply text-2xl;
   }
 }
 
@@ -24,13 +24,6 @@ body {
 
 .spec-post h3 {
   @apply px-4 py-1 mt-6 mb-4 mr-6 text-lg bg-gray-200 border border-t-0 border-b-2 border-r-0 border-gray-400 rounded-md shadow-sm;
-}
-
-/* Increase font size on larger screens */
-@screen sm {
-  .spec-post h1 {
-    @apply text-2xl;
-  }
 }
 
 /* === Paragraph + body text === === === === === === === === === === === === */
@@ -46,6 +39,10 @@ body {
 /* === Lists === === === === === === === === === === === === === === === === */
 .spec-post ol {
   @apply mb-4 ml-8 mr-6 list-decimal list-outside;
+}
+
+.spec-post ul {
+  @apply mb-4 ml-8 mr-6 list-disc list-outside;
 }
 
 ol.footnote {
