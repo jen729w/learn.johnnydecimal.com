@@ -44,8 +44,12 @@ body {
 }
 
 /* === Lists === === === === === === === === === === === === === === === === */
-ol {
+.spec-post ol {
   @apply mb-4 ml-8 mr-6 list-decimal list-outside;
+}
+
+ol.footnote {
+  @apply px-4 m-0 ml-4;
 }
 
 /* === Dividers === === === === === === === === === === === === === === ===  */

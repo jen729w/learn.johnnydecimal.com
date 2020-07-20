@@ -142,7 +142,7 @@ Press ⌘+space to bring up <a href="https://support.apple.com/en-au/HT204014">S
 
 Click on the Start button. Type a Johnny.Decimal number in the Search box. Press Return.
 
-### Command line users
+### Command-line users
 
 Tab completion becomes a joy when your folders start with structured, predictable numbers. Build a <Link to="/concepts/working-at-the-terminal/">small Bash script</Link> to pop you in to any folder instantly:
 
