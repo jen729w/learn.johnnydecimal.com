@@ -1,7 +1,10 @@
+const path = require("path")
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogPostTemplate = require.resolve(`./src/templates/jdSpecTemplate.js`)
+  const specMdxTemplate = require.resolve(`./src/templates/specMdxTemplate.js`)
 
   const result = await graphql(`
     {
@@ -36,4 +39,46 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+
+  const mdxResult = await graphql(`
+    query {
+      allMdx {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  mdxResult.data.allMdx.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: specMdxTemplate,
+      context: { id: node.id, slug: node.frontmatter.slug },
+    })
+  })
 }
+
+// exports.createPages = async ({ actions, graphql, reporter }) => {
+//   const { createPage } = actions
+
+//   const result = await graphql(`
+//     query {
+//       allMdx {
+//         edges {
+//           node {
+//             id
+//             frontmatter {
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+// }
