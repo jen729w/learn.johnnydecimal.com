@@ -18,17 +18,17 @@ const TOC = () => (
     >
       Concepts
     </Link>
-    <a href="#" className="block mb-1">
+    <a href="/404" className="block mb-1">
       Areas &amp; categories
     </a>
-    <a href="#" className="block mb-1">
+    <a href="/404" className="block mb-1">
       IDs
     </a>
     <hr className="mb-1" />
-    <a href="#" className="block mb-1">
+    <a href="/404" className="block mb-1">
       Contact
     </a>
-    <a href="#" className="block ">
+    <a href="/404" className="block ">
       Privacy
     </a>
   </nav>
