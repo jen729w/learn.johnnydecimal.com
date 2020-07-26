@@ -4,6 +4,12 @@ slug: "/concepts/areas-categories/"
 title: "Areas & categories"
 ---
 
+import {
+  FirstReminder,
+  TwoGroupThingsTogether,
+  ThreeDoItAgain,
+} from "./jdBlocks"
+
 # Areas & categories
 
 Let’s look again at the format of our numbers. It’s crucial that you understand _why_ they look like they do.
@@ -12,26 +18,32 @@ Let’s look again at the format of our numbers. It’s crucial that you underst
 
 Just as a reminder, every Johnny.Decimal number looks like this.
 
-<div class="inline-block p-2 mb-4 ml-4 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md font-jdmono">23.24   31.70
-22.39   13.04
-31.71   21.02
-22.38   13.03
-23.21   23.22
-32.56   12.34
-12.35   21.01
-32.55   23.23</div>
+<div className="flex mb-4 ml-4 mr-6">
+  <FirstReminder />
+  <div className="hidden sm:block ml-4 max-w-xs text-sm italic">
+    Here are a bunch of random numbers
+    <br />
+    from a theoretical system.
+  </div>
+</div>
 
 In words, we have any two digits, followed by a decimal point, followed by two more digits.
-
-Here are a bunch of random numbers from a theoretical system.
 
 ## Group things together (categories)
 
 Johnny.Decimal is all about **grouping similar things together**, so let’s start to do that.
 
+<div className="flex mb-4 ml-4 mr-6">
+  <TwoGroupThingsTogether />
+</div>
+
 ## Do it again (areas)
 
 That’s starting to look more like something organised and a bit less like a bunch of random numbers. Let’s take it one step further.
+
+<div className="flex mb-4 ml-4 mr-6">
+  <ThreeDoItAgain />
+</div>
 
 ### Interesting...
 
@@ -45,17 +57,9 @@ When we decide to organise something with Johnny.Decimal, we don’t _start_ wit
 
 We start like this:
 
-- First, we divide everything in our system in to (at most) ten large buckets of stuff. We call those our **areas**, and we assign each area a range like
-  <span className={styles.johnnyDecimal_boxed}>10-19</span>, <span
-  className={styles.johnnyDecimal_boxed}
-  > 20-29
-  > </span> … <span className={styles.johnnyDecimal_boxed}>90-99</span>.
-- Then, within each area, we break things up again in to (at most) ten more buckets. We call them **categories** and we assign them numbers like <span className={styles.johnnyDecimal_boxed}>11</span>
-  , <span className={styles.johnnyDecimal_boxed}>12</span> …{' '}
-  <span className={styles.johnnyDecimal_boxed}>19</span>.
-- Finally, we assign each individual thing in our system to a category, and give it a unique number. We start at
-  <span className={styles.johnnyDecimal_boxed}>.01</span> within each category, and
-  work our way up through the numbers.
+- First, we divide everything in our system in to (at most) ten large buckets of stuff. We call those our **areas**, and we assign each area a range like <span className="jd-inline">10-19</span>, <span className="jd-inline">20-29</span> … <span className="jd-inline">90-99</span>.
+- Then, within each area, we break things up again in to (at most) ten more buckets. We call them **categories** and we assign them numbers like <span className="jd-inline">11</span>, <span className="jd-inline">12</span> … <span className="jd-inline">19</span>.
+- Finally, we assign each individual thing in our system to a category, and give it a unique number. We start at <span className="jd-inline">.01</span> within each category, and work our way up through the numbers.
 
 Let’s use a small company as an example, and write it out without the numbers.
 
@@ -75,4 +79,4 @@ What does this achieve? For one, it’s removed our dependence on the alphabet. 
 
 **BOX**
 
-…and tomorrow the exports department come along and do this:
+...and tomorrow the exports department come along and do this:
