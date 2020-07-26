@@ -27,16 +27,18 @@ module.exports = {
         path: `${__dirname}/src/spec-mdx`,
       },
     },
+    // `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 1200,
               linkImagesToOriginal: false,
             },
           },
@@ -56,7 +58,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-mdx`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

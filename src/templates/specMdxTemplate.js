@@ -4,16 +4,24 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 
-const shortcodes = { Link } // Provide common components here
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Navigation from "../components/navigation"
+
+const shortcodes = { Link, Navigation } // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
-    <div>
-      <h1>{mdx.frontmatter.title}</h1>
+    <Layout>
       <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+        <SEO title={mdx.frontmatter.title} />
+        {/* <div className="spec-post-container"> */}
+        <div className="spec-post">
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </div>
+        {/* </div> */}
       </MDXProvider>
-    </div>
+    </Layout>
   )
 }
 
