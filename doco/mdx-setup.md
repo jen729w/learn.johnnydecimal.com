@@ -29,3 +29,9 @@ As usual, it was just typing magic and hoping that a rabbit came out the other e
 **This never works.** And even if it _did_ work, it never leads to understanding. Stop it. You must prioritise deep understanding -- but you must also document it for yourself here, given that you might not come back to it for a while.
 
 So. Revert all changes. Start again, from first principles. Also, make one change at a time. Introduce a component, check if it breaks. Rinse and repeat.
+
+> It's okay to take your time to become a better coder, both in technique as well as knowledge.
+
+# We've installed the plugin
+
+An auto-generated page at `/src/pages/test.mdx` works. Now let's [programmatically create pages](https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/).
