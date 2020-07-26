@@ -35,3 +35,9 @@ So. Revert all changes. Start again, from first principles. Also, make one chang
 # We've installed the plugin
 
 An auto-generated page at `/src/pages/test.mdx` works. Now let's [programmatically create pages](https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/).
+
+Creating a new mdx-only folder at `src/mdx-spec` just to keep things clean -- will migrate pages there from `src/md-spec`. Actually, calling it `spec-mdx` as that feels more hierarchical.
+
+Adding that as a `gatsby-source-filesystem` plugin. Moving `test.mdx` over to `/src/spec-mdx`.
+
+Okay this is good. GraphiQL is showing my nodes. I understand how (well, kinda) and why. Now I just have to write some code to auto-generate pages from those nodes.

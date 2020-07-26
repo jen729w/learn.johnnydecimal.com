@@ -20,6 +20,13 @@ module.exports = {
         path: `${__dirname}/src/md-spec`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `spec-mdx`,
+        path: `${__dirname}/src/spec-mdx`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
