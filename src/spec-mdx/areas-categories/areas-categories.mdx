@@ -5,10 +5,15 @@ title: "Areas & categories"
 ---
 
 import {
-  FirstReminder,
+  OneReminder,
   TwoGroupThingsTogether,
   ThreeDoItAgain,
-} from "./jdBlocks"
+  FourCompanyNoNumbers,
+  FiveCompanyWithNumbers,
+  SixTodayWeHave,
+  SevenAndThenExports,
+  EightThisIsBetter,
+} from "./jdBlocks_pre.js"
 import Finder_randomNumbers_category22Expanded from "./Finder__random-numbers__category22-expanded.png"
 
 # Areas & categories
@@ -20,7 +25,7 @@ Let’s look again at the format of our numbers. It’s crucial that you underst
 Just as a reminder, every Johnny.Decimal number looks like this.
 
 <div className="flex mb-4 ml-4 mr-6">
-  <FirstReminder />
+  <OneReminder />
   <div className="hidden sm:block ml-4 max-w-xs text-sm italic">
     Here are a bunch of random numbers
     <br />
@@ -50,11 +55,9 @@ That’s starting to look more like something organised and a bit less like a bu
 
 <div className="flex flex-col md:flex-row mr-6 mb-6">
   <div className="">
-    <p>You can almost imagine this looking like a set of folders.</p>
-    <p>
-      If you didn’t care about anything except the 22 numbers, you could just
-      collapse the others like this.
-    </p>
+    You can almost imagine this looking like a set of folders. If you didn’t
+    care about anything except the 22 numbers, you could just collapse the
+    others like this.
   </div>
   <div className="ml-4 flex-shrink-0">
     <img
@@ -81,20 +84,73 @@ We start like this:
 
 Let’s use a small company as an example, and write it out without the numbers.
 
-**BOX**
+<div className="mb-4 ml-4 mr-6">
+  <FourCompanyNoNumbers />
+</div>
 
-All we really do with Johnny.Decimal—and if at this point you’ve realised this and are thinking, “hang on, all he’s done is put numbers in front of things,” well then you’re not far wrong—is put numbers in front of things.
+All we really do with Johnny.Decimal—and if at this point you’ve realised this and are thinking, “hang on, all he’s done is put numbers<sup>1</sup> in front of things,” well then you’re not far wrong—is put numbers in front of things.
 
 **But this transforms the way you think about and use everything.** Trust me.
 
+<div className="py-1 mb-4 ml-4 mr-20 text-sm italic bg-gray-200 border border-l-8 border-gray-400 rounded-md shadow-sm">
+  <ol class="footnote">
+    <li>
+      I've seen countless filesystems with <strong>numbers</strong> in front of
+      folder names, but if they're not <strong>structured</strong> it doesn't
+      work.
+    </li>
+  </ol>
+</div>
+
 Let’s put numbers in front of the system we just built above.
 
-**BOX**
+<div className="mb-4 ml-4 mr-6">
+  <FiveCompanyWithNumbers />
+</div>
 
 ## So long, cursed alphabet
 
 What does this achieve? For one, it’s removed our dependence on the alphabet. The alphabet is a fine thing but it’s a terrible way to sort your files because things move around. Today we have:
 
-**BOX**
+<div className="mb-4 ml-4 mr-6">
+  <SixTodayWeHave />
+</div>
 
-...and tomorrow the exports department come along and do this:
+and tomorrow the exports department come along and do this:
+
+<div className="mb-4 ml-4 mr-6">
+  <SevenAndThenExports />
+</div>
+
+…and <span className="jd-inline">Finance</span> isn’t the second thing in the list any more. This sounds like a small thing, but <strong>it makes it impossible for your brain to learn where something will be.</strong>
+
+## The Johnny.Decimal version
+
+This is better:
+
+<div className="mb-4 ml-4 mr-6">
+  <EightThisIsBetter />
+</div>
+
+Because our folders all start with a number, they’ll sort in very predictable way. This concept applies throughout the system.
+
+## 20, 60, 30, 90, whatever
+
+At this point you might be wondering, well, why is <span className="jd-inline">Finance</span> all of the numbers from <span className="jd-inline">20-29</span> and why is <span className="jd-inline">Exports</span> <span className="jd-inline">40-49</span>? What do those numbers <em>mean</em>? And the answer is that they mean nothing. They’re just numbers. 40 isn’t better or worse than 20.
+
+---
+
+# In summary
+
+On this page I’ve talked mostly about the way that we structure our areas and categories. By now you should have a good high-level understanding. You have categories of things and each category belongs to one area only. Areas group categories together.
+
+All of this happens <em>before the decimal</em>. Those two digits of the number <strong>are the category</strong>, and the first digit of the number tells you which area it’s in.
+
+What we’ve done here is organise a bunch of ‘stuff’ in to something with structure; we’ve created, essentially, a very simple database.
+
+<Navigation
+  backURL={"/concepts/"}
+  backTitle={"Concepts"}
+  nextURL={"/concepts/ids/"}
+  nextTitle={"IDs"}
+/>

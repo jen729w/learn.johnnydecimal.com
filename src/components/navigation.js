@@ -8,7 +8,6 @@ const Navigation = ({ backURL, backTitle, nextURL, nextTitle }) => (
         ← {backTitle}
       </Link>
     </div>
-    <div className="text-center text-orange-700">|</div>
     <div className="text-right">
       <Link to={nextURL} className="text-md">
         {nextTitle} →

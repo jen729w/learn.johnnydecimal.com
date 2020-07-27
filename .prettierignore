@@ -2,3 +2,5 @@
 package.json
 package-lock.json
 public
+
+*_pre.js
