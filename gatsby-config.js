@@ -6,6 +6,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,8 +30,6 @@ module.exports = {
       },
     },
     // `gatsby-plugin-mdx`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,

@@ -151,6 +151,10 @@ a:focus {
   @apply mb-6 border border-gray-400 rounded-sm shadow-md;
 }
 
+img.screenshot {
+  @apply border border-gray-500 rounded-sm shadow-md;
+}
+
 /* === END === === === === === === === === === === === === === === === ===   */
 
 @tailwind utilities;
