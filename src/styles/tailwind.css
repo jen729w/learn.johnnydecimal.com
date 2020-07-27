@@ -3,32 +3,44 @@
 @tailwind components;
 
 body {
-  @apply text-lg bg-gray-100;
+  @apply text-lg bg-offwhite;
 }
 
 /* === Headers === === === === === === === === === === === === === === ===   */
 /* Tiny screen default */
 .spec-post h1 {
-  @apply px-4 mb-4 text-2xl bg-gray-200 border-t-2 border-b-4 border-l-2 border-r-2 border-gray-800 rounded-md shadow-md;
+  @apply mb-3 text-4xl leading-tight border-b-4 border-offblack font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
   .spec-post h1 {
-    @apply text-2xl;
+    @apply text-4xl;
   }
 }
 
 .spec-post h2 {
-  @apply px-4 py-1 mt-6 mb-4 mr-6 text-xl bg-gray-200 border border-b-2 border-gray-600 rounded-md shadow-sm;
+  @apply mt-6 mb-3 mr-6 text-3xl leading-tight border-b-2 border-offblack font-jdheader;
+}
+/* Increase font size on larger screens */
+@screen sm {
+  .spec-post h2 {
+    @apply text-3xl;
+  }
 }
 
 .spec-post h3 {
-  @apply px-4 py-1 mt-6 mb-4 mr-6 text-lg bg-gray-200 border border-t-0 border-b-2 border-r-0 border-gray-400 rounded-md shadow-sm;
+  @apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700;
+}
+/* Increase font size on larger screens */
+@screen sm {
+  .spec-post h3 {
+    @apply text-2xl;
+  }
 }
 
 /* === Paragraph + body text === === === === === === === === === === === === */
 .spec-post p {
-  @apply mb-4 ml-4 mr-6;
+  @apply mb-4 mr-2;
 }
 
 .spec-post strong {

@@ -4,8 +4,14 @@ module.exports = {
     fontFamily: {
       jdbody: ["Fira\\ Sans"],
       jdmono: ["Fira\\ Code"],
+      jdheader: ["Playfair\\ Display"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        offwhite: "#f8f8f8",
+        offblack: "#0a0a0a",
+      },
+    },
   },
   variants: {},
   plugins: [],
