@@ -1,0 +1,56 @@
+---
+slug: "/concepts/ids/"
+date: "2019-05-04"
+title: "IDs"
+---
+
+# IDs
+
+Let’s get on to the decimal. We have a category—let’s say <span className="jd-inline">22 Contracts</span>—and we want to store some things there.
+
+We create a Johnny.Decimal number by adding a decimal point to our category, and starting at number <span className="jd-inline">.01</span>.
+
+We start at <span className="jd-inline">.01</span> and not just <span className="jd-inline">.1</span> because of the way that computers sort files. Also it’s more consistent, and consistency is elegant.
+
+<span className="jd-inline text-xl sm:text-2xl mb-4 px-3 inline-block">
+  22.01
+</span>
+
+Now we just decide what we’re keeping there and give it a nice name.
+
+<span className="jd-inline text-xl sm:text-2xl mb-4 px-3 inline-block">
+  22.01 Cleaning contract
+</span>
+
+Later, we need to store another contract. What to do? Just use the next
+number.
+
+<span className="jd-inline text-xl sm:text-2xl mb-4 px-3 inline-block">
+  22.02 Office lease
+</span>
+
+## That was easy
+
+You create a full Johnny.Decimal number by choosing a category and **looking for the next available number after the decimal.**
+
+The thing to remember here is that the number after the decimal has _no meaning whatsoever:_ we just start at <span className="jd-inline">.01</span> and work our way up.
+
+## “What happens when I get to 99?”
+
+You never will. And if you do, the category you defined was almost certainly too broad. Split it up.
+
+## Give your Johnny.Decimal items simple names
+
+This system lets us give concise names to things, because we already know from the number which category they’re in.
+
+I created <span className="jd-inline">22.01 Cleaning contract</span> because it’s short and
+reads well, but you could have gone with <span className="jd-inline">22.01 Cleaning</span> if you’d preferred. You’re already in a folder called <span className="jd-inline">Contracts</span>.
+
+**Everything that starts with** <span className="jd-inline">22</span> **is a contract**.
+
+<Navigation
+  backURL={"/concepts/areas-categories/"}
+  backTitle={"Areas & categories"}
+  nextURL={"/concepts/saving-files/"}
+  nextTitle={"Saving files"}
+/>
