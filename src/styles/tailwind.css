@@ -29,7 +29,7 @@ body {
 }
 
 .spec-post h3 {
-  @apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700;
+  @apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700 font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
@@ -66,8 +66,8 @@ hr {
   border: 0;
   height: 1px;
   background: #555;
-  background-image: linear-gradient(to right, #ccc, #555, #ccc);
-  @apply my-6;
+  background-image: linear-gradient(to right, #ddd, #555, #ddd);
+  @apply m-8;
 }
 
 /* === Links === === === === === === === === === === === === === === === === */
