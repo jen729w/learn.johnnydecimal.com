@@ -1,0 +1,149 @@
+---
+slug: "/concepts/tracking-your-numbers/"
+date: "2019-05-04"
+title: "Tracking your numbers"
+---
+
+import GoogleSheets_simpleCompany from "./GoogleSheets_simpleCompany.png"
+
+# Tracking your numbers
+
+When you’re assigning new Johnny.Decimal numbers to different types of files and objects, you need to know that the number is unique.
+
+You don’t want to have to look in your file system, your email, and your notes to check what the next available number in a category is: **you need a central index.**
+
+## It’s an index, not an inventory
+
+The purpose of this index is _not_ to record the individual contents of every single Johnny.Decimal item: it is only to record the IDs that you have assigned.
+
+Your database needs to record this level of information:
+
+<div className="mb-4 ml-4 mr-6">
+  <pre className="inline-block px-4 py-2 text-sm text-orange-800 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">{`10-19 My area
+   11 My category
+      11.01 My first ID
+      11.02 My second ID`}</pre>
+</div>
+
+You don’t need to track what is _in_ each of your JD folders:
+
+<div className="mb-4 ml-4 mr-6">
+  <pre className="inline-block px-4 py-2 text-sm text-orange-800 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">
+    {`10-19 My area
+   11 My category
+      11.01 My first ID`}
+    <br />
+    {`            `}
+    <span className="line-through">Document.doc</span>
+    <br />
+    {`            `}
+    <span className="line-through">Picture.jpg</span>
+    <br />
+    {`            `}
+    <span className="line-through">Spreadsheet.xls</span>
+    <br />
+    {`      11.02 My second ID`}
+  </pre>
+</div>
+
+## Your file system is not your index
+
+You might think that your folder structure—in Finder or Windows Explorer—is this index, but it isn’t.
+
+You will create Johnny.Decimal numbers to save things that aren’t files. That might be <Link to="/concepts/managing-email/">an email</Link>, <Link to="/concepts/keeping-notes/">a note</Link>, a physical object, or anything else. These numbers must be tracked centrally.
+
+## Searching for things
+
+When you’re saving all sorts of items in your system, you won’t always remember where they are. Did you save the office contract in your email, or your shared drive? You might look in your drive, not see the contract, and think you didn’t save it.
+
+**The whole point of the Johnny.Decimal system is to remove this frustration.**
+
+Having a central index allows you to search for items by title, or filter your entire list by area or category. This lets you see, immediately, what you’ve saved.
+
+If your system also tells you where that item _is,_ then all the better.
+
+---
+
+# What do we use?
+
+I’ll be honest, there isn’t a great solution to this yet. I’m in the process of writing something specifically to support this system<sup>1</sup>, but until then we have to make do with other tools.
+
+<div class="footnote-wrapper">
+  <ol class="footnote">
+    <li>
+      Sign up to <Link to="/contact/">the mailing list</Link> or follow{" "}
+      <a href="https://twitter.com/johnnydecimal">@johnnydecimal</a> on Twitter
+      for updates.
+    </li>
+  </ol>
+</div>
+
+## Use your notes
+
+Simply create a blank note in <Link to="/concepts/keeping-notes">your note system</Link> for each new number that you create. This has worked well for me in the past. It’s quick, searchable, and uses a system you already have.
+
+It also has the side-effect of encouraging you to use your notes, which will make you more efficient.
+
+## AirTable (or any other database)
+
+You can use any database system you like. <a href="https://airtable.com/invite/r/wcs73zWf">Airtable</a><sup>2</sup> is a _great_ online database which I use for all sorts of things.
+
+I’ve created a template database which you can use as a starter. You can <a href="https://airtable.com/shr5vvlmaCV98G6z7">copy it from here</a>.
+
+<div class="footnote-wrapper">
+  <ol class="footnote" start="2">
+    <li>
+      That link earns me a $10 referral credit if you sign up. If you’d rather
+      not do that, that’s cool: just go to{" "}
+      <a href="https://airtable.com">airtable.com</a>. You can copy the template
+      database either way.
+    </li>
+  </ol>
+</div>
+
+## Excel or Google Sheets
+
+<div className="flex flex-col md:flex-row">
+  <div className="flex-shrink-0 mb-4 pr-4">
+    <img
+      src={GoogleSheets_simpleCompany}
+      alt="Screenshot of a spreadsheet showing columns with area, category, ID, and title."
+      width="412"
+      height="172"
+      className="screenshot"
+    />
+  </div>
+  <p>
+    Create a spreadsheet and save your numbers there. This is a really simple
+    solution, but it isn’t very clever.
+  </p>
+</div>
+
+## At work: SharePoint lists
+
+If you work for a large organisation, you may be able to ask your IT people to create you a <a href="https://support.office.com/en-us/article/create-a-list-in-sharepoint-0d397414-d95f-41eb-addd-5e6eff41b083?ui=en-US&rs=en-US&ad=US">list in SharePoint</a>. This can work very well, and has the advantage of being visible to your entire team.
+
+---
+
+# Subscribe for updates
+
+Sign up to my _very_ low volume mailing list<sup>3</sup> and I’ll
+let you know when I finally develop custom software for this thing.
+
+// `<ButtondownEmailForm />`
+
+<div class="footnote-wrapper">
+  <ol class="footnote" start="3">
+    <li>
+      Number of emails sent in 2019: 0; so far in 2020: 0. (I should really do
+      something with my mailing list.)
+    </li>
+  </ol>
+</div>
+
+<Navigation
+  backURL={"/concepts/keeping-notes"}
+  backTitle={"Keeping notes"}
+  nextURL={"/concepts/developing-your-own-system"}
+  nextTitle={"Developing your own system"}
+/>
