@@ -30,11 +30,7 @@ const ButtondownEmailForm = () => (
 			/>
 		</div>
 		<p className="mb-4">
-			<a
-				href="https://buttondown.email"
-				target="_blank"
-				className="text-xs font-light"
-			>
+			<a href="https://buttondown.email" className="text-xs font-light">
 				Powered by Buttondown.
 			</a>
 		</p>

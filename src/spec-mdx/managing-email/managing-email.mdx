@@ -1,0 +1,83 @@
+---
+slug: "/concepts/managing-email/"
+date: "2019-05-04"
+title: "Managing email"
+---
+
+import outlook_folder_structure_1232_expanded from "./Outlook__folder-structure-12-32-expanded-min.png"
+
+# Managing email
+
+This won’t make you _enjoy_ email, but maybe you’ll hate it a little less.
+
+## Make your Subject: work for you
+
+There must be some sort of medical condition to describe the terrible dyslexia that overcomes people when they type email subjects. Here’s a real example from an old job:
+
+<div className="emailSubject mr-2 sm:mr-6">
+	<strong>Subject:</strong> EXTERNAL: RE: PO410192251
+	-LUE-2016-04-28-MEL-Additional-Transformation-Cabling
+</div>
+
+Seriously. What the hell?
+
+### Put the Johnny.Decimal number in the subject line
+
+This might sound mad, but it works. Just put the relevant number in the subject line, and here’s the special sauce: put it in [square brackets]. So, my subject line becomes:
+
+<div className="emailSubject mr-2 sm:mr-6">
+	<strong>Subject:</strong> EXTERNAL: RE:
+	PO410192251-LUE-2016-04-28-MEL-Additional-Transformation-Cabling{" "}
+	<strong className="text-orange-600">[72.02]</strong>
+</div>
+
+### Why? Search is why
+
+You want to find that email related to the additional cabling. You either:
+
+- know off the top of your head that <span className="jd-inline">72.02</span> is the number you need, because you’ve used it a lot, or
+- use <Link to="/concepts/tracking-your-numbers/">your index</Link> to look up the Johnny.Decimal number for ‘structured cabling’ if you don’t remember it.
+
+If the email isn’t already in your <span className="jd-inline">72.02</span> folder, just search for <span className="jd-inline">[72.02]</span>.
+
+The brackets around the numbers in the subject help your email’s search function pinpoint exactly what you want. The text ‘72.02’ might appear in a spreadsheet, or in someone’s phone number. The text ‘[72.02]’ almost certainly does not.
+
+This has never failed me. **People ask me about an email and when I find it five seconds later, they say to me, “wow … how did you do that?”.**
+
+## “But I write useful Subject: lines!”
+
+That might be the case. _You_ do. But nobody else does.
+
+With this system you can **add your own tag to someone else’s email.** And because it’s plain text in the subject line, it’ll follow the email around and return to you. In my experience, nobody notices it’s there.
+
+---
+
+# Putting things in folders
+
+Since we typically move a _lot_ of emails in to folders, we want to minimise clicking.
+
+<div className="flex flex-col md:flex-row">
+	<div className="flex-shrink-0 mb-4 pr-4">
+		<img
+			src={outlook_folder_structure_1232_expanded}
+			alt="Outlook window showing folder structure"
+			width="293"
+			height="155"
+			className="screenshot"
+		/>
+	</div>
+	<p>
+		In my email client, I don’t create a folder for each area and then a folder
+		for each category within it. I create folders for my categories at the top
+		level. Do whatever works for you.
+	</p>
+</div>
+
+Also, in case it isn’t obvious, you don’t need to create a folder for every Johnny.Decimal number _just because_. If you don’t get email related to that item, don’t create a folder.
+
+<Navigation
+	backURL={"/concepts/developing-your-own-system/"}
+	backTitle={"Developing your own system"}
+	nextURL="/concepts/what-about-00-09/"
+	nextTitle="What about 00-09?"
+/>
