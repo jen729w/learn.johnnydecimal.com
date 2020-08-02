@@ -4,6 +4,7 @@ date: "2019-05-04"
 title: "Tracking your numbers"
 ---
 
+import ButtondownEmailForm from "../../components/buttondownEmail.js"
 import GoogleSheets_simpleCompany from "./GoogleSheets_simpleCompany.png"
 
 # Tracking your numbers
@@ -19,7 +20,7 @@ The purpose of this index is _not_ to record the individual contents of every si
 Your database needs to record this level of information:
 
 <div className="mb-4 ml-4 mr-6">
-  <pre className="inline-block px-4 py-2 text-sm text-orange-800 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">{`10-19 My area
+	<pre className="inline-block px-4 py-2 text-sm text-orange-800 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">{`10-19 My area
    11 My category
       11.01 My first ID
       11.02 My second ID`}</pre>
@@ -28,22 +29,22 @@ Your database needs to record this level of information:
 You don’t need to track what is _in_ each of your JD folders:
 
 <div className="mb-4 ml-4 mr-6">
-  <pre className="inline-block px-4 py-2 text-sm text-orange-800 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">
-    {`10-19 My area
+	<pre className="inline-block px-4 py-2 text-sm text-orange-800 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">
+		{`10-19 My area
    11 My category
       11.01 My first ID`}
-    <br />
-    {`            `}
-    <span className="line-through">Document.doc</span>
-    <br />
-    {`            `}
-    <span className="line-through">Picture.jpg</span>
-    <br />
-    {`            `}
-    <span className="line-through">Spreadsheet.xls</span>
-    <br />
-    {`      11.02 My second ID`}
-  </pre>
+		<br />
+		{`            `}
+		<span className="line-through">Document.doc</span>
+		<br />
+		{`            `}
+		<span className="line-through">Picture.jpg</span>
+		<br />
+		{`            `}
+		<span className="line-through">Spreadsheet.xls</span>
+		<br />
+		{`      11.02 My second ID`}
+	</pre>
 </div>
 
 ## Your file system is not your index
@@ -69,13 +70,13 @@ If your system also tells you where that item _is,_ then all the better.
 I’ll be honest, there isn’t a great solution to this yet. I’m in the process of writing something specifically to support this system<sup>1</sup>, but until then we have to make do with other tools.
 
 <div class="footnote-wrapper">
-  <ol class="footnote">
-    <li>
-      Sign up to <Link to="/contact/">the mailing list</Link> or follow{" "}
-      <a href="https://twitter.com/johnnydecimal">@johnnydecimal</a> on Twitter
-      for updates.
-    </li>
-  </ol>
+	<ol class="footnote">
+		<li>
+			Sign up to <Link to="/contact/">the mailing list</Link> or follow{" "}
+			<a href="https://twitter.com/johnnydecimal">@johnnydecimal</a> on Twitter
+			for updates.
+		</li>
+	</ol>
 </div>
 
 ## Use your notes
@@ -91,32 +92,32 @@ You can use any database system you like. <a href="https://airtable.com/invite/r
 I’ve created a template database which you can use as a starter. You can <a href="https://airtable.com/shr5vvlmaCV98G6z7">copy it from here</a>.
 
 <div class="footnote-wrapper">
-  <ol class="footnote" start="2">
-    <li>
-      That link earns me a $10 referral credit if you sign up. If you’d rather
-      not do that, that’s cool: just go to{" "}
-      <a href="https://airtable.com">airtable.com</a>. You can copy the template
-      database either way.
-    </li>
-  </ol>
+	<ol class="footnote" start="2">
+		<li>
+			That link earns me a $10 referral credit if you sign up. If you’d rather
+			not do that, that’s cool: just go to{" "}
+			<a href="https://airtable.com">airtable.com</a>. You can copy the template
+			database either way.
+		</li>
+	</ol>
 </div>
 
 ## Excel or Google Sheets
 
 <div className="flex flex-col md:flex-row">
-  <div className="flex-shrink-0 mb-4 pr-4">
-    <img
-      src={GoogleSheets_simpleCompany}
-      alt="Screenshot of a spreadsheet showing columns with area, category, ID, and title."
-      width="412"
-      height="172"
-      className="screenshot"
-    />
-  </div>
-  <p>
-    Create a spreadsheet and save your numbers there. This is a really simple
-    solution, but it isn’t very clever.
-  </p>
+	<div className="flex-shrink-0 mb-4 pr-4">
+		<img
+			src={GoogleSheets_simpleCompany}
+			alt="Screenshot of a spreadsheet showing columns with area, category, ID, and title."
+			width="412"
+			height="172"
+			className="screenshot"
+		/>
+	</div>
+	<p>
+		Create a spreadsheet and save your numbers there. This is a really simple
+		solution, but it isn’t very clever.
+	</p>
 </div>
 
 ## At work: SharePoint lists
@@ -127,23 +128,13 @@ If you work for a large organisation, you may be able to ask your IT people to c
 
 # Subscribe for updates
 
-Sign up to my _very_ low volume mailing list<sup>3</sup> and I’ll
-let you know when I finally develop custom software for this thing.
+Sign up to my _very_ low volume mailing list and I’ll let you know when I finally develop custom software for this thing.
 
-// `<ButtondownEmailForm />`
-
-<div class="footnote-wrapper">
-  <ol class="footnote" start="3">
-    <li>
-      Number of emails sent in 2019: 0; so far in 2020: 0. (I should really do
-      something with my mailing list.)
-    </li>
-  </ol>
-</div>
+<ButtondownEmailForm />
 
 <Navigation
-  backURL={"/concepts/keeping-notes"}
-  backTitle={"Keeping notes"}
-  nextURL={"/concepts/developing-your-own-system"}
-  nextTitle={"Developing your own system"}
+	backURL={"/concepts/keeping-notes"}
+	backTitle={"Keeping notes"}
+	nextURL={"/concepts/developing-your-own-system"}
+	nextTitle={"Developing your own system"}
 />

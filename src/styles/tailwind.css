@@ -3,179 +3,179 @@
 @tailwind components;
 
 body {
-  @apply text-lg bg-offwhite;
+	@apply text-lg bg-offwhite;
 }
 
 /* === Headers === === === === === === === === === === === === === === ===   */
 /* Tiny screen default */
 .spec-post h1 {
-  @apply mb-3 text-4xl leading-tight border-b-4 border-offblack font-jdheader;
+	@apply mb-3 text-4xl leading-tight border-b-4 border-offblack font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
-  .spec-post h1 {
-    @apply text-4xl;
-  }
+	.spec-post h1 {
+		@apply text-4xl;
+	}
 }
 
 .spec-post h2 {
-  @apply mt-6 mb-3 mr-6 text-3xl leading-tight border-b-2 border-offblack font-jdheader;
+	@apply mt-6 mb-3 mr-6 text-3xl leading-tight border-b-2 border-offblack font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
-  .spec-post h2 {
-    @apply text-3xl;
-  }
+	.spec-post h2 {
+		@apply text-3xl;
+	}
 }
 
 .spec-post h3 {
-  @apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700 font-jdheader;
+	@apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700 font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
-  .spec-post h3 {
-    @apply text-2xl;
-  }
+	.spec-post h3 {
+		@apply text-2xl;
+	}
 }
 
 /* === Paragraph + body text === === === === === === === === === === === === */
-.spec-post p {
-  @apply mb-4 mr-2;
+.spec-post > p {
+	@apply mb-4 mr-2;
 }
 
 .spec-post strong {
-  /* The default is a little too bold (700) */
-  @apply font-semibold;
+	/* The default is a little too bold (700) */
+	@apply font-semibold;
 }
 
 /* === Lists === === === === === === === === === === === === === === === === */
 .spec-post ol {
-  @apply mb-4 ml-8 mr-6 list-decimal list-outside;
+	@apply mb-4 ml-8 mr-6 list-decimal list-outside;
 }
 
 .spec-post ul {
-  @apply mb-4 ml-8 mr-6 list-disc list-outside;
+	@apply mb-4 ml-8 mr-6 list-disc list-outside;
 }
 
 /* === Footnote === === === === === === === === === === === === === === ===  */
 
 .footnote-wrapper {
-  @apply py-2 mb-4 ml-4 mr-6 text-sm italic bg-gray-200 border border-l-8 border-gray-400 rounded-md shadow-sm;
+	@apply py-2 mb-4 ml-4 mr-6 text-sm italic bg-gray-200 border border-l-8 border-gray-400 rounded-md shadow-sm;
 }
 @screen sm {
-  .footnote-wrapper {
-    @apply mr-20;
-  }
+	.footnote-wrapper {
+		@apply mr-20;
+	}
 }
 
 ol.footnote {
-  @apply px-4 m-0 ml-4;
+	@apply px-4 m-0 ml-4;
 }
 
 /* === Dividers === === === === === === === === === === === === === === ===  */
 hr {
-  border: 0;
-  height: 1px;
-  background: #555;
-  background-image: linear-gradient(to right, #ddd, #555, #ddd);
-  @apply m-8;
+	border: 0;
+	height: 1px;
+	background: #555;
+	background-image: linear-gradient(to right, #ddd, #555, #ddd);
+	@apply m-8;
 }
 
 /* === Links === === === === === === === === === === === === === === === === */
 a {
-  @apply text-orange-700 underline;
+	@apply text-orange-700 underline;
 }
 
 a:visited {
-  @apply text-orange-500 no-underline;
+	@apply text-orange-500 no-underline;
 }
 
 a:hover {
-  @apply text-white bg-orange-500;
+	@apply text-white bg-orange-500;
 }
 
 a:active {
-  @apply bg-orange-500;
+	@apply bg-orange-500;
 }
 
 a:focus {
-  @apply bg-orange-500;
+	@apply bg-orange-500;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
 .jd-inline {
-  @apply px-1 whitespace-pre bg-orange-200 border border-orange-400 rounded-sm font-jdmono;
+	@apply px-1 whitespace-pre bg-orange-200 border border-orange-400 rounded-sm font-jdmono;
 }
 
 /* === Blinking cursor === === === === === === === === === === === === ===   */
 /* Stolen: https://codepen.io/ArtemGordinsky/pen/GnLBq */
 .blinking-cursor {
-  font-weight: 400;
-  font-size: 20px;
-  color: #ffffff;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
+	font-weight: 400;
+	font-size: 20px;
+	color: #ffffff;
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
 }
 
 @keyframes "blink" {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-  }
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+	}
 }
 
 @-moz-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: orange;
-  }
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: orange;
+	}
 }
 
 @-webkit-keyframes "blink" {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: orange;
-  }
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: orange;
+	}
 }
 
 @-ms-keyframes "blink" {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: orange;
-  }
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: orange;
+	}
 }
 
 @-o-keyframes "blink" {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: orange;
-  }
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: orange;
+	}
 }
 
 /* === Images === === === === === === === === === === === === === === ===    */
 .gatsby-resp-image-wrapper {
-  @apply mb-6 border border-gray-400 rounded-sm shadow-md;
+	@apply mb-6 border border-gray-400 rounded-sm shadow-md;
 }
 
 img.screenshot {
-  @apply border border-gray-500 rounded-sm shadow-md;
+	@apply border border-gray-500 rounded-sm shadow-md;
 }
 
 /* === END === === === === === === === === === === === === === === === ===   */
