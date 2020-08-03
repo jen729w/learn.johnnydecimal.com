@@ -1,0 +1,47 @@
+---
+slug: "/concepts/working-at-the-terminal/"
+date: "2019-05-04"
+title: "Working at the terminal"
+---
+
+import terminal_cd_id3427 from "./Terminal__cd-id3427.gif"
+import terminal_bash_function from "./Terminal__bash-function-min.png"
+
+# Working at the terminal
+
+The structured nature of the Johnny.Decimal numbering system lets you move to any folder with the minimum number of keystrokes using tab completion.
+
+At each level, you know with certainty that **there will be no conflicting items.**
+
+<img
+	src={terminal_cd_id3427}
+	alt="GIF showing changing directory in the Terminal using tab completion"
+	width="620"
+	height="291"
+	className="screenshot"
+/>
+
+## Script your way around
+
+Easier still, use a simple bash script to change to any directory immediately. Put this in your <span className="jd-inline">.bashrc</span> (<a href="https://gist.github.com/jen729w/cab3a02bce70dab7a4567d460d5c36e2">plain text version here</a>).
+
+<img
+	src={terminal_bash_function}
+	alt="Screenshot of macOS Terminal showing bash function declaration"
+	width="488"
+	height="137"
+	className="screenshot mb-4"
+/>
+
+And now change to any directory with <span className="jd-inline">`cjd 34.27`</span>.
+
+## Got any more?
+
+I’d love to build a collection of useful scripts here. <Link to="/contact/">Send me yours</Link> and I’ll create a repository.
+
+<Navigation
+	backURL={"/concepts/what-about-00-09/"}
+	backTitle={"What about 00-09?"}
+	nextURL="/concepts/exceptions-to-the-rules/"
+	nextTitle="Exceptions to the rules"
+/>
