@@ -60,7 +60,7 @@ body {
 /* === Footnote === === === === === === === === === === === === === === ===  */
 
 .footnote-wrapper {
-	@apply py-2 mb-4 ml-4 mr-6 text-sm italic bg-gray-200 border border-l-8 border-gray-400 rounded-md shadow-sm;
+	@apply py-2 mb-4 ml-4 mr-6 text-sm italic bg-gray-200 border border-l-8 border-gray-700 rounded-md shadow-sm;
 }
 @screen sm {
 	.footnote-wrapper {
