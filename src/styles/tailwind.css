@@ -83,11 +83,11 @@ hr {
 
 /* === Links === === === === === === === === === === === === === === === === */
 a {
-	@apply text-orange-700 underline;
+	@apply text-orange-800 underline;
 }
 
 a:visited {
-	@apply text-orange-500 no-underline;
+	@apply text-yellow-700 no-underline;
 }
 
 a:hover {

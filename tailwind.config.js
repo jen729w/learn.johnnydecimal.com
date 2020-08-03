@@ -14,6 +14,21 @@ module.exports = {
 			},
 		},
 	},
+	// variants: [
+	// 	"responsive",
+	// 	"group-hover",
+	// 	"group-focus",
+	// 	"focus-within",
+	// 	"first",
+	// 	"last",
+	// 	"odd",
+	// 	"even",
+	// 	"hover",
+	// 	"focus",
+	// 	"active",
+	// 	"visited",
+	// 	"disabled",
+	// ],
 	variants: {
 		// Order matters here
 		// https://tailwindcss.com/course/hover-focus-and-active-styles/#app
@@ -21,7 +36,6 @@ module.exports = {
 		textColor: ["responsive", "hover", "focus", "active"],
 		borderColor: ["responsive", "hover", "focus", "active"],
 		boxShadow: ["responsive", "hover", "focus", "active"],
-		textDecoration: ["responsive", "hover", "focus", "active", "visited"],
 	},
 	plugins: [],
 }
