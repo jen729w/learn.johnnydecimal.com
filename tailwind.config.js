@@ -9,7 +9,7 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				offwhite: "#fafafa",
+				offwhite: "#fbfbfb",
 				offblack: "#0a0a0a",
 			},
 		},
@@ -21,6 +21,7 @@ module.exports = {
 		textColor: ["responsive", "hover", "focus", "active"],
 		borderColor: ["responsive", "hover", "focus", "active"],
 		boxShadow: ["responsive", "hover", "focus", "active"],
+		textDecoration: ["responsive", "hover", "focus", "active", "visited"],
 	},
 	plugins: [],
 }
