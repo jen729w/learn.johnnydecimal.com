@@ -7,32 +7,33 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navigation from "../components/navigation"
+import JD from "../components/jdInline"
 
-const shortcodes = { Link, Navigation } // Provide common components here
+const shortcodes = { JD, Link, Navigation } // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
-  return (
-    <Layout>
-      <MDXProvider components={shortcodes}>
-        <SEO title={mdx.frontmatter.title} />
-        {/* <div className="spec-post-container"> */}
-        <div className="spec-post">
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </div>
-        {/* </div> */}
-      </MDXProvider>
-    </Layout>
-  )
+	return (
+		<Layout>
+			<MDXProvider components={shortcodes}>
+				<SEO title={mdx.frontmatter.title} />
+				{/* <div className="spec-post-container"> */}
+				<div className="spec-post">
+					<MDXRenderer>{mdx.body}</MDXRenderer>
+				</div>
+				{/* </div> */}
+			</MDXProvider>
+		</Layout>
+	)
 }
 
 export const pageQuery = graphql`
-  query specMdxQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-      }
-    }
-  }
+	query specMdxQuery($id: String) {
+		mdx(id: { eq: $id }) {
+			id
+			body
+			frontmatter {
+				title
+			}
+		}
+	}
 `

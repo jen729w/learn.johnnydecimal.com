@@ -8,11 +8,19 @@ const Navigation = ({ backURL, backTitle, nextURL, nextTitle }) => (
 				← {backTitle}
 			</Link>
 		</div>
-		<div className="text-right">
-			<Link to={nextURL} className="text-md">
-				{nextTitle} →
-			</Link>
-		</div>
+		{nextURL ? (
+			<div className="text-right">
+				<Link to={nextURL} className="text-md">
+					{nextTitle} →
+				</Link>
+			</div>
+		) : (
+			<div className="text-right">
+				<Link to="/" className="text-md">
+					↩ Home
+				</Link>
+			</div>
+		)}
 	</nav>
 )
 
