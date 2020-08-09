@@ -58,7 +58,6 @@ body {
 }
 
 /* === Footnote === === === === === === === === === === === === === === ===  */
-
 .footnote-wrapper {
 	@apply py-2 mb-4 ml-4 mr-6 text-sm italic bg-gray-200 border border-l-8 border-gray-700 rounded-md shadow-sm;
 }
@@ -83,7 +82,7 @@ hr {
 
 /* === Links === === === === === === === === === === === === === === === === */
 a {
-	@apply text-orange-800 underline;
+	@apply text-orange-800;
 }
 
 a:visited {
@@ -95,16 +94,25 @@ a:hover {
 }
 
 a:active {
-	@apply bg-orange-500;
+	@apply bg-offwhite;
 }
 
 a:focus {
-	@apply bg-orange-500;
+	@apply text-white bg-orange-500;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
 .jd-inline {
 	@apply px-1 whitespace-pre bg-orange-200 border border-orange-400 rounded-sm font-jdmono;
+}
+
+.jd-block {
+	@apply inline-block px-4 py-2 text-sm whitespace-pre bg-orange-200 border-2 border-orange-400 rounded-md shadow-md font-jdmono;
+}
+@screen sm {
+	.jd-block {
+		@apply text-base;
+	}
 }
 
 /* === Blinking cursor === === === === === === === === === === === === ===   */
