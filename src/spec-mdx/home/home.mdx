@@ -4,6 +4,8 @@ date: "2019-05-04"
 title: "Home"
 ---
 
+import Finder_sampleCompany_category12Expanded from "./Finder__sample-company__category12-expanded-min.png"
+
 <h1 className="hidden sm:block">A system to organise projects</h1>
 <h1 className="sm:hidden">
 	A system to
@@ -17,7 +19,7 @@ Now those same people store all of their files in arbitrarily named folders on t
 
 ## Nobody can find anything any more
 
-Thousands of emails. Hundreds of files. File structures created on a whim and six layers deep. Duplication of content, lost content. **We thought search would save us from this nightmare, but we were wrong.**
+Thousands of emails. Hundreds of files. File structures created on a whim and six layers deep. Duplicated content, lost content. **We thought search would save us from this nightmare, but we were wrong.**
 
 The frustration I see in organisations is palpable. The time and energy wasted is unimaginable.
 
@@ -61,7 +63,7 @@ Remember they’re grouped in tens, so our first ten categories will be numbers 
 
 Let’s say <span className="jd-inline">10-19</span> is our <span className="jd-inline">Finance</span> area. Category <span className="jd-inline">11</span> might be <span className="jd-inline">Tax returns</span>, <span className="jd-inline">12 Payroll</span>, and so on.
 
-We also know that <span className="jd-inline">42</span> will not be a finance-related category. This is the power of the system: you know where you absolutely should _not_ bother looking to find your data.
+From this we know that <span className="jd-inline">42</span> will not be a finance-related category. This is the power of the system: you know where you absolutely should _not_ bother looking to find your data.
 
 ---
 
@@ -69,9 +71,15 @@ We also know that <span className="jd-inline">42</span> will not be a finance-re
 
 A Johnny.Decimal number looks like this:
 
-<span className="mr-4 text-2xl sm:text-4xl jd-inline border-2 px-2">42.18</span>
-<span className="mr-4 text-2xl sm:text-4xl jd-inline border-2 px-2">12.03</span>
-<span className="text-2xl sm:text-4xl jd-inline border-2 px-2">63.17</span>
+<div className="mb-4">
+	<span className="mr-4 text-2xl sm:text-4xl jd-inline border-2 px-2">
+		42.18
+	</span>
+	<span className="mr-4 text-2xl sm:text-4xl jd-inline border-2 px-2">
+		12.03
+	</span>
+	<span className="text-2xl sm:text-4xl jd-inline border-2 px-2">63.17</span>
+</div>
 
 They’re short, memorable, and can be spoken out loud. **They’re always two digits, a decimal point, and two more digits.**
 
@@ -101,11 +109,17 @@ The 3rd thing you’ve saved in your <span className="jd-inline">12 Payroll</spa
 
 Many, many reasons.
 
-## Organise your files. Properly
+## Organise your files
 
 The most obvious use of Johnny.Decimal is in organising your folder structure.
 
-![A screenshot of a macOS Finder window, showing a nested folder structure.](./Finder_category-12.png)
+<img
+	src={Finder_sampleCompany_category12Expanded}
+	alt="A screenshot of a macOS Finder window, showing an organised, nested folder structure."
+	className="screenshot mb-4"
+	width="305"
+	height="362"
+/>
 
 This is a folder structure for a small company. (The reasoning behind the folder naming structure will be explained later.)
 
@@ -113,7 +127,7 @@ Notice how we have four areas, each with a couple of categories. None of the are
 
 Even if you weren’t familiar with this folder structure, you’d be able to find your way to the sales proposals directory.
 
-## Nothing is more than two clicks away, ever
+## Nothing is more than two clicks away
 
 An important restriction of the system is that **you’re not allowed to create any folders inside a Johnny.Decimal folder.**
 
@@ -121,12 +135,18 @@ This means that you’ll never get lost in layers upon layers of folders. It als
 
 ## Tell people where things are
 
-“Hey Kristy, where can I find the payroll schedule?”
-
-<br />
+“Hey Kristy, where can I find the payroll schedule?”<br />
 “Twelve dot oh-three.”
 
 Thanks, Kristy.
+
+## Fix your email
+
+Put the Johnny.Decimal number in your email subject and you’ve instantly categorised everything. Your colleagues will think you have mystical powers because <Link to="/concepts/managing-email/">you’ll actually be able to find email again</Link>.
+
+## Display it on printed copies
+
+Rather than including the complete file path on printed documentation, just add the Johnny.Decimal number.
 
 ## Open files and folders instantly
 
@@ -148,13 +168,13 @@ Tab completion becomes a joy when your folders start with structured, predictabl
 
 <!-- Wrap this in some sort of a11y indicator? -->
 
-<div className="ml-4 mr-6 bg-gray-300 rounded-t-md sm:max-w-sm">
+<div className="mr-6 bg-gray-300 rounded-t-md sm:max-w-sm">
 	<span className="inline-block w-4 h-4 mt-2 ml-2 text-xs bg-red-700 rounded-full"></span>
 	<span className="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-orange-500 rounded-full"></span>
 	<span className="inline-block w-4 h-4 mt-2 ml-1 text-xs bg-green-500 rounded-full"></span>
 </div>
 
-<div className="p-2 mb-8 ml-4 mr-6 text-orange-400 bg-gray-900 shadow-md rounded-b-md font-jdmono sm:max-w-sm">
+<div className="p-2 mb-8 mr-6 text-orange-400 bg-gray-900 shadow-md rounded-b-md font-jdmono sm:max-w-sm">
 	<span className="pl-2 font-bold whitespace-pre-wrap">~ $</span> cjd 12.03
 	<br />
 	<span className="pl-2 font-bold whitespace-pre-wrap">
@@ -163,17 +183,9 @@ Tab completion becomes a joy when your folders start with structured, predictabl
 	<span className="blinking-cursor">|</span>
 </div>
 
-## Fix your email
-
-Put the Johnny.Decimal number in your email subject and you’ve instantly categorised everything. Your colleagues will think you have mystical powers because <Link to="/concepts/managing-email/">you’ll actually be able to find email again</Link>.
-
-## Display it on printed copies
-
-Rather than including the complete file path on printed documentation, just add the Johnny.Decimal number.
-
 ## Tag things in real life
 
-Managing physical objects? Just write the Johnny.Decimal number on a sticky note.
+Managing physical objects? Write the Johnny.Decimal number on a sticky note.
 
 ---
 
