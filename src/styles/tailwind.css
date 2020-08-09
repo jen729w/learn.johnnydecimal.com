@@ -72,7 +72,7 @@ ol.footnote {
 }
 
 /* === Dividers === === === === === === === === === === === === === === ===  */
-hr {
+.spec-post hr {
 	border: 0;
 	height: 1px;
 	background: #555;
@@ -84,9 +84,15 @@ hr {
 a {
 	@apply text-orange-800;
 }
+nav a {
+	@apply text-offblack;
+}
 
 a:visited {
 	@apply text-yellow-700 no-underline;
+}
+nav a:visited {
+	@apply text-gray-800;
 }
 
 a:hover {
