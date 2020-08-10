@@ -102,7 +102,7 @@ ol.footnote {
 	@apply bg-red-600 border-b-2 border-red-600 text-offwhite;
 }
 
-/* ==  nav == */
+/* ==  Table of contents == */
 nav.tableofcontents a:link {
 }
 nav.tableofcontents a:visited {
