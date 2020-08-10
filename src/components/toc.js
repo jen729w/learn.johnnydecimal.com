@@ -13,7 +13,7 @@ const JDNavLink = ({ children, to }) => (
 
 const TOC = () => (
 	<nav
-		className="border border-gray-400 rounded-md shadow-md sm:shadow-none sm:border-0"
+		className="border border-gray-400 rounded-md shadow-md tableofcontents sm:shadow-none sm:border-0"
 		tabIndex="100"
 	>
 		{/* Mobile-only: CONTENTS label at top of box */}

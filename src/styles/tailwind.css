@@ -103,17 +103,17 @@ ol.footnote {
 }
 
 /* ==  nav == */
-nav a:link {
+nav.tableofcontents a:link {
 }
-nav a:visited {
+nav.tableofcontents a:visited {
 }
-nav a:hover {
+nav.tableofcontents a:hover {
 	@apply font-semibold;
 }
-nav a:focus {
+nav.tableofcontents a:focus {
 	@apply font-semibold outline-none bg-offblack text-offwhite;
 }
-nav a:active {
+nav.tableofcontents a:active {
 	@apply font-semibold text-offblack bg-offwhite;
 }
 
