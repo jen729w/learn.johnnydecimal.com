@@ -18,33 +18,33 @@ const OneReminder = () => (
 
 const TwoGroupThingsTogether = () => (
   <pre className="jd-block">
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 12 numbers 
 </span>
 {`    `}
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 13 numbers
 </span>
 <br />
 {`    12.34  12.35      13.03  13.04`}
 <br />
 <br />
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 21 numbers
 </span>
 {`    `}
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 22 numbers
 </span>
 <br />
 {`    21.01  21.02      22.38  22.39`}
 <br />
 <br />
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 23 numbers
 </span>
 {`    `}
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 31 numbers
 </span>
 <br />
@@ -53,7 +53,7 @@ The 31 numbers
 {`    23.23  23.24`}
 <br />
 <br />
-<span className="border-b border-orange-700 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 32 numbers
 </span>
 <br />
@@ -63,41 +63,41 @@ The 32 numbers
 
 const ThreeDoItAgain = () => (
   <pre className="jd-block">
-<span className="border-b-2 border-orange-600">The 10-19 numbers</span>
+<span className="border-b border-orange-400">The 10-19 numbers</span>
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 12 numbers
 </span>
 <br />
 {`       12.34  12.35`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 13 numbers
 </span>
 <br />
 {`       13.03  13.04`}
 <br />
 <br />
-<span className="border-b-2 border-orange-600">The 20-29 numbers</span>
+<span className="border-b border-orange-400">The 20-29 numbers</span>
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 21 numbers
 </span>
 <br />
 {`       21.01  21.02`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 22 numbers
 </span>
 <br />
 {`       22.38  22.39`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 23 numbers
 </span>
 <br />
@@ -106,17 +106,17 @@ The 23 numbers
 {`       23.23  23.24`}
 <br />
 <br />
-<span className="border-b-2 border-orange-600">The 30-39 numbers</span>
+<span className="border-b border-orange-400">The 30-39 numbers</span>
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 31 numbers
 </span>
 <br />
 {`       31.70  31.71`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
 The 32 numbers
 </span>
 <br />
@@ -125,17 +125,17 @@ The 32 numbers
 )
 
 const FourCompanyNoNumbers = () => (
-  <pre className="jd-block">
-<div className="mb-2 font-bold border-b-2 border-orange-600 border-dashed">{`Folder                         This is a...`}</div>
-<span className="border-b-2 border-orange-600">Finance</span>
+  <pre className="px-2 text-xs jd-block sm:text-base sm:px-4">
+<div className="mb-2 font-bold border-b-2 border-orange-400">{`Folder                         This is a...`}</div>
+<span className="border-b border-orange-400">Finance</span>
 {`                        AREA`}
 <br />
 {`  `}
-<span className="border-b border-orange-600 border-dotted">Tax returns</span>
+<span className="border-b border-orange-400 border-dotted">Tax returns</span>
 {`                  CATEGORY`}
 <br />
 {`  `}
-<span className="border-b border-orange-600 border-dotted">Payroll</span>
+<span className="border-b border-orange-400 border-dotted">Payroll</span>
 {`                      CATEGORY`}
 <br />
 {`    September ’17 payroll      UNIQUE THING`}
@@ -143,19 +143,19 @@ const FourCompanyNoNumbers = () => (
 {`    October ’17 payroll        UNIQUE THING`}
 <br />
 {`  `}
-<span className="border-b border-orange-600 border-dotted">Bookkeeping</span>
+<span className="border-b border-orange-400 border-dotted">Bookkeeping</span>
 {`                  CATEGORY`}
 <br />
 <br />
-<span className="border-b-2 border-orange-600">Administration</span>
+<span className="border-b border-orange-400">Administration</span>
 {`                 AREA`}
 <br />
 {`  `}
-<span className="border-b border-orange-600 border-dotted">Company registration</span>
+<span className="border-b border-orange-400 border-dotted">Company registration</span>
 {`         CATEGORY`}
 <br />
 {`  `}
-<span className="border-b border-orange-600 border-dotted">Contracts</span>
+<span className="border-b border-orange-400 border-dotted">Contracts</span>
 {`                    CATEGORY`}
 <br />
 {`    Cleaning contract          UNIQUE THING`}
@@ -163,11 +163,11 @@ const FourCompanyNoNumbers = () => (
 {`    Office lease               UNIQUE THING`}
 <br />
 {`  `}
-<span className="border-b border-orange-600 border-dotted">Staffing</span>
+<span className="border-b border-orange-400 border-dotted">Staffing</span>
 {`                     CATEGORY`}
 <br />
 <br />
-<span className="border-b-2 border-orange-600">Marketing</span>
+<span className="border-b border-orange-400">Marketing</span>
 {`                      AREA`}
 <br />
 {`  ...etc.                      ...etc.`}
@@ -175,19 +175,19 @@ const FourCompanyNoNumbers = () => (
 )
 
 const FiveCompanyWithNumbers = () => (
-  <pre className="jd-block">
-<div className="mb-2 font-bold border-b-2 border-orange-600 border-dashed">{`Folder                         This is a...`}</div>
-<span className="border-b-2 border-orange-600">10-19 Finance</span>
+  <pre className="px-2 text-xs jd-block sm:text-base sm:px-4">
+<div className="mb-2 font-bold border-b-2 border-orange-400">{`Folder                         This is a...`}</div>
+<span className="border-b border-orange-400">10-19 Finance</span>
 {`                  AREA`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
   11 Tax returns
 </span>
 {`              CATEGORY`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">12 Payroll</span>
+<span className="border-b border-orange-400 border-dotted">12 Payroll</span>
 {`                  CATEGORY`}
 <br />
 {`      12.01 Sept ’17 payroll   UNIQUE THING`}
@@ -195,23 +195,23 @@ const FiveCompanyWithNumbers = () => (
 {`      12.02 Oct ’17 payroll    UNIQUE THING`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
   13 Bookkeeping
 </span>
 {`              CATEGORY`}
 <br />
 <br />
-<span className="border-b-2 border-orange-600">20-29 Administration</span>
+<span className="border-b border-orange-400">20-29 Administration</span>
 {`           AREA`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
   21 Company registration
 </span>
 {`     CATEGORY`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
   22 Contracts
 </span>
 {`                CATEGORY`}
@@ -221,13 +221,13 @@ const FiveCompanyWithNumbers = () => (
 {`      22.02 Office lease       UNIQUE THING`}
 <br />
 {`   `}
-<span className="border-b border-orange-600 border-dotted">
+<span className="border-b border-orange-400 border-dotted">
   23 Staffing
 </span>
 {`                 CATEGORY`}
 <br />
 <br />
-<span className="border-b-2 border-orange-600">30-39 Marketing</span>
+<span className="border-b border-orange-400">30-39 Marketing</span>
 {`                AREA`}
 <br />
 {`  ...etc.                      ...etc.`}
