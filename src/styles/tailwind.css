@@ -111,10 +111,10 @@ nav.tableofcontents a:hover {
 	@apply font-semibold;
 }
 nav.tableofcontents a:focus {
-	@apply font-semibold outline-none bg-offblack text-offwhite;
+	@apply font-semibold rounded outline-none bg-offblack text-offwhite;
 }
 nav.tableofcontents a:active {
-	@apply font-semibold text-offblack bg-offwhite;
+	@apply font-semibold border-r-2 border-red-600 rounded-none text-offblack bg-offwhite;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
