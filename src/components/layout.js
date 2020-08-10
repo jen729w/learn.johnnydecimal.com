@@ -27,15 +27,16 @@ const Layout = ({ children }) => {
 			{/* TODO: Pass better metadata to <Header>, e.g. page description. */}
 			<Header siteTitle={data.site.siteMetadata.title} />
 			{/**
-			 * The main flexbox for nav + content:
-			 * - Mobile-first: flex-col-reverse, content at top, TOC below
-			 * - sm+:          flex-row, TOC on left, content to the right
+			 * The main flexbox for nav + content. Moved the main content above to
+			 * preserve proper movement of focus on tab.
+			 * - Mobile-first: flex-col, content at top, TOC below
+			 * - sm+:          flex-row-reverse, TOC on left, content to the right
 			 */}
-			<div className="flex flex-col-reverse sm:flex-row">
+			<div className="flex flex-col sm:flex-row-reverse">
+				<main className="flex-grow mb-8 sm:w-3/4">{children}</main>
 				<div className="sm:w-1/4">
 					<TOC />
 				</div>
-				<main className="flex-grow mb-8 sm:w-3/4">{children}</main>
 			</div>
 			<footer className="bg-green-100">
 				© {new Date().getFullYear()}, Built with
