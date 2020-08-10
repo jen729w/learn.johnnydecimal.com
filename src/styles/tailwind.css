@@ -83,23 +83,23 @@ ol.footnote {
 /* === Links === === === === === === === === === === === === === === === === */
 /* ==  .spec-post == */
 .spec-post a:link {
-	@apply text-orange-800;
+	@apply border-b-2 border-red-600;
 }
 
 .spec-post a:visited {
-	@apply text-yellow-700;
+	@apply border-b-2 border-gray-400;
 }
 
 .spec-post a:hover {
-	@apply text-orange-600 bg-orange-200 border-b-2 border-orange-600 rounded-sm;
+	@apply text-red-600 border-b-4 border-red-600;
 }
 
 .spec-post a:focus {
-	@apply text-white bg-orange-500;
+	@apply text-red-600 border-b-4 border-red-600 outline-none;
 }
 
 .spec-post a:active {
-	@apply bg-offwhite;
+	@apply bg-red-600 border-b-2 border-red-600 text-offwhite;
 }
 
 /* ==  nav == */
