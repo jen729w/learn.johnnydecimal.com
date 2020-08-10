@@ -81,30 +81,40 @@ ol.footnote {
 }
 
 /* === Links === === === === === === === === === === === === === === === === */
-a {
+/* ==  .spec-post == */
+.spec-post a:link {
 	@apply text-orange-800;
 }
-nav a {
-	@apply text-offblack;
+
+.spec-post a:visited {
+	@apply text-yellow-700;
 }
 
-a:visited {
-	@apply text-yellow-700 no-underline;
-}
-nav a:visited {
-	@apply text-gray-800;
+.spec-post a:hover {
+	@apply text-orange-600 bg-orange-200 border-b-2 border-orange-600 rounded-sm;
 }
 
-a:hover {
+.spec-post a:focus {
 	@apply text-white bg-orange-500;
 }
 
-a:active {
+.spec-post a:active {
 	@apply bg-offwhite;
 }
 
-a:focus {
-	@apply text-white bg-orange-500;
+/* ==  nav == */
+nav a:link {
+}
+nav a:visited {
+}
+nav a:hover {
+	@apply font-semibold;
+}
+nav a:focus {
+	@apply font-semibold outline-none bg-offblack text-offwhite;
+}
+nav a:active {
+	@apply font-semibold text-offblack bg-offwhite;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
@@ -113,7 +123,7 @@ a:focus {
 }
 
 .jd-block {
-	@apply inline-block px-4 py-2 text-sm whitespace-pre bg-orange-200 border-2 border-orange-400 rounded-md shadow-md font-jdmono;
+	@apply inline-block px-4 py-2 text-sm whitespace-pre bg-orange-200 border-2 border-orange-400 rounded-sm shadow-md font-jdmono;
 }
 @screen sm {
 	.jd-block {

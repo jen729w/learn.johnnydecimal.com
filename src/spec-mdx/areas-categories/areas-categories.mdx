@@ -5,14 +5,14 @@ title: "Areas & categories"
 ---
 
 import {
-  OneReminder,
-  TwoGroupThingsTogether,
-  ThreeDoItAgain,
-  FourCompanyNoNumbers,
-  FiveCompanyWithNumbers,
-  SixTodayWeHave,
-  SevenAndThenExports,
-  EightThisIsBetter,
+	OneReminder,
+	TwoGroupThingsTogether,
+	ThreeDoItAgain,
+	FourCompanyNoNumbers,
+	FiveCompanyWithNumbers,
+	SixTodayWeHave,
+	SevenAndThenExports,
+	EightThisIsBetter,
 } from "./jdBlocks_pre.js"
 
 import Finder_randomNumbers_category22Expanded from "./Finder__random-numbers__category22-expanded.png"
@@ -25,13 +25,13 @@ Let’s look again at the format of our numbers. It’s crucial that you underst
 
 Just as a reminder, every Johnny.Decimal number looks like this.
 
-<div className="flex mb-4 ml-4 mr-6">
-  <OneReminder />
-  <div className="hidden sm:block ml-4 max-w-xs text-sm italic">
-    Here are a bunch of random numbers
-    <br />
-    from a theoretical system.
-  </div>
+<div className="flex mb-4 mr-6">
+	<OneReminder />
+	<div className="hidden sm:block ml-8 max-w-xs text-sm italic">
+		Here are a bunch of random numbers
+		<br />
+		from a theoretical system.
+	</div>
 </div>
 
 In words, we have any two digits, followed by a decimal point, followed by two more digits.
@@ -40,35 +40,35 @@ In words, we have any two digits, followed by a decimal point, followed by two m
 
 Johnny.Decimal is all about **grouping similar things together**, so let’s start to do that.
 
-<div className="flex mb-4 ml-4 mr-6">
-  <TwoGroupThingsTogether />
+<div className="mb-4 mr-6">
+	<TwoGroupThingsTogether />
 </div>
 
 ## Do it again (areas)
 
 That’s starting to look more like something organised and a bit less like a bunch of random numbers. Let’s take it one step further.
 
-<div className="flex mb-4 ml-4 mr-6">
-  <ThreeDoItAgain />
+<div className="mb-4 mr-6">
+	<ThreeDoItAgain />
 </div>
 
 ### Interesting...
 
 <div className="flex flex-col md:flex-row mr-6 mb-6">
-  <div className="">
-    You can almost imagine this looking like a set of folders. If you didn’t
-    care about anything except the 22 numbers, you could just collapse the
-    others like this.
-  </div>
-  <div className="ml-4 flex-shrink-0">
-    <img
-      src={Finder_randomNumbers_category22Expanded}
-      alt="macOS Finder window showing a three-level deep folder structure using the numbers from the examples above."
-      width="182"
-      height="153"
-      className="screenshot"
-    />
-  </div>
+	<div className="">
+		You can almost imagine this looking like a set of folders. If you didn’t
+		care about anything except the 22 numbers, you could just collapse the
+		others like this.
+	</div>
+	<div className="ml-4 flex-shrink-0">
+		<img
+			src={Finder_randomNumbers_category22Expanded}
+			alt="macOS Finder window showing a three-level deep folder structure using the numbers from the examples above."
+			width="182"
+			height="153"
+			className="screenshot"
+		/>
+	</div>
 </div>
 
 ---
@@ -85,8 +85,8 @@ We start like this:
 
 Let’s use a small company as an example, and write it out without the numbers.
 
-<div className="mb-4 ml-4 mr-6">
-  <FourCompanyNoNumbers />
+<div className="mb-4 mr-6">
+	<FourCompanyNoNumbers />
 </div>
 
 All we really do with Johnny.Decimal—and if at this point you’ve realised this and are thinking, “hang on, all he’s done is put numbers<sup>1</sup> in front of things,” well then you’re not far wrong—is put numbers in front of things.
@@ -94,33 +94,33 @@ All we really do with Johnny.Decimal—and if at this point you’ve realised th
 **But this transforms the way you think about and use everything.** Trust me.
 
 <div className="footnote-wrapper">
-  <ol class="footnote">
-    <li>
-      I’ve seen countless filesystems with <strong>numbers</strong> in front of
-      folder names, but if they’re not <strong>structured</strong> it doesn’t
-      work.
-    </li>
-  </ol>
+	<ol class="footnote">
+		<li>
+			I’ve seen countless filesystems with <strong>numbers</strong> in front of
+			folder names, but if they’re not <strong>structured</strong> it doesn’t
+			work.
+		</li>
+	</ol>
 </div>
 
 Let’s put numbers in front of the system we just built above.
 
-<div className="mb-4 ml-4 mr-6">
-  <FiveCompanyWithNumbers />
+<div className="mb-4 mr-6">
+	<FiveCompanyWithNumbers />
 </div>
 
 ## So long, cursed alphabet
 
 What does this achieve? For one, it’s removed our dependence on the alphabet. The alphabet is a fine thing but it’s a terrible way to sort your files because things move around. Today we have:
 
-<div className="mb-4 ml-4 mr-6">
-  <SixTodayWeHave />
+<div className="mb-4 mr-6">
+	<SixTodayWeHave />
 </div>
 
 and tomorrow the exports department come along and do this:
 
-<div className="mb-4 ml-4 mr-6">
-  <SevenAndThenExports />
+<div className="mb-4 mr-6">
+	<SevenAndThenExports />
 </div>
 
 …and <span className="jd-inline">Finance</span> isn’t the second thing in the list any more. This sounds like a small thing, but <strong>it makes it impossible for your brain to learn where something will be.</strong>
@@ -129,8 +129,8 @@ and tomorrow the exports department come along and do this:
 
 This is better:
 
-<div className="mb-4 ml-4 mr-6">
-  <EightThisIsBetter />
+<div className="mb-4 mr-6">
+	<EightThisIsBetter />
 </div>
 
 Because our folders all start with a number, they’ll sort in very predictable way. This concept applies throughout the system.
@@ -150,8 +150,8 @@ All of this happens <em>before the decimal</em>. Those two digits of the number 
 What we’ve done here is organise a bunch of ‘stuff’ in to something with structure; we’ve created, essentially, a very simple database.
 
 <Navigation
-  backURL={"/concepts/"}
-  backTitle={"Concepts"}
-  nextURL={"/concepts/ids/"}
-  nextTitle={"IDs"}
+	backURL={"/concepts/"}
+	backTitle={"Concepts"}
+	nextURL={"/concepts/ids/"}
+	nextTitle={"IDs"}
 />

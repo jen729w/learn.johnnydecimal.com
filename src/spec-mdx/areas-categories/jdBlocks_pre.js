@@ -6,7 +6,7 @@ import React from "react"
  */
 
 const OneReminder = () => (
-  <pre className="inline-block px-4 py-2 whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md font-jdmono">{`23.24    31.70
+  <pre className="jd-block">{`23.24    31.70
 22.39    13.04
 31.71    21.02
 22.38    13.03
@@ -17,7 +17,7 @@ const OneReminder = () => (
 )
 
 const TwoGroupThingsTogether = () => (
-  <pre className="inline-block px-2 py-2 text-sm whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:px-4 sm:text-base font-jdmono">
+  <pre className="jd-block">
 <span className="border-b border-orange-700 border-dotted">
 The 12 numbers 
 </span>
@@ -62,7 +62,7 @@ The 32 numbers
 )
 
 const ThreeDoItAgain = () => (
-  <pre className="inline-block px-4 py-2 text-sm whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">
+  <pre className="jd-block">
 <span className="border-b-2 border-orange-600">The 10-19 numbers</span>
 <br />
 {`   `}
@@ -125,7 +125,7 @@ The 32 numbers
 )
 
 const FourCompanyNoNumbers = () => (
-  <pre className="inline-block px-2 py-2 text-xs whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:px-4 sm:text-base font-jdmono">
+  <pre className="jd-block">
 <div className="mb-2 font-bold border-b-2 border-orange-600 border-dashed">{`Folder                         This is a...`}</div>
 <span className="border-b-2 border-orange-600">Finance</span>
 {`                        AREA`}
@@ -175,7 +175,7 @@ const FourCompanyNoNumbers = () => (
 )
 
 const FiveCompanyWithNumbers = () => (
-  <pre className="inline-block px-2 py-2 text-xs whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:px-4 sm:text-base font-jdmono">
+  <pre className="jd-block">
 <div className="mb-2 font-bold border-b-2 border-orange-600 border-dashed">{`Folder                         This is a...`}</div>
 <span className="border-b-2 border-orange-600">10-19 Finance</span>
 {`                  AREA`}
@@ -235,20 +235,20 @@ const FiveCompanyWithNumbers = () => (
 )
 
 const SixTodayWeHave = () => (
-  <pre className="inline-block px-4 py-2 text-sm whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">{`Administration
+  <pre className="jd-block">{`Administration
 Finance
 Marketing`}</pre>
 )
 
 const SevenAndThenExports = () => (
-  <pre className="inline-block px-4 py-2 text-sm whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">{`Administration
+  <pre className="jd-block">{`Administration
 Exports        `}<span className="font-bold">← new folder</span><br />
 {`Finance
 Marketing`}</pre>
 )
 
 const EightThisIsBetter = () => (
-<pre className="inline-block px-4 py-2 text-sm whitespace-pre bg-orange-100 border-2 border-orange-600 rounded-md shadow-md sm:text-base font-jdmono">{`10-19 Administration
+<pre className="jd-block">{`10-19 Administration
 20-29 Finance
 30-39 Marketing
 40-49 Exports`}</pre>
