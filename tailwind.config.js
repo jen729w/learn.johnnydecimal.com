@@ -11,6 +11,7 @@ module.exports = {
 			colors: {
 				offwhite: "#fbfbfb",
 				offblack: "#0a0a0a",
+				offgray: "#505050", // Yeah I know this makes no sense
 			},
 		},
 	},

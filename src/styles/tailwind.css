@@ -77,7 +77,12 @@ ol.footnote {
 	height: 1px;
 	background: #555;
 	background-image: linear-gradient(to right, #ddd, #555, #ddd);
-	@apply m-8;
+	@apply m-4;
+}
+@screen sm {
+	.spec-post hr {
+		@apply m-8;
+	}
 }
 
 /* === Links === === === === === === === === === === === === === === === === */

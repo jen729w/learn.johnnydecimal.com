@@ -34,15 +34,17 @@ const Layout = ({ children }) => {
 			 */}
 			<div className="flex flex-col sm:flex-row-reverse">
 				<main className="flex-grow mb-8 sm:w-3/4">{children}</main>
-				<div className="sm:w-1/4">
+				<div className="mb-8 sm:w-1/4">
 					<TOC />
 				</div>
 			</div>
-			<footer className="bg-green-100">
-				© {new Date().getFullYear()}, Built with
+			{/*
+			<footer className="pt-2 mt-6 text-sm text-gray-400 border-t-2 border-gray-400">
+				&copy; {new Date().getFullYear()}, Built with
 				{` `}
 				<a href="https://www.gatsbyjs.org">Gatsby</a>
 			</footer>
+			*/}
 		</div>
 	)
 }
