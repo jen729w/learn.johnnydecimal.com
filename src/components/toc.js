@@ -5,7 +5,8 @@ const JDNavLink = ({ children, to }) => (
 	<Link
 		to={to}
 		activeClassName="font-semibold sm:border-r-2 sm:border-offblack rounded-none"
-		className="block px-2 py-1 ml-2 sm:border-r-2 sm:border-gray-400"
+		className="block px-2 py-1 ml-2"
+		style={{ marginRight: "-2px" }}
 	>
 		{children}
 	</Link>
@@ -13,7 +14,7 @@ const JDNavLink = ({ children, to }) => (
 
 const TOC = () => (
 	<nav
-		className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-none sm:rounded-none sm:text-base"
+		className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base"
 		tabIndex="100"
 	>
 		{/* Mobile-only: CONTENTS label at top of box */}
