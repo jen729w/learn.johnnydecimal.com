@@ -3,9 +3,9 @@ module.exports = {
 	theme: {
 		// Font customisation: https://tailwindcss.com/docs/font-family/#app
 		fontFamily: {
-			jdbody: ["Fira\\ Sans"],
-			jdmono: ["Fira\\ Code"],
-			jdheader: ["Playfair\\ Display"],
+			jdbody: ["Fira Sans"],
+			jdmono: ["Fira Code"],
+			jdheader: ["Playfair Display"],
 		},
 		extend: {
 			colors: {

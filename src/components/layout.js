@@ -10,6 +10,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import TOC from "./toc"
 
+require("typeface-playfair-display")
+
 const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
