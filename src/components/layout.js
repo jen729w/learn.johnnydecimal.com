@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
 			<div className="flex flex-col sm:flex-row-reverse">
 				<main className="flex-grow mb-8 sm:w-3/4">{children}</main>
 				{/* Needs pixel-perfect margin to line up the header lines */}
-				<div className="mb-8 sm:w-1/4" style={{ marginTop: "0.3rem" }}>
+				<div className="mb-8 sm:w-1/4" style={{ marginTop: "0.5rem" }}>
 					<TOC />
 				</div>
 			</div>
