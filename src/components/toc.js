@@ -14,7 +14,7 @@ const JDNavLink = ({ children, to }) => (
 
 const TOC = () => (
 	<nav
-		className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base"
+		className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none"
 		tabIndex="100"
 	>
 		{/* Mobile-only: CONTENTS label at top of box */}
@@ -51,6 +51,8 @@ const TOC = () => (
 			</JDNavLink>
 			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
 			<JDNavLink to="/contact/">Contact</JDNavLink>
+			<JDNavLink to="/privacy/">Privacy</JDNavLink>
+			<JDNavLink to="/licence/">Licence</JDNavLink>
 		</div>
 	</nav>
 )
