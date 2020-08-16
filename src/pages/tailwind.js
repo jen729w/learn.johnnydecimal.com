@@ -1,11 +1,9 @@
 import React from "react"
 
-import "../styles/tailwind.css"
-
-const Tailwind = () => (
-  <div className="bg-red-400">
-    This is just a quick test to see if Tailwind has installed.
-  </div>
+const LearnHeader = () => (
+  <>
+    <div className="bg-blue-200 sm:bg-red-500 md:bg-red-200">Hello</div>
+  </>
 )
 
-export default Tailwind
+export default LearnHeader

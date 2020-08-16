@@ -48,6 +48,81 @@ That's it installed. Let's configure it quickly to test.
 - Gatsby warning, you forgot to `export default Tailwind`.
 - And she seems to work! Great news.
 - Git commit, get in a solid habit. It can be easy to forget.
+  - Agh, you were on `main`! Branch.
+  - So you have to merge `main` to `develop` first.
+  - And doing this while Gatsby is serving up the site can confuse it. Restart it.
+
+### Spend half an hour getting Tailwind Intellisense working
+
+- Wasn't working. Hmm.
+- Check the developer's page on [Marketplace](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss&ssr=false#qna), link out to Github, check over there, looks like there's an error with v0.3.x on Mac.
+- Take a while to figure out that you can use the VSCode command palette to 'install specific version of extension'. Back to v0.2.0, seems okay.
+
+## Okay what are we actually going to _build_ now?
+
+Excellent question. Let's make a very very simple header that looks like this on mobile:
+
+```
+J•D  |  Play  |  Learn  |  App
+```
+
+And on larger screens:
+
+```
+Johnny•Decimal  |  Playground  |  Learn  |  App
+```
+
+This gives us a bit of practice doing things at different screen sizes even though it probably isn't necessary in this case.
+
+At this point we found the [screencasts](https://tailwindcss.com/course/the-utility-first-workflow/) on Tailwind's site and watched the first couple. Worthwhile.
+
+> A thought here. These notes could just go straight up on the site, right?
+
+Ooh the second video, 'Responsive Design', is interesting. Lots of _design_. I don't think there's any way round this -- you just gotta build things.
+
+### What next?
+
+Do some research on other site headers. Don't just start from scratch here, this has been done before. Get inspiration.
+
+...a bit later...
+
+Okay, did that. They're not very good! Don't spend any time on this, _you're getting in your own way_. This is a lesson unto itself.
+
+You still don't have a clear vision in your mind of what you're building. You've just started without really knowing what the end-state is.
+
+## PROGRESS 2020-06-22 17:48
+
+You've got your headers, they're fine for now. This is all you needed to do.
+
+Next: build a site which has the 'Learn' header (always active) and pulls in Markdown files. Then you gotta do some basic styling on each of the posts it renders. Publish this file there as a demo.
+
+---
+
+# 2020-07-04
+
+Moved the `tailwind.css` import to `gatsby-browser.js` because then you never have to remember to import it per-file (thx [Benjamin](https://lannonbr.com/blog/2020-04-05-tailwind-in-gatsby)).
+
+---
+
+# 2020-07-05 Getting back in to it
+
+## Messing about with the header
+
+Let's fit a very basic header in to the existing Gatsby `<Layout>` and `<SEO>` framework. I assume that's useful for all sorts of things, so it would be silly to 'throw it out'.
+
+Did some of that, played around with some Tailwind, but if we get carried away we'll spend all day trying to get a border just-so. Not a good use of time: move on for now.
+
+**Don't forget to commit and change branches.**
+
+## Getting some Markdown pages in here
+
+Next is to import the old content and have it displaying. Onwards with Markdown!
+
+Do [this](https://www.gatsbyjs.org/docs/adding-markdown-pages/).
+
+Yep, follow that and you get generated pages. No styling yet, how do we figure that out?
+
+---
 
 # Documentation
 

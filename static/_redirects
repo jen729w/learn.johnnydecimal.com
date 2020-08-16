@@ -1,0 +1,10 @@
+# Redirect default Netlify subdomain to primary domain
+http://johnnydecimal.netlify.com/* https://johnnydecimal.com/:splat 301!
+https://johnnydecimal.netlify.com/* https://johnnydecimal.com/:splat 301!
+
+# Johnny's redirects so nothing from the old published site breaks
+/concepts/command-line /concepts/working-at-the-terminal
+/concepts/develop-your-own /concepts/developing-your-own-system
+/concepts/numbers-after-the-decimal /concepts/ids
+/concepts/numbers-before-the-decimal /concepts/areas-categories
+/concepts/where-did-00-go /concepts/what-about-00-09

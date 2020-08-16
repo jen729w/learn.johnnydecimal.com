@@ -1,8 +1,6 @@
 /**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
+ * Layout: wraps the entire site.
  *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
 import React from "react"
@@ -10,42 +8,50 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import TOC from "./toc"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+	const data = useStaticQuery(graphql`
+		query SiteTitleQuery {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+	return (
+		// This div wraps the entire page
+		<div className="max-w-5xl px-4 mx-auto leading-relaxed text-offblack sm:px-8 font-jdbody">
+			{/* TODO: Pass better metadata to <Header>, e.g. page description. */}
+			<Header siteTitle={data.site.siteMetadata.title} />
+			{/**
+			 * The main flexbox for nav + content. Moved the main content above to
+			 * preserve proper movement of focus on tab.
+			 * - Mobile-first: flex-col, content at top, TOC below
+			 * - sm+:          flex-row-reverse, TOC on left, content to the right
+			 */}
+			<div className="flex flex-col sm:flex-row-reverse">
+				<main className="flex-grow mb-8 sm:w-3/4">{children}</main>
+				{/* Needs pixel-perfect margin to line up the header lines */}
+				<div className="mb-8 sm:w-1/4" style={{ marginTop: "0.3rem" }}>
+					<TOC />
+				</div>
+			</div>
+			{/*
+			<footer className="pt-2 mt-6 text-sm text-gray-400 border-t-2 border-gray-400">
+				&copy; {new Date().getFullYear()}, Built with
+				{` `}
+				<a href="https://www.gatsbyjs.org">Gatsby</a>
+			</footer>
+			*/}
+		</div>
+	)
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+	children: PropTypes.node.isRequired,
 }
 
 export default Layout

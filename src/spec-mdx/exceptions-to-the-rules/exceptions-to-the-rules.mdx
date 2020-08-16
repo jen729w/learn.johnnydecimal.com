@@ -1,0 +1,81 @@
+---
+slug: "/concepts/exceptions-to-the-rules/"
+date: "2019-05-04"
+title: "Exceptions to the rules"
+---
+
+import finder_14_timesheets_and_expenses from "./Finder__14-timesheets-and-expenses-min.png"
+
+# Exceptions to the rules
+
+**Where it makes sense to do so**, go ahead and break the rules. I won’t judge you.
+
+## Storing things with dates in them
+
+An example from my life: I sent weekly timesheets to a company I worked for. Category <JD>14 Timesheets &amp; expenses</JD> is where I kept them.
+
+I thought about creating a new number for each week’s timesheets, but soon ended up with a system like this:
+
+<div className="mb-4 mr-6">
+	<pre className="jd-block">
+		{`14.01 Timesheets for 1601
+14.02 Timesheets for 1602
+...
+14.19 Timesheets for 1619`}
+	</pre>
+</div>
+
+(I use ‘year-week’ as my date format for this sort of thing, so <span className="jd-inline not-italic">1601</span> was the 1st week of 2016. Use whatever works for you.)
+
+If I had created a new number each week, I’d need to <Link to="/concepts/tracking-your-numbers/">track it</Link>. That’s an overhead I didn’t need – **the system is meant to make my life easier.**
+
+More importantly, <JD>1619</JD> is a _better_ way to represent ‘the 19th week of 2016’ than <JD>14.19</JD>. In this case, my numbers were getting in the way.
+
+## Folders inside Johnny.Decimal folders
+
+I told you not to do this. I am not to be trusted.
+
+Here’s how my timesheets folder looks:
+
+<img
+	src={finder_14_timesheets_and_expenses}
+	alt="Finder window showing folders within the 14 Timesheets & Expenses folder"
+	width="293"
+	height="134"
+	className="screenshot mb-4"
+/>
+
+I did this because **it makes more sense this way.**
+
+My timesheets are still in one place. I haven’t broken the Johnny.Decimal system because everything is still very organised.
+
+Notice that things still sort according to time of creation. That's why we use <JD>1601</JD> and not <JD>0116</JD>
+
+### Emailing my weekly timesheet
+
+When I email my weekly timesheet to the boss, I use the following subject line:
+
+<div className="emailSubject mr-2 sm:mr-6 inline-block">
+	<strong>Subject:</strong> Timesheets and expenses [14.01.1619]
+</div>
+
+I’m extending the ‘<Link to="/concepts/managing-email/">use Johnny.Decimal numbers in your email subject</Link>’ concept by putting the full number, including the <JD>yyww</JD> bit, in the subject. Our number has grown, but **that’s okay because it’s still very structured.**
+
+This allows me—or the boss—to find any timesheet instantly. Search in Outlook for <JD>[14.01.1619]</JD> and the _only_ thing that appears is my timesheet for this specific week.
+
+This is incredibly useful when I have to remind him to approve it so that I can get paid. (He gets far too much email and, unfortunately, I’m the only one that sends it to him already categorised.)
+
+---
+
+# Archiving files
+
+I need to keep old copies of files. Say it’s a spreadsheet that I’m updating, but I want to keep the previous version in case I mess it up.
+
+This is also an exception to the ‘you can’t create a folder inside a Johnny.Decimal folder’ rule. In this case, feel free to create a folder called <JD>archive</JD> and move things in to it.
+
+<Navigation
+	backURL="/concepts/working-at-the-terminal"
+	backTitle="Working at the terminal"
+	nextURL={null}
+	nextTitle={null}
+/>
