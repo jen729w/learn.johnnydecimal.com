@@ -124,11 +124,11 @@ nav.tableofcontents a:active {
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
 .jd-inline {
-	@apply px-1 whitespace-pre bg-orange-200 border border-orange-400 rounded-sm font-jdmono;
+	@apply px-1 whitespace-pre border rounded-sm bg-jdred-100 border-jdred-900 font-jdmono;
 }
 
 .jd-block {
-	@apply inline-block px-4 py-2 text-sm whitespace-pre bg-orange-200 border-2 border-orange-400 rounded-sm shadow-md font-jdmono;
+	@apply inline-block px-4 py-2 text-sm whitespace-pre border-2 rounded-sm shadow-md bg-jdred-100 border-jdred-900 font-jdmono;
 }
 @screen sm {
 	.jd-block {
