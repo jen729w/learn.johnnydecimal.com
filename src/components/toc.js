@@ -13,10 +13,7 @@ const JDNavLink = ({ children, to }) => (
 )
 
 const TOC = () => (
-	<nav
-		className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none"
-		tabIndex="100"
-	>
+	<nav className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none">
 		{/* Mobile-only: CONTENTS label at top of box */}
 		<div className="flex justify-center sm:hidden">
 			<h1 className="px-4 -mt-4 uppercase bg-offwhite">CONTENTS</h1>
