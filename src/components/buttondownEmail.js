@@ -10,7 +10,7 @@ const ButtondownEmailForm = () => (
 		class="embeddable-buttondown-form"
 	>
 		<label for="bd-email" className="inline-block mb-2">
-			Email address (see the <Link to="/privacy/">privacy policy</Link>)
+			Email address (see the <Link to="/privacy/">privacy policy</Link>).
 		</label>
 		<br />
 		<div className="flex flex-col md:flex-row">
