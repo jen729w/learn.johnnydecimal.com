@@ -12,6 +12,11 @@ module.exports = {
 				offwhite: "#fbfbfb",
 				offblack: "#0a0a0a",
 				offgray: "#505050", // Yeah I know this makes no sense
+				jdred: {
+					"100": "#FCE9E9",
+					"600": "#E53E3E", // same as Tailwind's red-600
+					"900": "#651B1B",
+				},
 			},
 		},
 	},
