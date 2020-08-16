@@ -39,7 +39,7 @@ body {
 }
 
 /* === Paragraph + body text === === === === === === === === === === === === */
-.spec-post > p {
+.spec-post p {
 	@apply mb-4 mr-2;
 }
 
