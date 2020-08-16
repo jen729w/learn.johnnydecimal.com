@@ -24,7 +24,7 @@ const TOC = () => (
 		{/* Wrap all links */}
 		<div className="">
 			<JDNavLink to="/">Home</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/" activeClassName="font-semibold" className="">
 				Concepts
 			</JDNavLink>
@@ -40,7 +40,7 @@ const TOC = () => (
 			<JDNavLink to="/concepts/developing-your-own-system">
 				Developing your own system
 			</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/managing-email/">Managing email</JDNavLink>
 			<JDNavLink to="/concepts/what-about-00-09/">What about 00-09?</JDNavLink>
 			<JDNavLink to="/concepts/working-at-the-terminal/">
@@ -49,7 +49,7 @@ const TOC = () => (
 			<JDNavLink to="/concepts/exceptions-to-the-rules/">
 				Exceptions to the rules
 			</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/contact/">Contact</JDNavLink>
 			<JDNavLink to="/privacy/">Privacy</JDNavLink>
 			<JDNavLink to="/licence/">Licence</JDNavLink>
