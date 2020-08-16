@@ -39,7 +39,22 @@ body {
 }
 
 /* === Paragraph + body text === === === === === === === === === === === === */
-.spec-post p {
+/* TODO Okay here's where this `>` became important. Without it, a <p> in a
+				<div.footnote>, for example, takes this styline and you can't get rid
+				of it. So this is the next thing to do when you look at this on Monday.
+
+				I wonder if you can use something like `.footnote-wrapper *` and un-
+				style that class, so the <p> in there doesn't pick up the previous.
+ */
+
+/* In all <p> that are any descendant of a .spec-post, apply the margin. This
+	 ensures spacing between all elements regardless of whether they're nested
+	 in a <div> for some reason.
+
+	 Ooh this is a nice solution. You can add .style-override to any <p> and it'll
+	 be ignored.
+ */
+.spec-post p:not(.style-override) {
 	@apply mb-4 mr-2;
 }
 
@@ -59,7 +74,7 @@ body {
 
 /* === Footnote === === === === === === === === === === === === === === ===  */
 .footnote-wrapper {
-	@apply py-2 mb-4 ml-4 mr-6 text-sm italic bg-gray-200 border border-b-2 border-l-4 border-gray-800 rounded shadow;
+	@apply py-2 my-6 mr-6 text-sm italic bg-gray-200 border border-b-2 border-l-4 border-gray-800 rounded shadow;
 }
 @screen sm {
 	.footnote-wrapper {
