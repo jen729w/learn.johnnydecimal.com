@@ -49,6 +49,8 @@ const TOC = () => (
 			<JDNavLink to="/concepts/exceptions-to-the-rules/">
 				Exceptions to the rules
 			</JDNavLink>
+			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<JDNavLink to="/contact/">Contact</JDNavLink>
 		</div>
 	</nav>
 )
