@@ -18,13 +18,6 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `md-spec`,
-				path: `${__dirname}/src/md-spec`,
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
 				name: `spec-mdx`,
 				path: `${__dirname}/src/spec-mdx`,
 			},
@@ -51,8 +44,8 @@ module.exports = {
 				name: `Johnny•Decimal`,
 				short_name: `J•D`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#fbfbfb`,
+				theme_color: `#fbfbfb`,
 				display: `minimal-ui`,
 				icon: `src/images/favicon-1024.png`, // This path is relative to the root of the site.
 			},
