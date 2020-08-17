@@ -13,10 +13,7 @@ const JDNavLink = ({ children, to }) => (
 )
 
 const TOC = () => (
-	<nav
-		className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none"
-		tabIndex="100"
-	>
+	<nav className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none">
 		{/* Mobile-only: CONTENTS label at top of box */}
 		<div className="flex justify-center sm:hidden">
 			<h1 className="px-4 -mt-4 uppercase bg-offwhite">CONTENTS</h1>
@@ -24,7 +21,7 @@ const TOC = () => (
 		{/* Wrap all links */}
 		<div className="">
 			<JDNavLink to="/">Home</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/" activeClassName="font-semibold" className="">
 				Concepts
 			</JDNavLink>
@@ -40,7 +37,7 @@ const TOC = () => (
 			<JDNavLink to="/concepts/developing-your-own-system">
 				Developing your own system
 			</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/managing-email/">Managing email</JDNavLink>
 			<JDNavLink to="/concepts/what-about-00-09/">What about 00-09?</JDNavLink>
 			<JDNavLink to="/concepts/working-at-the-terminal/">
@@ -49,7 +46,7 @@ const TOC = () => (
 			<JDNavLink to="/concepts/exceptions-to-the-rules/">
 				Exceptions to the rules
 			</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-300" />
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/contact/">Contact</JDNavLink>
 			<JDNavLink to="/privacy/">Privacy</JDNavLink>
 			<JDNavLink to="/licence/">Licence</JDNavLink>

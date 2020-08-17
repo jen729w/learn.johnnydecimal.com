@@ -1,5 +1,5 @@
 module.exports = {
-	purge: [],
+	purge: ["./src/**/*.mdx", "./src/**/*.js"],
 	theme: {
 		// Font customisation: https://tailwindcss.com/docs/font-family/#app
 		fontFamily: {
