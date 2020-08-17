@@ -1,3 +1,10 @@
+/* Careful with this.
+	 https://www.gatsbyjs.com/docs/eslint/
+	 "Creating an empty .eslintrc file at the root of your project
+	 will disable ESLint for your site. The empty file will disable
+	 the built-in eslint-loader because Gatsby assumes once you have
+	 an ESLint file you are in charge of linting.
+ */
 {
 	"env": {
 		"browser": true,
@@ -17,15 +24,15 @@
 	},
 	"plugins": ["react"],
 	"rules": {
-		"jsx-a11y/label-has-for": [
-			2,
-			{
-				"components": ["Label"],
-				"required": {
-					"every": ["nesting", "id"]
-				},
-				"allowChildren": false
-			}
-		]
+		// 	"jsx-a11y/label-has-for": [
+		// 		2,
+		// 		{
+		// 			"components": ["Label"],
+		// 			"required": {
+		// 				"every": ["nesting", "id"]
+		// 			},
+		// 			"allowChildren": false
+		// 		}
+		// 	]
 	}
 }
