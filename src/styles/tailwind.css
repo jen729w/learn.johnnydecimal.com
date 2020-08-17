@@ -133,8 +133,9 @@ nav.tableofcontents a:hover {
 nav.tableofcontents a:focus {
 	@apply pl-2 font-semibold border-2 rounded shadow-md outline-none border-offblack;
 }
+/* Remember, a:focus cascades to a:active. */
 nav.tableofcontents a:active {
-	@apply font-semibold border-r-2 border-red-600 rounded-none text-offblack bg-offwhite;
+	@apply font-semibold text-red-600 border-none shadow-none;
 }
 
 /* ==  Header == */
