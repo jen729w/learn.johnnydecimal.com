@@ -29,6 +29,9 @@ module.exports = {
 					"900": "#2b2b2b",
 				},
 			},
+			screens: {
+				print: { raw: "print" },
+			},
 		},
 	},
 	// variants: [
