@@ -39,6 +39,20 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: "gatsby-remark-smartypants",
+						options: {
+							backticks: false,
+							dashes: "oldschool",
+						},
+					},
+				],
+			},
+		},
+		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `Johnny•Decimal`,
