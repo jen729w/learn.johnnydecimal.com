@@ -29,6 +29,7 @@ const TOC = () => (
 				Areas &amp; categories
 			</JDNavLink>
 			<JDNavLink to="/concepts/ids/">IDs</JDNavLink>
+			<JDNavLink to="/concepts/multiple-projects/">Multiple projects</JDNavLink>
 			<JDNavLink to="/concepts/saving-files/">Saving files</JDNavLink>
 			<JDNavLink to="/concepts/keeping-notes/">Keeping notes</JDNavLink>
 			<JDNavLink to="/concepts/tracking-your-numbers/">
