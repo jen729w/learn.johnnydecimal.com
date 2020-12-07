@@ -22,7 +22,6 @@ module.exports = {
 				path: `${__dirname}/src/spec-mdx`,
 			},
 		},
-		// `gatsby-plugin-mdx`,
 		`gatsby-remark-images`,
 		{
 			resolve: `gatsby-plugin-mdx`,
@@ -35,13 +34,6 @@ module.exports = {
 							linkImagesToOriginal: false,
 						},
 					},
-				],
-			},
-		},
-		{
-			resolve: `gatsby-transformer-remark`,
-			options: {
-				plugins: [
 					{
 						resolve: "gatsby-remark-smartypants",
 						options: {
@@ -52,6 +44,20 @@ module.exports = {
 				],
 			},
 		},
+		// {
+		// 	resolve: `gatsby-transformer-remark`,
+		// 	options: {
+		// 		plugins: [
+		// 			{
+		// 				resolve: "gatsby-remark-smartypants",
+		// 				options: {
+		// 					backticks: false,
+		// 					dashes: "oldschool",
+		// 				},
+		// 			},
+		// 		],
+		// 	},
+		// },
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
