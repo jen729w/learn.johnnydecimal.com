@@ -1,7 +1,8 @@
 {
-  "name": "Johnny•Decimal – a system to organise projects",
+  "npm-or-yarn": "yarn",
+  "name": "johnnydecimal",
   "private": true,
-  "description": "Johnny•Decimal – the documentation site",
+  "description": "Johnny.Decimal - a system to organise projects",
   "version": "1.0.0",
   "author": "Johnny 'Decimal' Noble <hello@johnnydecimal.com>",
   "dependencies": {
@@ -33,6 +34,7 @@
   "devDependencies": {
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
+    "postcss": "^8.2.2",
     "prettier": "2.2.1",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^2.0.2"
