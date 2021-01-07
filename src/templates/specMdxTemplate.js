@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Navigation from "../components/navigation"
-import JD from "../components/jdInline"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Navigation from "../components/Navigation"
+import JD from "../components/JDInline"
 
 const shortcodes = { JD, Link, Navigation } // Provide common components here
 
