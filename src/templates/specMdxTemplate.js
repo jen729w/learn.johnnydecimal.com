@@ -5,10 +5,10 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Navigation from "../components/navigation"
-import JD from "../components/jdInline"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Navigation from "../components/Navigation"
+import JD from "../components/JDInline"
 
 const Project = ({ children, classes }) => (
 	<div
