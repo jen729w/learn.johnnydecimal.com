@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
@@ -9,7 +10,25 @@ import SEO from "../components/seo"
 import Navigation from "../components/navigation"
 import JD from "../components/jdInline"
 
-const shortcodes = { JD, Link, Navigation } // Provide common components here
+const Project = ({ children, classes }) => (
+	<div
+		className={`font-bold underline ${classes}`}
+		style={{ marginLeft: "4ch", textIndent: "-4ch" }}
+	>
+		{children}
+	</div>
+)
+
+const Area = ({ children, classes }) => (
+	<div
+		className={`font-bold ${classes}`}
+		style={{ marginLeft: "10ch", textIndent: "-6ch" }}
+	>
+		{children}
+	</div>
+)
+
+const shortcodes = { JD, Link, Navigation, Project, Area } // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
 	return (
