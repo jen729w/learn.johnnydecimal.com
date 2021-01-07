@@ -31,23 +31,13 @@ solution in this case is to expand to the system as described here.
 
 <!-- Let's build out a JD display box manually. -->
 
-<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
-	<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
-		{" "}
-		J•D{" "}
-	</div>
-	<div className="p-2">
-		{/* <div>012345678901234567890123456789</div> */}
-		{/* marginLeft: where the indented text starts */}
-		{/* textIndent: how many chars left of that the number starts */}
-		<Project>104 Learn with Lucy</Project>
-		<Area classes="mt-24">20-29 Just to make sure</Area>
-		<div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>11 Finance</div>
-		<div style={{ marginLeft: "13ch", textIndent: "-6ch" }}>
-			11.01 Project budget
-		</div>
-	</div>
-</div>
+<PROACIDbox>
+	<Project>104 Learn with Lucy</Project>
+	<Area>20-29 Just to make sure</Area>
+	<Category>11 Finance</Category>
+	{/* <div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>11 Finance</div> */}
+	<ID>11.01 Project budget</ID>
+</PROACIDbox>
 
 ---
 

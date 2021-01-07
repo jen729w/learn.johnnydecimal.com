@@ -6,29 +6,28 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Navigation from "../components/navigation"
+import SEO from "../components/seo"
 import JD from "../components/jdInline"
+import {
+	PROACIDbox,
+	Project,
+	Area,
+	Category,
+	ID,
+} from "../components/PROACIDbox"
 
-const Project = ({ children, classes }) => (
-	<div
-		className={`font-bold underline ${classes}`}
-		style={{ marginLeft: "4ch", textIndent: "-4ch" }}
-	>
-		{children}
-	</div>
-)
-
-const Area = ({ children, classes }) => (
-	<div
-		className={`font-bold ${classes}`}
-		style={{ marginLeft: "10ch", textIndent: "-6ch" }}
-	>
-		{children}
-	</div>
-)
-
-const shortcodes = { JD, Link, Navigation, Project, Area } // Provide common components here
+// Provide common components here
+const shortcodes = {
+	Link,
+	Navigation,
+	JD,
+	PROACIDbox,
+	Project,
+	Area,
+	Category,
+	ID,
+}
 
 export default function PageTemplate({ data: { mdx } }) {
 	return (
