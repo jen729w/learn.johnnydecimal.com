@@ -29,14 +29,30 @@ solution in this case is to expand to the system as described here.
 
 ---
 
-<div class="p-4 m-10 border-2 border-green-600 font-jdmono bg-green-50">
-	<div class="font-extrabold">001 Project</div>
-	<div>
-		    10-19 Administration
-		<br />
-		        11 Whatever
-		<br />
-		        11.11
+<!-- Let's build out a JD display box manually. -->
+
+<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
+	<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
+		{" "}
+		J•D{" "}
+	</div>
+	<div className="p-2">
+		<div>012345678901234567890123456789</div>
+		{/* marginLeft: where the indented text starts */}
+		{/* textIndent: how many chars left of that the number starts */}
+		<div style={{ marginLeft: "4ch", textIndent: "-4ch" }}>
+			100 My first project but if it's really long, I want it to flow nicely
+			even if it's really, really wide yeah?
+		</div>
+		<div style={{ marginLeft: "10ch", textIndent: "-6ch" }}>
+			10-19 My first area, which is also improbably long
+		</div>
+		<div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>
+			11 A regular category, thank goodness!
+		</div>
+		<div style={{ marginLeft: "13ch", textIndent: "-6ch" }}>
+			11.01 Finally, an ID. I thought it would never come
+		</div>
 	</div>
 </div>
 
