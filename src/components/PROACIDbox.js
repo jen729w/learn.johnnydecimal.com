@@ -5,11 +5,28 @@ export const PROACIDbox = ({ children, classes }) => {
 	const PROJECT_MARGINLEFT = "4ch"
 	const PROJECT_TEXTINDENT = "-4ch"
 
+	const AREA_MARGINLEFT = "10ch"
+	const AREA_TEXTINDENT = "-6ch"
+
+	const CATEGORY_MARGINLEFT = "10ch"
+	const CATEGORY_TEXTINDENT = "-3ch"
+
+	const ID_MARGINLEFT = "13ch"
+	const ID_TEXTINDENT = "-6ch"
+
+	const MARGINSINDENTS = {
+		PROJECT_MARGINLEFT,
+		PROJECT_TEXTINDENT,
+		AREA_MARGINLEFT,
+		AREA_TEXTINDENT,
+		CATEGORY_MARGINLEFT,
+		CATEGORY_TEXTINDENT,
+		ID_MARGINLEFT,
+		ID_TEXTINDENT,
+	}
+
 	const childrenWithProps = React.Children.map(children, child =>
-		React.cloneElement(child, {
-			project_marginLeft: PROJECT_MARGINLEFT,
-			project_textIndent: PROJECT_TEXTINDENT,
-		})
+		React.cloneElement(child, { MARGINSINDENTS: MARGINSINDENTS })
 	)
 
 	return (
@@ -22,11 +39,11 @@ export const PROACIDbox = ({ children, classes }) => {
 	)
 }
 
-export const Project = ({ children, classes, ...rest }) => {
-	const { project_marginLeft, project_textIndent } = rest
+export const Project = ({ children, classes, MARGINSINDENTS }) => {
+	const { PROJECT_MARGINLEFT, PROJECT_TEXTINDENT } = MARGINSINDENTS
 	if (
-		typeof project_marginLeft === "undefined" ||
-		typeof project_textIndent === "undefined"
+		typeof PROJECT_MARGINLEFT === "undefined" ||
+		typeof PROJECT_TEXTINDENT === "undefined"
 	) {
 		throw new Error("The Project component was not passed the relevant props.")
 	}
@@ -34,21 +51,30 @@ export const Project = ({ children, classes, ...rest }) => {
 	return (
 		<div
 			className={`font-bold underline ${classes}`}
-			style={{ marginLeft: project_marginLeft, textIndent: project_textIndent }}
+			style={{ marginLeft: PROJECT_MARGINLEFT, textIndent: PROJECT_TEXTINDENT }}
 		>
 			{children}
 		</div>
 	)
 }
 
-export const Area = ({ children, classes }) => (
-	<div
-		className={`font-bold ${classes}`}
-		style={{ marginLeft: "10ch", textIndent: "-6ch" }}
-	>
-		{children}
-	</div>
-)
+export const Area = ({ children, classes, MARGINSINDENTS }) => {
+	const { AREA_MARGINLEFT, AREA_TEXTINDENT } = MARGINSINDENTS
+	if (
+		typeof AREA_MARGINLEFT === "undefined" ||
+		typeof AREA_TEXTINDENT === "undefined"
+	) {
+		throw new Error("The Area component was not passed the relevant props.")
+	}
+	return (
+		<div
+			className={`font-bold ${classes}`}
+			style={{ marginLeft: AREA_MARGINLEFT, textIndent: AREA_TEXTINDENT }}
+		>
+			{children}
+		</div>
+	)
+}
 
 export const Category = ({ children, classes }) => (
 	<div
@@ -75,10 +101,12 @@ PROACIDbox.propTypes = {
 Project.propTypes = {
 	children: PropTypes.string,
 	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.object,
 }
 Area.propTypes = {
 	children: PropTypes.string,
 	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.object,
 }
 Category.propTypes = {
 	children: PropTypes.string,
