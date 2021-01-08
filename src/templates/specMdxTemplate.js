@@ -11,6 +11,7 @@ import SEO from "../components/seo"
 import JD from "../components/jdInline"
 import {
 	PROACIDbox,
+	ACIDbox,
 	Project,
 	Area,
 	Category,
@@ -23,6 +24,7 @@ const shortcodes = {
 	Navigation,
 	JD,
 	PROACIDbox,
+	ACIDbox,
 	Project,
 	Area,
 	Category,

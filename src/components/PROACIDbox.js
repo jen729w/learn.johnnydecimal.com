@@ -1,6 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+/* What do the margins and indents mean?
+ *
+ * marginLeft: how many characters in the hanging indent will start
+ * textIndent: how many characters *to the left of that* will the number start
+ *  */
+
 export const PROACIDbox = ({ children, classes }) => {
 	const PROJECT_MARGINLEFT = "4ch"
 	const PROJECT_TEXTINDENT = "-4ch"
@@ -17,6 +23,39 @@ export const PROACIDbox = ({ children, classes }) => {
 	const MARGINSINDENTS = {
 		PROJECT_MARGINLEFT,
 		PROJECT_TEXTINDENT,
+		AREA_MARGINLEFT,
+		AREA_TEXTINDENT,
+		CATEGORY_MARGINLEFT,
+		CATEGORY_TEXTINDENT,
+		ID_MARGINLEFT,
+		ID_TEXTINDENT,
+	}
+
+	const childrenWithProps = React.Children.map(children, child =>
+		React.cloneElement(child, { MARGINSINDENTS: MARGINSINDENTS })
+	)
+
+	return (
+		<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
+			<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
+				J•D
+			</div>
+			<div className="p-2">{childrenWithProps}</div>
+		</div>
+	)
+}
+
+export const ACIDbox = ({ children, classes }) => {
+	const AREA_MARGINLEFT = "6ch"
+	const AREA_TEXTINDENT = "-6ch"
+
+	const CATEGORY_MARGINLEFT = "6ch"
+	const CATEGORY_TEXTINDENT = "-3ch"
+
+	const ID_MARGINLEFT = "9ch"
+	const ID_TEXTINDENT = "-6ch"
+
+	const MARGINSINDENTS = {
 		AREA_MARGINLEFT,
 		AREA_TEXTINDENT,
 		CATEGORY_MARGINLEFT,
@@ -119,6 +158,10 @@ export const ID = ({ children, classes, MARGINSINDENTS }) => {
 }
 
 PROACIDbox.propTypes = {
+	children: PropTypes.array,
+	classes: PropTypes.string,
+}
+ACIDbox.propTypes = {
 	children: PropTypes.array,
 	classes: PropTypes.string,
 }
