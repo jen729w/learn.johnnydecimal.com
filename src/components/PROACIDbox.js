@@ -47,22 +47,22 @@ export const ID = ({ children, classes }) => (
 )
 
 PROACIDbox.propTypes = {
-	children: PropTypes.object,
+	children: PropTypes.array,
 	classes: PropTypes.string,
 }
 Project.propTypes = {
-	children: PropTypes.object,
+	children: PropTypes.string,
 	classes: PropTypes.string,
 }
 Area.propTypes = {
-	children: PropTypes.object,
+	children: PropTypes.string,
 	classes: PropTypes.string,
 }
 Category.propTypes = {
-	children: PropTypes.object,
+	children: PropTypes.string,
 	classes: PropTypes.string,
 }
 ID.propTypes = {
-	children: PropTypes.object,
+	children: PropTypes.string,
 	classes: PropTypes.string,
 }
