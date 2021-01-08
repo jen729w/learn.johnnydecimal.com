@@ -66,6 +66,7 @@ export const Area = ({ children, classes, MARGINSINDENTS }) => {
 	) {
 		throw new Error("The Area component was not passed the relevant props.")
 	}
+
 	return (
 		<div
 			className={`font-bold ${classes}`}
@@ -76,23 +77,46 @@ export const Area = ({ children, classes, MARGINSINDENTS }) => {
 	)
 }
 
-export const Category = ({ children, classes }) => (
-	<div
-		className={`${classes}`}
-		style={{ marginLeft: "10ch", textIndent: "-3ch" }}
-	>
-		{children}
-	</div>
-)
+export const Category = ({ children, classes, MARGINSINDENTS }) => {
+	const { CATEGORY_MARGINLEFT, CATEGORY_TEXTINDENT } = MARGINSINDENTS
+	if (
+		typeof CATEGORY_MARGINLEFT === "undefined" ||
+		typeof CATEGORY_TEXTINDENT === "undefined"
+	) {
+		throw new Error("The Category component was not passed the relevant props.")
+	}
 
-export const ID = ({ children, classes }) => (
-	<div
-		className={`${classes}`}
-		style={{ marginLeft: "13ch", textIndent: "-6ch" }}
-	>
-		{children}
-	</div>
-)
+	return (
+		<div
+			className={`${classes}`}
+			style={{
+				marginLeft: CATEGORY_MARGINLEFT,
+				textIndent: CATEGORY_TEXTINDENT,
+			}}
+		>
+			{children}
+		</div>
+	)
+}
+
+export const ID = ({ children, classes, MARGINSINDENTS }) => {
+	const { ID_MARGINLEFT, ID_TEXTINDENT } = MARGINSINDENTS
+	if (
+		typeof ID_MARGINLEFT === "undefined" ||
+		typeof ID_TEXTINDENT === "undefined"
+	) {
+		throw new Error("The ID component was not passed the relevant props.")
+	}
+
+	return (
+		<div
+			className={`${classes}`}
+			style={{ marginLeft: ID_MARGINLEFT, textIndent: ID_TEXTINDENT }}
+		>
+			{children}
+		</div>
+	)
+}
 
 PROACIDbox.propTypes = {
 	children: PropTypes.array,
@@ -111,8 +135,10 @@ Area.propTypes = {
 Category.propTypes = {
 	children: PropTypes.string,
 	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.object,
 }
 ID.propTypes = {
 	children: PropTypes.string,
 	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.object,
 }
