@@ -7,6 +7,15 @@ import PropTypes from "prop-types"
  * textIndent: how many characters *to the left of that* will the number start
  *  */
 
+const Basebox = ({ children }) => (
+	<div className="mb-4 text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
+		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
+			J•D
+		</div>
+		<div className="p-2 sm:px-4">{children}</div>
+	</div>
+)
+
 export const PROACIDbox = ({ children, classes }) => {
 	const PROJECT_MARGINLEFT = "4ch"
 	const PROJECT_TEXTINDENT = "-4ch"
@@ -35,14 +44,15 @@ export const PROACIDbox = ({ children, classes }) => {
 		React.cloneElement(child, { MARGINSINDENTS: MARGINSINDENTS })
 	)
 
-	return (
-		<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
-			<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
-				J•D
-			</div>
-			<div className="p-2">{childrenWithProps}</div>
-		</div>
-	)
+	// return (
+	// 	<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
+	// 		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
+	// 			J•D
+	// 		</div>
+	// 		<div className="p-2">{childrenWithProps}</div>
+	// 	</div>
+	// )
+	return <Basebox>{childrenWithProps}</Basebox>
 }
 
 export const ACIDbox = ({ children, classes }) => {
@@ -52,7 +62,7 @@ export const ACIDbox = ({ children, classes }) => {
 	const CATEGORY_MARGINLEFT = "6ch"
 	const CATEGORY_TEXTINDENT = "-3ch"
 
-	const ID_MARGINLEFT = "9ch"
+	const ID_MARGINLEFT = "12ch"
 	const ID_TEXTINDENT = "-6ch"
 
 	const MARGINSINDENTS = {
@@ -68,14 +78,15 @@ export const ACIDbox = ({ children, classes }) => {
 		React.cloneElement(child, { MARGINSINDENTS: MARGINSINDENTS })
 	)
 
-	return (
-		<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
-			<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
-				J•D
-			</div>
-			<div className="p-2">{childrenWithProps}</div>
-		</div>
-	)
+	// return (
+	// 	<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
+	// 		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
+	// 			J•D
+	// 		</div>
+	// 		<div className="p-2">{childrenWithProps}</div>
+	// 	</div>
+	// )
+	return <Basebox>{childrenWithProps}</Basebox>
 }
 
 export const Project = ({ children, classes, MARGINSINDENTS }) => {
@@ -156,6 +167,9 @@ export const ID = ({ children, classes, MARGINSINDENTS }) => {
 		</div>
 	)
 }
+
+/* Hmm we shouldn't need this if our margins are all correct? */
+export const BlankRow = () => <div>&nbsp;</div>
 
 PROACIDbox.propTypes = {
 	children: PropTypes.array,
