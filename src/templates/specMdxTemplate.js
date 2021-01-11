@@ -16,6 +16,7 @@ import {
 	Area,
 	Category,
 	ID,
+	BlankRow,
 } from "../components/PROACIDbox"
 
 // Provide common components here
@@ -29,6 +30,7 @@ const shortcodes = {
 	Area,
 	Category,
 	ID,
+	BlankRow,
 }
 
 export default function PageTemplate({ data: { mdx } }) {
