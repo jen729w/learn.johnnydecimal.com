@@ -23,7 +23,7 @@ const TOC = () => (
 			<JDNavLink to="/">Home</JDNavLink>
 			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/" activeClassName="font-semibold" className="">
-				Concepts
+				Concepts index
 			</JDNavLink>
 			<JDNavLink to="/concepts/areas-categories/">
 				Areas &amp; categories
