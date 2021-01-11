@@ -4,6 +4,8 @@ date: "2020-11-22"
 title: "Multiple projects"
 ---
 
+<!-- Note to self: this is the only page (so far) where you're showing *groupings* of projects. I don't anticipate ever doing this again, so I haven't created a custom <PROACIDbox> for it. Hence all the &nbsp; and other junk here. -->
+
 # Multiple-project systems
 
 The system described so far works very well for a single project, or for one
@@ -12,6 +14,13 @@ individual's personal system. There are situations when we need more: we expand 
 ## The problem
 
 Let's imagine that you're a freelancer. You might have set up a system like this.
+
+<div className="block footnote-wrapper sm:hidden">
+	<p className="footnote style-override">
+		Some of these examples don't look so great on mobile, sorry. Rotating to
+		landscape might help!
+	</p>
+</div>
 
 <ACIDbox>
 	<Area>10-19 Administration</Area>
@@ -54,6 +63,182 @@ We might try and fix it like this.
 This problem is an unavoidable consequence of the way that the JD system is designed: one of the **benefits** of the system is that "nothing is more than two levels deep". This is a problem when we need to structure information about clients and jobs which is itself two levels deep. We've run out of levels.
 
 ---
+
+# Adding projects to the system
+
+I've thought about this for a few years, and have been using the system I'll describe here since 2018. So far it's working well for me.
+
+## Goals
+
+The extended system must retain the advantages of the original Johnny.Decimal system.
+
+1. Each item must have a unique identifier.
+2. You must be able to search (your notes, your file system) for this identifier.
+3. The identifier should be short and preferably memorable.
+
+## Letters: no good
+
+I tried systems using letters rather than numbers and they didn't work. My initial attempt looked something like this:
+
+- <JD>HME.AC.ID</JD> = home system
+- <JD>DVO.AC.ID</JD> = the DevOps project at work
+- <JD>ETC.AC.ID</JD> = etc. for more projects
+
+Now you just have to remember what those letters mean, and they don't add any semantic value to your system.
+
+## The answer: more numbers
+
+Here were my goals and constraints when introducing new numbers:
+
+1. It must not confuse the system.
+2. It must allow for a sufficient number of additional projects.
+3. It must allow the user to organise those projects in some way (i.e. like you organise categories in to areas).
+
+The solution is to **add a three-number project code to the start of your numbers**, e.g. <JD>000.AC.ID</JD>. In the abstract I'll refer to this as [PRO.AC.ID](/concepts/acid-notation/). 😃
+
+### 1. It must not confuse the system
+
+Three numbers is not two numbers. I think if I'd gone with <JD>PR.AC.ID</JD>, e.g. <JD>10.12.53</JD>, that would have been a bit much on the brain. The only thing in the JD system with three numbers is a project code.
+
+### 2. It must allow for a sufficient number of additional projects
+
+One thousand projects should be enough for anyone. I'd love to know what you're doing if you need more than a thousand projects.
+
+### 3. It must allow the user to organise those projects in some way
+
+We can use the same method of grouping as we currently use for our areas: simply group them by number according to our needs.
+
+Here's what my current system looks like.
+
+<PROACIDbox>
+	<Project>100-199 Personal</Project>
+	<Area>101 Personal system</Area>
+	<Category>&nbsp;10-19 Administration</Category>
+	<Category>&nbsp;... and so on</Category>
+	<Area>102 Johnny.Decimal</Area>
+	<Area>102 Another cool project 😎</Area>
+	<BlankRow />
+	<Project>
+		200-299 ACME Corp&nbsp;&nbsp;&nbsp;
+		<span className="text-gray-400 font-light">// my current contract</span>
+	</Project>
+	<Area>201 Project #1</Area>
+	<Area>202 Project #2</Area>
+	<Category>&nbsp;10-19 ... you get the idea</Category>
+</PROACIDbox>
+
+Alternatively, you can group your projects by tens, rather than hundreds. This might work better if you're a freelancer vs. a long-term contractor.
+
+<PROACIDbox>
+	<Project classes="no-underline">
+		100-109 If you group like this, you get 100
+	</Project>
+	<Project classes="no-underline">
+		110-119 divisions of 10 things each. This might
+	</Project>
+	<Project classes="no-underline">
+		120-129 suit you if you're a freelancer with a
+	</Project>
+	<Project classes="no-underline">
+		130-139 lot of clients, and occasionally those
+	</Project>
+	<Project classes="no-underline">
+		140-149 clients have more than one job.
+	</Project>
+	<Area>141 Then you number your projects like this</Area>
+	<ID>&nbsp;141.32.73 And individual items like this</ID>
+</PROACIDbox>
+
+Of course, you don't have to group your projects at all if you don't want or need to. In this case your projects will sort by order of creation, just like individual IDs do within a category.
+
+<PROACIDbox>
+	<Project classes="no-underline">101 My first project</Project>
+	<Project classes="no-underline">
+		102 which I would instinctively start at 101
+	</Project>
+	<Project classes="no-underline">
+		103 even though there's nothing wrong with the
+	</Project>
+	<Project classes="no-underline">
+		104 numbers 000-100. There's just something
+	</Project>
+	<Project classes="no-underline">
+		105 about reserving numbers at the 'front' of
+	</Project>
+	<Project classes="no-underline">
+		106 a system that I find reassuring. But
+	</Project>
+	<Project classes="no-underline">107 you do whatever you want. :-)</Project>
+</PROACIDbox>
+
+---
+
+# Implementation details
+
+For most people who are in this situation, I think you should use one project for all of the stuff that is general to your life/business/etc.
+
+So what I mean is we go from something like this.
+
+<ACIDbox>
+	<Area>10-19 Administration</Area>
+	<Area>20-29 Marketing</Area>
+	<Category>21 Advertising</Category>
+	<Area>30-39 Finance</Area>
+	<Category>31 Accounting</Category>
+	<Category>32 Contracts</Category>
+	<Area>40-49 Clients</Area>
+	<Category>41 ... // this is what didn't work</Category>
+	<Category>42 ...</Category>
+</ACIDbox>
+
+...to this.
+
+<PROACIDbox>
+	<Project>
+		101 Administration{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// this is all the stuff
+		</span>
+	</Project>
+	<Area>
+		10-19 Administration{" "}
+		<span className="text-gray-400 font-light">// from above, just in its</span>
+	</Area>
+	<Area>
+		20-29 Marketing{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// own 'project'
+		</span>
+	</Area>
+	<Category>21 Advertising</Category>
+	<Area>30-39 Finance</Area>
+	<Category>31 Accounting</Category>
+	<Category>32 Contracts</Category>
+	<BlankRow />
+	<Project>
+		102 First project{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// and now we break out
+		</span>
+	</Project>
+	<Area>
+		10-19 ...{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// all
+			of the actual projects
+		</span>
+	</Area>
+	<Area>
+		20-29 ...{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// as
+			discussed above
+		</span>
+	</Area>
+	<BlankRow />
+	<Project>103 Second project</Project>
+	<Area>10-19 ...</Area>
+</PROACIDbox>
 
 <Navigation
 	backURL={"/concepts/developing-your-own-system/"}

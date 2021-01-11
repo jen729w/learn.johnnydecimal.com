@@ -88,6 +88,14 @@ ol.footnote {
 	@apply px-4 m-0 ml-4;
 }
 
+ul.footnote {
+	@apply px-4 m-0 ml-4;
+}
+
+p.footnote {
+	@apply px-4 m-0 mb-0;
+}
+
 /* === Dividers === === === === === === === === === === === === === === ===  */
 .spec-post hr {
 	border: 0;
