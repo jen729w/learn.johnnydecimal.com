@@ -6,51 +6,54 @@ title: "Multiple projects"
 
 # Multiple-project systems
 
-When I started this system I was running a specific project, and I didn't
-really consider the need for multiple projects on the same computer.
-
-If two projects never meet, there's no issue. I have a project at work with one
-set of numbers and my system at home with another, totally unrelated, set of
-numbers. No problem at all – it's like I'm two people leading separate lives.
-
-Fast-forward a decade and I find myself needing more. I still have my personal
-system, but I work as a contractor and the projects I run for other people must
-exist alongside my personal stuff, and each other.
-
----
-
 The system described so far works very well for a single project, or for one
-individual's personal system. In some scenarios, however, it falls short. The
-solution in this case is to expand to the system as described here.
+individual's personal system. There are situations when we need more: we expand our system to use multiple projects.
 
----
+## The problem
 
-# When does the system nee
-
----
-
-<!-- Let's build out a JD display box manually. -->
-
-<PROACIDbox>
-	<Project>104 Learn with Lucy</Project>
-	<Area>20-29 Just to make sure</Area>
-	<Category>11 Finance</Category>
-	<Category>...</Category>
-	<Category>11 Finance</Category>
-	{/* <div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>11 Finance</div> */}
-	<ID>11.01 Project budget</ID>
-	<ID>11.01 Project budget</ID>
-	<ID>11.01 Project budget</ID>
-</PROACIDbox>
-
----
+Let's imagine that you're a freelancer. You might have set up a system like this.
 
 <ACIDbox>
-	<Area>20-29 Just to make sure</Area>
-	<Category>11 Finance</Category>
-	{/* <div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>11 Finance</div> */}
-	<ID>11.01 Project budget</ID>
+	<Area>10-19 Administration</Area>
+	<Category>11 ... // the usual stuff</Category>
+	<BlankRow />
+	<Area>20-29 Clients</Area>
+	<Category>21 Best client</Category>
+	<Category>22 Another client</Category>
+	<ID>22.01 Job #1</ID>
+	<ID>22.02 Job #2</ID>
+	<Category>23 Third client</Category>
+	<Category>...</Category>
+	<Category>29 Ninth and final? client</Category>
 </ACIDbox>
+
+A couple of problems are obvious:
+
+1. We are going to want to create folders within <JD>22.01 Job 1</JD> but the system says we shouldn't do that (and we shouldn't – don't be tempted!).
+2. This only allows us to have 10 clients.
+
+We might try and fix it like this.
+
+<ACIDbox>
+	<Area>10-19 Administration</Area>
+	<Category>11 ... // the usual stuff</Category>
+	<BlankRow />
+	<Area>20-29 Best client</Area>
+	<BlankRow />
+	<Area>30-39 Another client</Area>
+	<Category>31 Job #1</Category>
+	<ID>31.01 Requirements</ID>
+	<ID>31.02 Quote</ID>
+	<ID>31.03 Artwork</ID>
+	<ID>31.04 External images</ID>
+	<ID>31.05 Final exported files</ID>
+</ACIDbox>
+
+...but that's still no good. Now we can only have ~9 clients, and each client can only have 10 jobs.
+
+This problem is an unavoidable consequence of the way that the JD system is designed: one of the **benefits** of the system is that "nothing is more than two levels deep". This is a problem when we need to structure information about clients and jobs which is itself two levels deep. We've run out of levels.
+
+---
 
 <Navigation
 	backURL={"/concepts/developing-your-own-system/"}
