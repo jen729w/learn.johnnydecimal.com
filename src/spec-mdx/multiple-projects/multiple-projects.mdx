@@ -29,18 +29,28 @@ solution in this case is to expand to the system as described here.
 
 ---
 
-<div class="p-4 m-10 border-2 border-green-600 font-jdmono bg-green-50">
-	<div class="font-extrabold">001 Project</div>
-	<div>
-		    10-19 Administration
-		<br />
-		        11 Whatever
-		<br />
-		        11.11
-	</div>
-</div>
+<!-- Let's build out a JD display box manually. -->
+
+<PROACIDbox>
+	<Project>104 Learn with Lucy</Project>
+	<Area>20-29 Just to make sure</Area>
+	<Category>11 Finance</Category>
+	<Category>...</Category>
+	<Category>11 Finance</Category>
+	{/* <div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>11 Finance</div> */}
+	<ID>11.01 Project budget</ID>
+	<ID>11.01 Project budget</ID>
+	<ID>11.01 Project budget</ID>
+</PROACIDbox>
 
 ---
+
+<ACIDbox>
+	<Area>20-29 Just to make sure</Area>
+	<Category>11 Finance</Category>
+	{/* <div style={{ marginLeft: "10ch", textIndent: "-3ch" }}>11 Finance</div> */}
+	<ID>11.01 Project budget</ID>
+</ACIDbox>
 
 <Navigation
 	backURL={"/concepts/developing-your-own-system/"}

@@ -5,12 +5,31 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import Navigation from "../components/Navigation"
-import JD from "../components/JDInline"
+import Layout from "../components/layout"
+import Navigation from "../components/navigation"
+import SEO from "../components/seo"
+import JD from "../components/jdInline"
+import {
+	PROACIDbox,
+	ACIDbox,
+	Project,
+	Area,
+	Category,
+	ID,
+} from "../components/PROACIDbox"
 
-const shortcodes = { JD, Link, Navigation } // Provide common components here
+// Provide common components here
+const shortcodes = {
+	Link,
+	Navigation,
+	JD,
+	PROACIDbox,
+	ACIDbox,
+	Project,
+	Area,
+	Category,
+	ID,
+}
 
 export default function PageTemplate({ data: { mdx } }) {
 	return (
