@@ -3,7 +3,9 @@
 @tailwind components;
 
 body {
-	@apply text-lg bg-offwhite;
+	@apply text-lg;
+	/* @apply text-lg bg-offwhite; */
+	background: #fafafd;
 }
 
 /* === Headers === === === === === === === === === === === === === === ===   */
@@ -103,7 +105,7 @@ ol.footnote {
 /* === Links === === === === === === === === === === === === === === === === */
 /* ==  .spec-post == */
 .spec-post a:link {
-	@apply border-b-2 border-red-600;
+	@apply border-b-2 border-blue-600;
 }
 
 .spec-post a:visited {
@@ -111,15 +113,15 @@ ol.footnote {
 }
 
 .spec-post a:hover {
-	@apply text-red-600 border-b-4 border-red-600;
+	@apply text-blue-600 border-b-4 border-blue-600;
 }
 
 .spec-post a:focus {
-	@apply text-red-600 border-b-4 border-red-600 outline-none;
+	@apply text-blue-600 border-b-4 border-blue-600 outline-none;
 }
 
 .spec-post a:active {
-	@apply bg-red-600 border-b-2 border-red-600 text-offwhite;
+	@apply bg-blue-600 border-b-2 border-blue-600 text-offwhite;
 }
 
 a.no-style-link:link {
@@ -139,21 +141,22 @@ nav.tableofcontents a:focus {
 }
 /* Remember, a:focus cascades to a:active. */
 nav.tableofcontents a:active {
-	@apply font-semibold text-red-600 border-none shadow-none;
+	@apply font-semibold text-blue-600 border-none shadow-none;
 }
 
 /* ==  Header == */
 header a:focus {
-	@apply outline-none bg-jdred-600 text-offwhite;
+	@apply bg-blue-600 outline-none text-offwhite;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */
 .jd-inline {
-	@apply px-1 whitespace-pre border rounded-sm bg-jdred-100 border-jdred-900 font-jdmono;
+	@apply px-1 whitespace-pre border border-blue-700 rounded-sm bg-blue-50 font-jdmono;
+	/* @apply px-1 whitespace-pre bg-blue-100 border border-blue-900 rounded-sm font-jdmono; */
 }
 
 .jd-block {
-	@apply inline-block px-4 py-2 text-sm whitespace-pre border-2 rounded-sm shadow-md bg-jdred-100 border-jdred-900 font-jdmono;
+	@apply inline-block px-4 py-2 text-sm whitespace-pre border-2 border-blue-700 rounded-sm shadow-md bg-blue-50 font-jdmono;
 }
 @screen sm {
 	.jd-block {

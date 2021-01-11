@@ -20,13 +20,13 @@ const ButtondownEmailForm = () => (
 				id="bd-email"
 				placeholder="you@example.com"
 				size="25"
-				className="px-2 py-1 mr-4 border-2 border-gray-800 rounded-md shadow-inner text-jdred-900 font-jdmono focus:outline-none focus:border-jdred-900 hover:border-jdred-900 focus:bg-jdred-100 hover:bg-jdred-100"
+				className="px-2 py-1 mr-4 border-2 border-gray-800 rounded-md shadow-inner text-blue-900 font-jdmono focus:outline-none focus:border-blue-900 hover:border-blue-900 focus:bg-blue-100 hover:bg-blue-100"
 			/>
 			<input type="hidden" value="1" name="embed" />
 			<input
 				type="submit"
 				value="Subscribe"
-				className="w-32 px-3 py-1 mt-2 bg-gray-200 border-2 border-gray-800 rounded-md shadow-md sm:mt-0 focus:outline-none focus:border-red-600 focus:text-jdred-900 hover:text-jdred-900 hover:border-jdred-900 focus:bg-jdred-100 hover:bg-jdred-100 active:text-red-600 active:border-red-600 active:shadow-none"
+				className="w-32 px-3 py-1 mt-2 bg-gray-200 border-2 border-gray-800 rounded-md shadow-md sm:mt-0 focus:outline-none focus:border-red-600 focus:text-blue-900 hover:text-blue-900 hover:border-blue-900 focus:bg-blue-100 hover:bg-blue-100 active:text-red-600 active:border-red-600 active:shadow-none"
 			/>
 		</div>
 		<p className="mb-4">
