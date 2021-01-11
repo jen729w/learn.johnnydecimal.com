@@ -13,7 +13,7 @@ individual's personal system. There are situations when we need more: we expand 
 
 ## The problem
 
-Let's imagine that you're a freelancer. You might have set up a system like this.
+Let's say you're a freelancer. You might have set up a system like this.
 
 <div className="block footnote-wrapper sm:hidden">
 	<p className="footnote style-override">
@@ -92,13 +92,15 @@ Here were my goals and constraints when introducing new numbers:
 
 1. It must not confuse the system.
 2. It must allow for a sufficient number of additional projects.
-3. It must allow the user to organise those projects in some way (i.e. like you organise categories in to areas).
+3. It must allow the user to organise those projects in some way (i.e. like you organise **categories** in to **areas**).
 
 The solution is to **add a three-number project code to the start of your numbers**, e.g. <JD>000.AC.ID</JD>. In the abstract I'll refer to this as [PRO.AC.ID](/concepts/acid-notation/). 😃
 
 ### 1. It must not confuse the system
 
-Three numbers is not two numbers. I think if I'd gone with <JD>PR.AC.ID</JD>, e.g. <JD>10.12.53</JD>, that would have been a bit much on the brain. The only thing in the JD system with three numbers is a project code.
+Three numbers is not two numbers.
+
+I think if I'd gone with <JD>PR.AC.ID</JD>, e.g. <JD>10.12.53</JD>, that would have been a bit much on the brain. The only thing in the JD system with three numbers is a project code.
 
 ### 2. It must allow for a sufficient number of additional projects
 
@@ -145,7 +147,7 @@ Alternatively, you can group your projects by tens, rather than hundreds. This m
 	<Project classes="no-underline">
 		140-149 clients have more than one job.
 	</Project>
-	<Area>141 Then you number your projects like this</Area>
+	<Area classes="underline">141 Then you number your projects like this</Area>
 	<ID>&nbsp;141.32.73 And individual items like this</ID>
 </PROACIDbox>
 
@@ -239,6 +241,70 @@ So what I mean is we go from something like this.
 	<Project>103 Second project</Project>
 	<Area>10-19 ...</Area>
 </PROACIDbox>
+
+---
+
+# How I name my folders and files
+
+I don't use the project number in my area or category folders. This is because they tend to be fairly unique anyway, with the exception of my ubiquitous <JD>10-19 Administration</JD>.
+
+I **do** use the project number in my ID folders, and when I name files. There are a couple of reasons why I've found this to be right for me.
+
+1. When I use [Alfred](https://www.alfredapp.com/)<sup>1</sup>, which I do many times a day, I can type the full <JD>PRO.AC.ID</JD> number and it'll open the folder immediately.
+2. When you view the _Open Recent_ menu — e.g. in Microsoft Excel — the filename shows the project name at the beginning. I find this really useful.
+
+<div class="footnote-wrapper">
+	<ol class="footnote">
+		<li>
+			If you use macOS, you should use Alfred. Activate it, press the spacebar
+			to enter 'Open File...' mode, then type the name of a folder.{" "}
+			<span className="not-italic">🤯</span>
+		</li>
+	</ol>
+</div>
+
+So this means that my system looks like this.
+
+<PROACIDbox>
+	<Project>496 Any old project</Project>
+	<Area>10-19 ...</Area>
+	<Area>
+		20-29 An interesting area{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;// no project number here
+		</span>
+	</Area>
+	<Category>
+		21 A great category{" "}
+		<span className="text-gray-400 font-light">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// or here
+		</span>
+	</Category>
+	<ID>
+		496.21.11 My favourite ID{" "}
+		<span className="font-bold">// but check me out!</span>
+	</ID>
+</PROACIDbox>
+
+<!-- Break the long string on mobile -->
+
+<div className="hidden sm:block">
+	Within that folder, if I saved an Excel file I would call that file{" "}
+	<JD>496.21.11 Whatever descriptive name I'd use.xlsx</JD>.
+</div>
+<div className="block sm:hidden text-base">
+	Within that folder, if I saved an Excel file I would call that file{" "}
+	<JD>
+		496.21.11 Whatever descriptive
+		<br />
+		name I'd use.xlsx
+	</JD>
+	.
+</div>
+
+---
+
+As with most aspects of this system, you should adapt it to your needs. Try a few things and see what works. Change often – don't think that the first way you implement a thing will be the right one, I've found it needs experimentation to get just right.
 
 <Navigation
 	backURL={"/concepts/developing-your-own-system/"}
