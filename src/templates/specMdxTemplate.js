@@ -18,6 +18,7 @@ import {
 	ID,
 	BlankRow,
 } from "../components/PROACIDbox"
+import { ConceptsIndexItem } from "../components/ConceptsIndex"
 
 // Provide common components here
 const shortcodes = {
@@ -31,6 +32,7 @@ const shortcodes = {
 	Category,
 	ID,
 	BlankRow,
+	ConceptsIndexItem,
 }
 
 export default function PageTemplate({ data: { mdx } }) {
