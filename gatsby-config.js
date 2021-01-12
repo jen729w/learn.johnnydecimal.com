@@ -86,10 +86,15 @@ module.exports = {
 										site.siteMetadata.siteUrl +
 										// "/" +
 										edge.node.frontmatter.slug,
-									guid:
-										site.siteMetadata.siteUrl +
-										// "/" +
-										edge.node.frontmatter.slug,
+									// guid:
+									// 	site.siteMetadata.siteUrl +
+									// 	// "/" +
+									// 	edge.node.frontmatter.slug,
+									custom_elements: [
+										{
+											"content:encoded": edge.node.html,
+										},
+									],
 								})
 							})
 						},
@@ -106,6 +111,7 @@ module.exports = {
 												date
 												slug
 											}
+											html
 										}
 									}
 								}
