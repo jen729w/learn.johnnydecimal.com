@@ -17,6 +17,7 @@ import {
 	Category,
 	ID,
 	BlankRow,
+	Comment,
 } from "../components/PROACIDbox"
 import { ConceptsIndexItem } from "../components/ConceptsIndex"
 
@@ -32,6 +33,7 @@ const shortcodes = {
 	Category,
 	ID,
 	BlankRow,
+	Comment,
 	ConceptsIndexItem,
 }
 

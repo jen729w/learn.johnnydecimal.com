@@ -118,59 +118,48 @@ Here's what my current system looks like.
 	<Category>&nbsp;10-19 Administration</Category>
 	<Category>&nbsp;... and so on</Category>
 	<Area>102 Johnny.Decimal</Area>
-	<Area>102 Another cool project 😎</Area>
+	<Area>103 My next cool project 😎</Area>
 	<BlankRow />
 	<Project>
-		200-299 ACME Corp&nbsp;&nbsp;&nbsp;
-		<span className="text-gray-400 font-light">// my current contract</span>
+		200-299 ACME Corp
+		<Comment indent={9}>// my current contract</Comment>
 	</Project>
-	<Area>201 Project #1</Area>
-	<Area>202 Project #2</Area>
+	<Area>201 Work project #1</Area>
+	<Area>202 Work project #2</Area>
 	<Category>&nbsp;10-19 ... you get the idea</Category>
 </PROACIDbox>
 
 Alternatively, you can group your projects by tens, rather than hundreds. This might work better if you're a freelancer vs. a long-term contractor.
 
 <PROACIDbox>
-	<Project classes="no-underline">
-		100-109 If you group like this, you get 100
-	</Project>
-	<Project classes="no-underline">
-		110-119 divisions of 10 things each. This might
-	</Project>
-	<Project classes="no-underline">
-		120-129 suit you if you're a freelancer with a
-	</Project>
-	<Project classes="no-underline">
-		130-139 lot of clients, and occasionally those
-	</Project>
-	<Project classes="no-underline">
-		140-149 clients have more than one job.
-	</Project>
-	<Area classes="underline">141 Then you number your projects like this</Area>
-	<ID>&nbsp;141.32.73 And individual items like this</ID>
+	<Project classes="no-underline">100-109 First client's projects</Project>
+	<Area>101 Project #1 for first client</Area>
+	<Category>&nbsp;10-19 Administration</Category>
+	<Category>&nbsp;...</Category>
+	<BlankRow />
+	<Project classes="no-underline">110-119 Second client's projects</Project>
+	<BlankRow />
+	<Project classes="no-underline">120-129 Third client, and so on...</Project>
+	<Comment indent={8}>// note that no client can have more than</Comment>
+	<Comment indent={11}>10 projects if you group like this</Comment>
+	<BlankRow />
+	<Project classes="no-underline">130-139 Fourth client's projects</Project>
+	<Area>131 Then you number your projects like this</Area>
+	<ID>&nbsp;131.32.73 And individual items like this</ID>
 </PROACIDbox>
 
 Of course, you don't have to group your projects at all if you don't want or need to. In this case your projects will sort by order of creation, just like individual IDs do within a category.
 
 <PROACIDbox>
-	<Project classes="no-underline">101 My first project</Project>
+	<Project classes="no-underline">101 Project 1 for client A</Project>
 	<Project classes="no-underline">
-		102 which I would instinctively start at 101
+		102 Project 2 for your own personal thing
 	</Project>
-	<Project classes="no-underline">
-		103 even though there's nothing wrong with the
-	</Project>
-	<Project classes="no-underline">
-		104 numbers 000-100. There's just something
-	</Project>
-	<Project classes="no-underline">
-		105 about reserving numbers at the 'front' of
-	</Project>
-	<Project classes="no-underline">
-		106 a system that I find reassuring. But
-	</Project>
-	<Project classes="no-underline">107 you do whatever you want. :-)</Project>
+	<Project classes="no-underline">103 Project 3 for client B</Project>
+	<Project classes="no-underline">104 Project 4 also for client B</Project>
+	<Project classes="no-underline">105 Project 5 for client A again</Project>
+	<Project classes="no-underline">106 Project 6 for client C</Project>
+	<Project classes="no-underline">107 ... and you get the idea</Project>
 </PROACIDbox>
 
 ---

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import PropTypes from "prop-types"
 
@@ -7,16 +8,21 @@ import PropTypes from "prop-types"
  * textIndent: how many characters *to the left of that* will the number start
  *  */
 
-const Basebox = ({ children }) => (
+const Basebox = ({ children, guide = false }) => (
 	<div className="mb-4 text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
 		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
 			J•D
 		</div>
-		<div className="p-2 sm:px-4">{children}</div>
+		{guide ? (
+			<div className="px-2 sm:px-4">
+				123456789012345678901234567890123456789012345678901234567890
+			</div>
+		) : null}
+		<div className="p-2 text-sm sm:px-4 sm:text-base">{children}</div>
 	</div>
 )
 
-export const PROACIDbox = ({ children, classes }) => {
+export const PROACIDbox = ({ children, classes, guide }) => {
 	const PROJECT_MARGINLEFT = "4ch"
 	const PROJECT_TEXTINDENT = "-4ch"
 
@@ -44,15 +50,7 @@ export const PROACIDbox = ({ children, classes }) => {
 		React.cloneElement(child, { MARGINSINDENTS: MARGINSINDENTS })
 	)
 
-	// return (
-	// 	<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
-	// 		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
-	// 			J•D
-	// 		</div>
-	// 		<div className="p-2">{childrenWithProps}</div>
-	// 	</div>
-	// )
-	return <Basebox>{childrenWithProps}</Basebox>
+	return <Basebox guide={guide}>{childrenWithProps}</Basebox>
 }
 
 export const ACIDbox = ({ children, classes }) => {
@@ -168,34 +166,19 @@ export const ID = ({ children, classes, MARGINSINDENTS }) => {
 	)
 }
 
+export const Comment = ({ children, classes, indent = 0 }) => (
+	<span
+		className={`text-gray-500 font-light ${classes}`}
+		style={{
+			display: "inline-block",
+			textDecoration: "none",
+			marginLeft: `${indent}ch`,
+			textIndent: "0px",
+		}}
+	>
+		{children}
+	</span>
+)
+
 /* Hmm we shouldn't need this if our margins are all correct? */
 export const BlankRow = () => <div>&nbsp;</div>
-
-PROACIDbox.propTypes = {
-	children: PropTypes.array,
-	classes: PropTypes.string,
-}
-ACIDbox.propTypes = {
-	children: PropTypes.array,
-	classes: PropTypes.string,
-}
-Project.propTypes = {
-	children: PropTypes.string,
-	classes: PropTypes.string,
-	MARGINSINDENTS: PropTypes.object,
-}
-Area.propTypes = {
-	children: PropTypes.string,
-	classes: PropTypes.string,
-	MARGINSINDENTS: PropTypes.object,
-}
-Category.propTypes = {
-	children: PropTypes.string,
-	classes: PropTypes.string,
-	MARGINSINDENTS: PropTypes.object,
-}
-ID.propTypes = {
-	children: PropTypes.string,
-	classes: PropTypes.string,
-	MARGINSINDENTS: PropTypes.object,
-}
