@@ -185,46 +185,34 @@ So what I mean is we go from something like this.
 ...to this.
 
 <PROACIDbox>
-	<Project>
-		101 Administration{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// this is all the stuff
-		</span>
-	</Project>
+	<Project>101 Administration</Project>
 	<Area>
-		10-19 Administration{" "}
-		<span className="text-gray-400 font-light">// from above, just in its</span>
+		10-19 Administration
+		<Comment indent={3}>// this is all the stuff</Comment>
 	</Area>
 	<Area>
-		20-29 Marketing{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// own 'project'
-		</span>
+		20-29 Marketing
+		<Comment indent={8}>// from above, just in</Comment>
 	</Area>
-	<Category>21 Advertising</Category>
+	<Category>
+		21 Advertising
+		<Comment indent={6}>// its own 'project'</Comment>
+	</Category>
 	<Area>30-39 Finance</Area>
 	<Category>31 Accounting</Category>
 	<Category>32 Contracts</Category>
 	<BlankRow />
 	<Project>
-		102 First project{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// and now we break out
-		</span>
+		102 First project
+		<Comment indent={10}>// and now we break out all</Comment>
 	</Project>
 	<Area>
-		10-19 ...{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// all
-			of the actual projects
-		</span>
+		10-19 ...
+		<Comment indent={14}>// of the actual projects</Comment>
 	</Area>
 	<Area>
-		20-29 ...{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// as
-			discussed above
-		</span>
+		20-29 ...
+		<Comment indent={14}>// as discussed above</Comment>
 	</Area>
 	<BlankRow />
 	<Project>103 Second project</Project>
