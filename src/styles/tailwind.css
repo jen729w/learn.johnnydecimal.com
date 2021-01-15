@@ -10,32 +10,32 @@ body {
 
 /* === Headers === === === === === === === === === === === === === === ===   */
 /* Tiny screen default */
-.spec-post h1 {
+.post h1 {
 	@apply mb-3 text-4xl leading-tight border-b-4 border-offblack font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
-	.spec-post h1 {
+	.post h1 {
 		@apply text-4xl;
 	}
 }
 
-.spec-post h2 {
+.post h2 {
 	@apply mt-6 mb-3 mr-6 text-3xl leading-tight border-b-2 border-offblack font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
-	.spec-post h2 {
+	.post h2 {
 		@apply text-3xl;
 	}
 }
 
-.spec-post h3 {
+.post h3 {
 	@apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700 font-jdheader;
 }
 /* Increase font size on larger screens */
 @screen sm {
-	.spec-post h3 {
+	.post h3 {
 		@apply text-2xl;
 	}
 }
@@ -49,28 +49,28 @@ body {
 				style that class, so the <p> in there doesn't pick up the previous.
  */
 
-/* In all <p> that are any descendant of a .spec-post, apply the margin. This
+/* In all <p> that are any descendant of a .post, apply the margin. This
 	 ensures spacing between all elements regardless of whether they're nested
 	 in a <div> for some reason.
 
 	 Ooh this is a nice solution. You can add .style-override to any <p> and it'll
 	 be ignored.
  */
-.spec-post p:not(.style-override) {
+.post p:not(.style-override) {
 	@apply mb-4 mr-2;
 }
 
-.spec-post strong {
+.post strong {
 	/* The default is a little too bold (700) */
 	@apply font-semibold;
 }
 
 /* === Lists === === === === === === === === === === === === === === === === */
-.spec-post ol {
+.post ol {
 	@apply mb-4 ml-8 mr-6 list-decimal list-outside;
 }
 
-.spec-post ul {
+.post ul {
 	@apply mb-4 ml-8 mr-6 list-disc list-outside;
 }
 
@@ -97,7 +97,7 @@ p.footnote {
 }
 
 /* === Dividers === === === === === === === === === === === === === === ===  */
-.spec-post hr {
+.post hr {
 	border: 0;
 	height: 1px;
 	background: #555;
@@ -105,13 +105,12 @@ p.footnote {
 	@apply m-4;
 }
 @screen sm {
-	.spec-post hr {
+	.post hr {
 		@apply m-8;
 	}
 }
 
-/* === Links === === === === === === === === === === === === === === === === */
-/* ==  .spec-post == */
+/* === Spec links === === === === === === === === === === === === === === == */
 .spec-post a:link {
 	@apply border-b-2 border-blue-600;
 }
@@ -136,6 +135,36 @@ a.no-style-link:link {
 	@apply underline border-b-0;
 }
 
+/* === Blog links === === === === === === === === === === === === === === == */
+.blog-post a:link {
+	@apply border-b-2 border-yellow-600;
+}
+
+.blog-post a:visited {
+	@apply border-b-2 border-gray-400;
+}
+
+.blog-post a:hover {
+	@apply text-yellow-600 border-b-4 border-yellow-600;
+}
+
+.blog-post a:focus {
+	@apply text-yellow-600 border-b-4 border-yellow-600 outline-none;
+}
+
+.blog-post a:active {
+	@apply bg-yellow-600 border-b-2 border-yellow-600 text-offwhite;
+}
+
+a.no-style-link:link {
+	@apply underline border-b-0;
+}
+
+/* == Blog blockquote (which is the date) == */
+.blog-post blockquote {
+	@apply text-sm text-gray-700;
+}
+
 /* ==  Table of contents == */
 nav.tableofcontents a:link {
 }
@@ -153,8 +182,11 @@ nav.tableofcontents a:active {
 }
 
 /* ==  Header == */
-header a:focus {
-	@apply bg-blue-600 outline-none text-offwhite;
+a#spec-header:focus {
+	@apply bg-blue-600 border-blue-600 outline-none text-offwhite;
+}
+a#blog-header:focus {
+	@apply bg-yellow-600 border-yellow-600 outline-none text-offwhite;
 }
 
 /* === Decimal === === === === === === === === === === === === === === ===   */

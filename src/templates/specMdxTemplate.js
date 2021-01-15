@@ -20,6 +20,7 @@ import {
 	Comment,
 } from "../components/PROACIDbox"
 import { ConceptsIndexItem } from "../components/ConceptsIndex"
+import { BlogIndexItem } from "../components/BlogIndex"
 
 // Provide common components here
 const shortcodes = {
@@ -35,6 +36,7 @@ const shortcodes = {
 	BlankRow,
 	Comment,
 	ConceptsIndexItem,
+	BlogIndexItem,
 }
 
 export default function PageTemplate({ data: { mdx } }) {
@@ -43,12 +45,9 @@ export default function PageTemplate({ data: { mdx } }) {
 			<Layout type="blog">
 				<MDXProvider components={shortcodes}>
 					<SEO title={mdx.frontmatter.title} />
-					{/* <div className="spec-post-container"> */}
-					<div className="spec-post">
-						<div>{mdx.frontmatter.slug}</div>
+					<div className="post blog-post">
 						<MDXRenderer>{mdx.body}</MDXRenderer>
 					</div>
-					{/* </div> */}
 				</MDXProvider>
 			</Layout>
 		)
@@ -57,12 +56,9 @@ export default function PageTemplate({ data: { mdx } }) {
 			<Layout type="spec">
 				<MDXProvider components={shortcodes}>
 					<SEO title={mdx.frontmatter.title} />
-					{/* <div className="spec-post-container"> */}
-					<div className="spec-post">
-						<div>{mdx.frontmatter.slug}</div>
+					<div className="post spec-post">
 						<MDXRenderer>{mdx.body}</MDXRenderer>
 					</div>
-					{/* </div> */}
 				</MDXProvider>
 			</Layout>
 		)

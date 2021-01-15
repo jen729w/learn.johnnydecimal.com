@@ -2,7 +2,7 @@
 import React from "react"
 
 export const ConceptsIndexItem = ({ title, summary, url }) => (
-	<div class="my-2">
+	<div className="my-2">
 		<div>
 			<a href={url}>{title}</a>
 		</div>
