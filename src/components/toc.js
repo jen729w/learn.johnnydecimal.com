@@ -5,7 +5,7 @@ const JDNavLink = ({ children, to }) => (
 	<Link
 		to={to}
 		activeClassName="font-semibold sm:border-r-2 sm:border-offblack rounded-none"
-		className="block px-2 py-1 ml-2"
+		className="block px-2 py-1 ml-2 text-center sm:text-left"
 		style={{ marginRight: "-2px" }}
 	>
 		{children}
@@ -21,10 +21,10 @@ const TOC = () => (
 		{/* Wrap all links */}
 		<div className="">
 			<JDNavLink to="/">Home</JDNavLink>
-			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/" activeClassName="font-semibold" className="">
 				Concepts
 			</JDNavLink>
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 			<JDNavLink to="/concepts/areas-categories/">
 				Areas &amp; categories
 			</JDNavLink>
@@ -38,6 +38,7 @@ const TOC = () => (
 				Developing your own system
 			</JDNavLink>
 			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
+			<JDNavLink to="/concepts/multiple-projects/">Multiple projects</JDNavLink>
 			<JDNavLink to="/concepts/managing-email/">Managing email</JDNavLink>
 			<JDNavLink to="/concepts/what-about-00-09/">What about 00-09?</JDNavLink>
 			<JDNavLink to="/concepts/working-at-the-terminal/">
@@ -50,6 +51,13 @@ const TOC = () => (
 			<JDNavLink to="/contact/">Contact</JDNavLink>
 			<JDNavLink to="/privacy/">Privacy</JDNavLink>
 			<JDNavLink to="/licence/">Licence</JDNavLink>
+			<hr className="mx-2 my-1 border-r-2 border-gray-400" />
+			<div className="px-2 py-1 ml-2 text-xs text-center text-gray-600 sm:text-left">
+				<a href="/rss.xml">RSS feed</a>
+			</div>
+			<p className="px-2 py-1 ml-2 text-xs text-center text-gray-600 sm:text-left">
+				&copy;2021 John Noble 🇦🇺
+			</p>
 		</div>
 	</nav>
 )

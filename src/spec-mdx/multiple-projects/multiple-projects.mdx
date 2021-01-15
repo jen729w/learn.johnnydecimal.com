@@ -1,0 +1,298 @@
+---
+slug: "/concepts/multiple-projects/"
+date: "2020-11-22"
+title: "Multiple projects"
+---
+
+<!-- Note to self: this is the only page (so far) where you're showing *groupings* of projects. I don't anticipate ever doing this again, so I haven't created a custom <PROACIDbox> for it. Hence all the &nbsp; and other junk here. -->
+
+# Multiple-project systems
+
+The system described so far works very well for a single project, or for one
+individual's personal system. But when there are situations when we need more, we expand our system to allow for multiple projects.
+
+## The problem
+
+Let's say you're a freelancer. You might have set up a system like this.
+
+<div className="block footnote-wrapper sm:hidden">
+	<p className="footnote style-override">
+		Some of these examples don't look so great on mobile, sorry. Rotating to
+		landscape might help!
+	</p>
+</div>
+
+<ACIDbox>
+	<Area>10-19 Administration</Area>
+	<Category>
+		11 ... <Comment>// the usual stuff</Comment>
+	</Category>
+	<BlankRow />
+	<Area>20-29 Clients</Area>
+	<Category>21 Best client</Category>
+	<Category>22 Another client</Category>
+	<ID>22.01 Job #1</ID>
+	<ID>22.02 Job #2</ID>
+	<Category>23 Third client</Category>
+	<Category>...</Category>
+	<Category>29 Ninth and final? client</Category>
+</ACIDbox>
+
+A couple of problems are obvious:
+
+1. We are going to want to create folders within <JD>22.01 Job 1</JD> but the system says we shouldn't do that (and we shouldn't – don't be tempted!).
+2. This only allows us to have 10 clients.
+
+We might try and fix it like this.
+
+<ACIDbox>
+	<Area>10-19 Administration</Area>
+	<Category>11 ...</Category>
+	<BlankRow />
+	<Area>20-29 Best client</Area>
+	<BlankRow />
+	<Area>30-39 Another client</Area>
+	<Category>31 Job #1</Category>
+	<ID>31.01 Requirements</ID>
+	<ID>31.02 Quote</ID>
+	<ID>31.03 Artwork</ID>
+	<ID>31.04 External images</ID>
+	<ID>31.05 Final exported files</ID>
+</ACIDbox>
+
+...but that's still no good. Now we can only have ~9 clients, and each client can only have 10 jobs.
+
+This problem is an unavoidable consequence of the way that the J.D system is designed: one of the **benefits** of the system is that "nothing is more than two levels deep". This is a problem when we need to structure information about clients and jobs which is itself two levels deep. We've run out of levels.
+
+---
+
+# Adding projects to the system
+
+I've thought about this for a few years, and have been using the system I'll describe here since 2018. So far it's working well for me.
+
+## Goals
+
+The extended system must retain the advantages of the original Johnny.Decimal system.
+
+1. Each item must have a unique identifier.
+2. You must be able to search (your notes, your file system) for this identifier.
+3. The identifier should be short and preferably memorable.
+
+## Letters: no good
+
+I tried systems using letters rather than numbers and they didn't work. My initial attempt looked something like this:
+
+- <JD>HME.AC.ID</JD> = home system
+- <JD>DVO.AC.ID</JD> = the DevOps project at work
+- <JD>ETC.AC.ID</JD> = etc. for more projects
+
+Now you just have to remember what those letters mean, and they don't add any semantic value to your system.
+
+## The answer: more numbers
+
+Here were my goals and constraints when introducing new numbers:
+
+1. It must not confuse the system.
+2. It must allow for a sufficient number of additional projects.
+3. It must allow the user to organise those projects in some way (i.e. like you organise **categories** in to **areas**).
+
+The solution is to **add a three-number project code to the start of your numbers**, e.g. <JD>000.AC.ID</JD>. In the abstract I'll refer to this as [PRO.AC.ID](/concepts/acid-notation/). 😃
+
+### 1. It must not confuse the system
+
+Three numbers is not two numbers.
+
+I think if I'd gone with <JD>PR.AC.ID</JD>, e.g. <JD>10.12.53</JD>, that would have been a bit much on the brain. The only thing in the J.D system with three numbers is a project code.
+
+### 2. It must allow for a sufficient number of additional projects
+
+One thousand projects should be enough for anyone. I'd love to know what you're doing if you need more than a thousand projects.
+
+### 3. It must allow the user to organise those projects in some way
+
+We can use the same method of grouping as we currently use for our areas: simply group them by number according to our needs.
+
+Here's what my current system looks like.
+
+<PROACIDbox>
+	<Project>100-199 Personal</Project>
+	<Area>101 Personal system</Area>
+	<Category>&nbsp;10-19 Administration</Category>
+	<Comment indent={8}>// ... and so on</Comment>
+	<Area>102 Johnny.Decimal</Area>
+	<Area>103 My next cool project 😎</Area>
+	<BlankRow />
+	<Project>
+		200-299 ACME Corp
+		<Comment indent={9}>// my current contract</Comment>
+	</Project>
+	<Area>201 Work project #1</Area>
+	<Area>202 Work project #2</Area>
+	<Category>&nbsp;10-19 ...</Category>
+</PROACIDbox>
+
+Alternatively, you can group your projects by tens, rather than hundreds. This might work better if you're a freelancer vs. a long-term contractor.
+
+<PROACIDbox>
+	<Project>100-109 First client's projects</Project>
+	<Area>101 Project #1 for first client</Area>
+	<Category>&nbsp;10-19 Administration</Category>
+	<Category>&nbsp;...</Category>
+	<BlankRow />
+	<Project>110-119 Second client's projects</Project>
+	<BlankRow />
+	<Project>120-129 Third client, and so on...</Project>
+	<Comment indent={8}>// note that no client can have more than</Comment>
+	<Comment indent={8}>// 10 projects if you group like this</Comment>
+	<BlankRow />
+	<Project>130-139 Fourth client's projects</Project>
+	<Area>131 Then you number your projects like this</Area>
+	<ID>&nbsp;131.32.73 And individual items like this</ID>
+</PROACIDbox>
+
+Of course, you don't have to group your projects at all if you don't want or need to. In this case your projects will just sort by order of creation.
+
+<PROACIDbox>
+	<Project>101 Project 1 for client A</Project>
+	<Area>10-19 Administration</Area>
+	<Category>...</Category>
+	<BlankRow />
+	<Project>102 Project 2 for your own personal thing</Project>
+	<Area>...</Area>
+	<BlankRow />
+	<Project>
+		103 Project 3 for client B<Comment indent={7}>// ... and so on</Comment>
+	</Project>
+	<Project>104 Project 4 also for client B</Project>
+	<Project>105 Project 5 for client A again</Project>
+	<Project>106 Project 6 for client C</Project>
+	<Project>
+		107<Comment indent={1}>// ... and you get the idea</Comment>
+	</Project>
+</PROACIDbox>
+
+---
+
+# Implementation details
+
+For most people who are in this situation, I think you should use one project for all of the stuff that is general to your life/business/etc.
+
+So what I mean is we go from something like this...
+
+<ACIDbox>
+	<Area>10-19 Administration</Area>
+	<Area>20-29 Marketing</Area>
+	<Category>21 Advertising</Category>
+	<Area>30-39 Finance</Area>
+	<Category>31 Accounting</Category>
+	<Category>32 Contracts</Category>
+	<Area>40-49 Clients</Area>
+	<Category>
+		41 ...<Comment indent={4}>// this is what didn't work</Comment>
+	</Category>
+	<Category>42 ...</Category>
+</ACIDbox>
+
+...to this.
+
+<PROACIDbox>
+	<Project>101 Administration</Project>
+	<Area>
+		10-19 Administration
+		<Comment indent={3}>// this is all the stuff</Comment>
+	</Area>
+	<Area>
+		20-29 Marketing
+		<Comment indent={8}>// from above, just in</Comment>
+	</Area>
+	<Category>
+		21 Advertising
+		<Comment indent={6}>// its own 'project'</Comment>
+	</Category>
+	<Area>30-39 Finance</Area>
+	<Category>31 Accounting</Category>
+	<Category>32 Contracts</Category>
+	<BlankRow />
+	<Project>
+		102 First project
+		<Comment indent={10}>// and now we break out all</Comment>
+	</Project>
+	<Area>
+		10-19 ...
+		<Comment indent={14}>// of the actual projects</Comment>
+	</Area>
+	<Area>
+		20-29 ...
+		<Comment indent={14}>// as discussed above</Comment>
+	</Area>
+	<BlankRow />
+	<Project>103 Second project</Project>
+	<Area>10-19 ...</Area>
+</PROACIDbox>
+
+---
+
+# How I name my folders and files
+
+I don't use the project number in my area or category folders. This is because they tend to be fairly unique anyway, with the exception of my ubiquitous <JD>10-19 Administration</JD>.
+
+I **do** use the project number in my ID folders, and when I name files. There are a couple of reasons why I've found this to be right for me.
+
+1. When I use [Alfred](https://www.alfredapp.com/)<sup>1</sup>, which I do many times a day, I can type the full <JD>PRO.AC.ID</JD> number and it'll open the folder immediately.
+2. When you view the _Open Recent_ menu — e.g. in Microsoft Excel — the filename shows the project name at the beginning. I find this really useful.
+
+<div class="footnote-wrapper">
+	<ol class="footnote">
+		<li>
+			If you use macOS, you should use Alfred. Activate it, press the spacebar
+			to enter 'Open File...' mode, then type the name of a folder.{" "}
+			<span className="not-italic">🤯</span>
+		</li>
+	</ol>
+</div>
+
+So this means that my system looks like this.
+
+<PROACIDbox>
+	<Project>496 Any old project</Project>
+	<Area>10-19 ...</Area>
+	<Area>
+		20-29 An interesting area
+		<Comment indent={4}>// no project number here</Comment>
+	</Area>
+	<Category>
+		21 A great category
+		<Comment indent={7}>// or here</Comment>
+	</Category>
+	<ID>
+		496.21.11 My favourite ID
+		<Comment indent={1}>// but check me out!</Comment>
+	</ID>
+</PROACIDbox>
+
+<!-- Break the long string on mobile -->
+
+<div className="hidden sm:block">
+	Within that folder, if I saved an Excel file I would call that file{" "}
+	<JD>496.21.11 Whatever descriptive name I'd use.xlsx</JD>.
+</div>
+<div className="block sm:hidden text-base">
+	Within that folder, if I saved an Excel file I would call that file{" "}
+	<JD>
+		496.21.11 Whatever descriptive
+		<br />
+		name I'd use.xlsx
+	</JD>
+	.
+</div>
+
+---
+
+As with most aspects of this system, you should adapt it to your needs. Try a few things and see what works. Change often – don't think that the first way you implement a thing will be the right one, I've found it needs experimentation to get just right.
+
+<Navigation
+	backURL="/concepts/developing-your-own-system/"
+	backTitle="Developing your own system"
+	nextURL="/concepts/managing-email/"
+	nextTitle="Managing email"
+/>
