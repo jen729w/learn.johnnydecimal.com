@@ -38,18 +38,35 @@ const shortcodes = {
 }
 
 export default function PageTemplate({ data: { mdx } }) {
-	return (
-		<Layout>
-			<MDXProvider components={shortcodes}>
-				<SEO title={mdx.frontmatter.title} />
-				{/* <div className="spec-post-container"> */}
-				<div className="spec-post">
-					<MDXRenderer>{mdx.body}</MDXRenderer>
-				</div>
-				{/* </div> */}
-			</MDXProvider>
-		</Layout>
-	)
+	if (mdx.frontmatter.slug.slice(0, 5) === "/blog") {
+		return (
+			<Layout type="blog">
+				<MDXProvider components={shortcodes}>
+					<SEO title={mdx.frontmatter.title} />
+					{/* <div className="spec-post-container"> */}
+					<div className="spec-post">
+						<div>{mdx.frontmatter.slug}</div>
+						<MDXRenderer>{mdx.body}</MDXRenderer>
+					</div>
+					{/* </div> */}
+				</MDXProvider>
+			</Layout>
+		)
+	} else {
+		return (
+			<Layout type="spec">
+				<MDXProvider components={shortcodes}>
+					<SEO title={mdx.frontmatter.title} />
+					{/* <div className="spec-post-container"> */}
+					<div className="spec-post">
+						<div>{mdx.frontmatter.slug}</div>
+						<MDXRenderer>{mdx.body}</MDXRenderer>
+					</div>
+					{/* </div> */}
+				</MDXProvider>
+			</Layout>
+		)
+	}
 }
 
 export const pageQuery = graphql`
@@ -59,6 +76,7 @@ export const pageQuery = graphql`
 			body
 			frontmatter {
 				title
+				slug
 			}
 		}
 	}

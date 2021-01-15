@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import TOC from "./toc"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, type = "spec" }) => {
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
 					className="mb-8 sm:w-1/4 print:hidden"
 					style={{ marginTop: "0.5rem" }}
 				>
-					<TOC />
+					{type === "spec" ? <TOC /> : <div>Blog!</div>}
 				</div>
 			</div>
 			{/*
@@ -55,6 +55,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
+	type: PropTypes.string,
 }
 
 export default Layout
