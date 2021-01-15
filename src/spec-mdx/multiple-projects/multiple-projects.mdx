@@ -24,7 +24,9 @@ Let's say you're a freelancer. You might have set up a system like this.
 
 <ACIDbox>
 	<Area>10-19 Administration</Area>
-	<Category>11 ... // the usual stuff</Category>
+	<Category>
+		11 ... <Comment>// the usual stuff</Comment>
+	</Category>
 	<BlankRow />
 	<Area>20-29 Clients</Area>
 	<Category>21 Best client</Category>
@@ -45,7 +47,7 @@ We might try and fix it like this.
 
 <ACIDbox>
 	<Area>10-19 Administration</Area>
-	<Category>11 ... // the usual stuff</Category>
+	<Category>11 ...</Category>
 	<BlankRow />
 	<Area>20-29 Best client</Area>
 	<BlankRow />
@@ -116,7 +118,7 @@ Here's what my current system looks like.
 	<Project>100-199 Personal</Project>
 	<Area>101 Personal system</Area>
 	<Category>&nbsp;10-19 Administration</Category>
-	<Category>&nbsp;... and so on</Category>
+	<Comment indent={8}>// ... and so on</Comment>
 	<Area>102 Johnny.Decimal</Area>
 	<Area>103 My next cool project 😎</Area>
 	<BlankRow />
@@ -126,40 +128,47 @@ Here's what my current system looks like.
 	</Project>
 	<Area>201 Work project #1</Area>
 	<Area>202 Work project #2</Area>
-	<Category>&nbsp;10-19 ... you get the idea</Category>
+	<Category>&nbsp;10-19 ...</Category>
 </PROACIDbox>
 
 Alternatively, you can group your projects by tens, rather than hundreds. This might work better if you're a freelancer vs. a long-term contractor.
 
 <PROACIDbox>
-	<Project classes="no-underline">100-109 First client's projects</Project>
+	<Project>100-109 First client's projects</Project>
 	<Area>101 Project #1 for first client</Area>
 	<Category>&nbsp;10-19 Administration</Category>
 	<Category>&nbsp;...</Category>
 	<BlankRow />
-	<Project classes="no-underline">110-119 Second client's projects</Project>
+	<Project>110-119 Second client's projects</Project>
 	<BlankRow />
-	<Project classes="no-underline">120-129 Third client, and so on...</Project>
+	<Project>120-129 Third client, and so on...</Project>
 	<Comment indent={8}>// note that no client can have more than</Comment>
-	<Comment indent={11}>10 projects if you group like this</Comment>
+	<Comment indent={8}>// 10 projects if you group like this</Comment>
 	<BlankRow />
-	<Project classes="no-underline">130-139 Fourth client's projects</Project>
+	<Project>130-139 Fourth client's projects</Project>
 	<Area>131 Then you number your projects like this</Area>
 	<ID>&nbsp;131.32.73 And individual items like this</ID>
 </PROACIDbox>
 
-Of course, you don't have to group your projects at all if you don't want or need to. In this case your projects will sort by order of creation, just like individual IDs do within a category.
+Of course, you don't have to group your projects at all if you don't want or need to. In this case your projects will just sort by order of creation.
 
 <PROACIDbox>
-	<Project classes="no-underline">101 Project 1 for client A</Project>
-	<Project classes="no-underline">
-		102 Project 2 for your own personal thing
+	<Project>101 Project 1 for client A</Project>
+	<Area>10-19 Administration</Area>
+	<Category>...</Category>
+	<BlankRow />
+	<Project>102 Project 2 for your own personal thing</Project>
+	<Area>...</Area>
+	<BlankRow />
+	<Project>
+		103 Project 3 for client B<Comment indent={7}>// ... and so on</Comment>
 	</Project>
-	<Project classes="no-underline">103 Project 3 for client B</Project>
-	<Project classes="no-underline">104 Project 4 also for client B</Project>
-	<Project classes="no-underline">105 Project 5 for client A again</Project>
-	<Project classes="no-underline">106 Project 6 for client C</Project>
-	<Project classes="no-underline">107 ... and you get the idea</Project>
+	<Project>104 Project 4 also for client B</Project>
+	<Project>105 Project 5 for client A again</Project>
+	<Project>106 Project 6 for client C</Project>
+	<Project>
+		107<Comment indent={1}>// ... and you get the idea</Comment>
+	</Project>
 </PROACIDbox>
 
 ---
@@ -168,7 +177,7 @@ Of course, you don't have to group your projects at all if you don't want or nee
 
 For most people who are in this situation, I think you should use one project for all of the stuff that is general to your life/business/etc.
 
-So what I mean is we go from something like this.
+So what I mean is we go from something like this...
 
 <ACIDbox>
 	<Area>10-19 Administration</Area>
@@ -178,7 +187,9 @@ So what I mean is we go from something like this.
 	<Category>31 Accounting</Category>
 	<Category>32 Contracts</Category>
 	<Area>40-49 Clients</Area>
-	<Category>41 ... // this is what didn't work</Category>
+	<Category>
+		41 ...<Comment indent={4}>// this is what didn't work</Comment>
+	</Category>
 	<Category>42 ...</Category>
 </ACIDbox>
 
@@ -246,20 +257,16 @@ So this means that my system looks like this.
 	<Project>496 Any old project</Project>
 	<Area>10-19 ...</Area>
 	<Area>
-		20-29 An interesting area{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;// no project number here
-		</span>
+		20-29 An interesting area
+		<Comment indent={4}>// no project number here</Comment>
 	</Area>
 	<Category>
-		21 A great category{" "}
-		<span className="text-gray-400 font-light">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// or here
-		</span>
+		21 A great category
+		<Comment indent={7}>// or here</Comment>
 	</Category>
 	<ID>
-		496.21.11 My favourite ID{" "}
-		<span className="font-bold">// but check me out!</span>
+		496.21.11 My favourite ID
+		<Comment indent={1}>// but check me out!</Comment>
 	</ID>
 </PROACIDbox>
 
