@@ -79,6 +79,14 @@ module.exports = {
 					{
 						serialize: ({ query: { site, allMdx } }) => {
 							return allMdx.edges.map(edge => {
+								// If this is a blog post, strip the <h1> and <blockquote>
+								let html
+								if (edge.node.frontmatter.slug.slice(0, 5) === "/blog") {
+									html = edge.node.html.split(/^<h1>.*?<\/blockquote>/)[1]
+								} else {
+									// otherwise just strip the <h1>
+									html = edge.node.html.split(/^<h1>.*?<\/h1>/)[1]
+								}
 								return Object.assign({}, edge.node.frontmatter, {
 									description: edge.node.frontmatter.summary,
 									date: edge.node.frontmatter.date,
@@ -92,7 +100,7 @@ module.exports = {
 									// 	edge.node.frontmatter.slug,
 									custom_elements: [
 										{
-											"content:encoded": edge.node.html,
+											"content:encoded": html,
 										},
 									],
 								})
