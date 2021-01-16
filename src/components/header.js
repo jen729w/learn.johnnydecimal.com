@@ -14,7 +14,7 @@ const isMainSite = ({ location }) => {
 
 const Header = () => (
 	<header
-		className="grid grid-flow-row mt-2 mb-4 text-base sm:ml-4 sm:mb-6"
+		className="grid grid-flow-row mt-2 mb-4 text-base font-medium sm:ml-4 sm:mb-6"
 		style={{
 			gridTemplateColumns: "auto auto 1fr",
 			justifyContent: "start",
