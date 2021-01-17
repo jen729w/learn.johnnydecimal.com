@@ -135,36 +135,6 @@ a.no-style-link:link {
 	@apply underline border-b-0;
 }
 
-/* === Blog links === === === === === === === === === === === === === === == */
-.blog-post a:link {
-	@apply border-b-2 border-yellow-600;
-}
-
-.blog-post a:visited {
-	@apply border-b-2 border-gray-400;
-}
-
-.blog-post a:hover {
-	@apply text-yellow-600 border-b-4 border-yellow-600;
-}
-
-.blog-post a:focus {
-	@apply text-yellow-600 border-b-4 border-yellow-600 outline-none;
-}
-
-.blog-post a:active {
-	@apply bg-yellow-600 border-b-2 border-yellow-600 text-offwhite;
-}
-
-a.no-style-link:link {
-	@apply underline border-b-0;
-}
-
-/* == Blog blockquote (which is the date) == */
-.blog-post blockquote {
-	@apply text-sm text-gray-700;
-}
-
 /* ==  Table of contents == */
 nav.tableofcontents a:link {
 }
@@ -286,6 +256,54 @@ img.screenshot {
 	.emailSubject {
 		@apply text-base;
 	}
+}
+
+/* ===========================================================================
+	 ALL THE BLOG STUFF HERE
+	 ==========================================================================*/
+/* === Blog links === === === === === === === === === === === === === === == */
+.blog-post a:link {
+	@apply border-b-2 border-yellow-600;
+}
+
+.blog-post a:visited {
+	@apply border-b-2 border-gray-400;
+}
+
+.blog-post a:hover {
+	@apply text-yellow-600 border-b-4 border-yellow-600;
+}
+
+.blog-post a:focus {
+	@apply text-yellow-600 border-b-4 border-yellow-600 outline-none;
+}
+
+.blog-post a:active {
+	@apply bg-yellow-600 border-b-2 border-yellow-600 text-offwhite;
+}
+
+a.no-style-link:link {
+	@apply underline border-b-0;
+}
+
+/* == Blog blockquote (which is the date) == */
+.blog-post blockquote {
+	@apply text-sm text-gray-700;
+}
+
+/* == The thing where you hide certain 'BlogIndexItem's depending on whether
+			they have a class assigned, that class corresponding to the #tag.
+
+			1. On each new tag index page that you create, wrap <BlogIndexItems />
+			   in a div with a class of `blog-tag-{the tag}`.
+			2. The definition here then identifies just that div on just that page,
+				 and within that div it hides anything that does *not* include the class
+				 which is the tag.
+			3. That class gets loaded on to that div in the definition of
+			   <BlogIndexItem />.
+ */
+.blog-tag-new-system .blog-index-item:not(.new-system) {
+	@apply hidden;
 }
 
 /* === END === === === === === === === === === === === === === === === ===   */
