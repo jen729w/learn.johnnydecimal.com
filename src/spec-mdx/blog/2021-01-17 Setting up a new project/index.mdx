@@ -1,0 +1,145 @@
+---
+title: "Setting up a new project"
+slug: "/blog/20210117-setting-up-a-new-project/"
+date: "2021-01-17T15:30+10:00"
+summary: "Walking through the setup of a new home project."
+tags: "new-system"
+---
+
+import img_104_02_11_01 from "./img/1 - 104.02.11 LwL MindNode mind map-min.png"
+import img_104_02_11_02 from "./img/2 - 104.02.11 LwL MindNode mind map-min.png"
+import img_104_02_11_03 from "./img/3 - 104.02.11 LwL MindNode mind map-min.png"
+import img_104_02_11_05 from "./img/5 - 104.02.11 LwL MindNode mind map-min.png"
+
+# Setting up a new project
+
+> 17th January 2021 | [#new-system](/blog/tags/new-system/)
+
+My partner and I recently set up a new home project, which meant a new J.D system. I'll talk through its design and setup here.
+
+## The project
+
+We're going to put together an Excel training course. I know it backwards, she doesn't know it at all but she wants to, so we thought we'd record the whole thing and release it. We've done [a podcast](https://podcasts.apple.com/au/podcast/strange-attractor/id1099562790) before and really enjoyed the process.
+
+First up I almost always start with a mind map. Don't try to organise anything yet, just dump your thoughts. Any old crap, it doesn't matter – you don't have to use it later.
+
+Take your time at this stage. And if you prefer writing things on paper, post-it notes are great for this.
+
+<div className="max-w-md mx-auto shadow-md border border-gray-500 rounded-sm p-2 my-4">
+	<img
+		src={img_104_02_11_01}
+		alt="Screenshot of a mind map in its early stages."
+	/>
+	<div className="text-center text-xs text-gray-600 mt-2 italic">
+		MindNode screenshot #1
+	</div>
+</div>
+
+Given that this won't be too dissimilar to a podcast in its structure, I kinda know where I'm going here. Still, it takes a few tries to get there. Here's the first cut at organising in to areas and categories.
+
+I also give it a [project number](/concepts/multiple-projects/) of 104. 'LwL' is 'Learn with Lucy', the name of the project.
+
+<div className="max-w-md mx-auto shadow-md border border-gray-500 rounded-sm p-2 my-4">
+	<img
+		src={img_104_02_11_02}
+		alt="Screenshot of a mind map after a little bit of organising."
+	/>
+	<div className="text-center text-xs text-gray-600 mt-2 italic">
+		MindNode screenshot #2
+	</div>
+</div>
+
+And then we just keep going, really. This isn't rocket-science. I try something different...
+
+<div className="max-w-md mx-auto shadow-md border border-gray-500 rounded-sm p-2 my-4">
+	<img
+		src={img_104_02_11_03}
+		alt="Screenshot of a mind map after a bit more organising."
+	/>
+	<div className="text-center text-xs text-gray-600 mt-2 italic">
+		MindNode screenshot #3
+	</div>
+</div>
+
+...before settling on what becomes the final structure, which I add numbers to just to make it feel real.
+
+<div className="max-w-md mx-auto shadow-md border border-gray-500 rounded-sm p-2 my-4">
+	<img
+		src={img_104_02_11_05}
+		alt="Screenshot of a mind map which is basically finished by now."
+	/>
+	<div className="text-center text-xs text-gray-600 mt-2 italic">
+		MindNode screenshot #4
+	</div>
+</div>
+
+Just play around until it feels right. The more items you have to play with, the better the final result is going to be (which is why you shouldn't rush to start organising until you've got as much out of your brain as possible).
+
+---
+
+# I broke the rules 😮
+
+Looking at that last screenshot you might be thinking, hang on, he's gone three levels deep there (at the end of <JD>22.11</JD>).
+
+Yep. I've [broken the rules](http://localhost:8000/concepts/exceptions-to-the-rules/).
+
+The problem here is that <JD>22.11</JD> is the perfect level for each 'episode'. They all get their own ID. But when I record each episode, I've got a bunch of material – again, it helps that I have experience from the podcast because it's basically exactly what we did there.
+
+We have:
+
+1. The original raw media files that we recorded.
+2. An edited version of those files, this time as a [ScreenFlow](http://www.telestream.net/screenflow/overview.htm) package.
+3. (For the podcast I also had 'optimised' versions of the audio files.)
+4. And finally, the as-released exported movie file.
+
+I _could_ figure out some sort of structure where each of these things gets their own ID, but I know this worked for me previously so I'm going to do it again.
+
+Remember, if you choose to break the rules, the key thing is that **it helps you to be more organised**. That's all that this system is: it's a way to be more organised, to help you find your stuff. I don't give a crap how you modify it as long as it continues to do that job for you.
+
+The key here is that every episode folder will look the same: they'll all contain these sub-folders, exactly these sub-folders, and only these sub-folders. I won't allow myself to create a bunch of other crap in here.
+
+So, here's the final structure.
+
+<PROACIDbox>
+	<Project>104 Learn with Lucy</Project>
+	<Area>10-19 Administration</Area>
+	<Category>11 High-level planning</Category>
+	<ID>11.12 Hover domain shortlist</ID>
+	<Area>20-29 Lessons/episodes</Area>
+	<Category>21 Lesson planning &amp; other miscellanea</Category>
+	<ID>21.11 Spreadsheets under development</ID>
+	<Category>22 Problem-solving lessons</Category>
+	<ID>22.11 Tracking our weight</ID>
+	<Comment indent={10}>// within this folder, I create subfolders</Comment>
+	<ID>&nbsp;&nbsp;&nbsp;01 Raw media files, as recorded</ID>
+	<ID>&nbsp;&nbsp;&nbsp;02 Edited ScreenFlow package</ID>
+	<ID>&nbsp;&nbsp;&nbsp;03 Final exports, as published</ID>
+	<ID>&nbsp;&nbsp;&nbsp;04 Images</ID>
+	<Comment indent={10}>// ... more episode folders here</Comment>
+	<Category>23 Deep-dive lessons</Category>
+	<Area>30-39 Creative</Area>
+	<Category>31 Images</Category>
+	<ID>31.11 LwL hero image, various formats exported</ID>
+	<ID>31.12 Banners</ID>
+	<ID>31.13 Favicon</ID>
+	<Category>32 Design stuff</Category>
+	<ID>32.11 Design guide</ID>
+	<Area>40-49 Technology</Area>
+	<Category>41 Our website</Category>
+	<Category>42 ScreenFlow - anything that isn't a lesson</Category>
+	<ID>42.11 Screenflow practice</ID>
+	<Area>50-59 Marketing &amp; sales</Area>
+	<Category>51 Market analysis</Category>
+	<ID>51.11 Competitors, overview</ID>
+	<Category>52 Social media etc.</Category>
+	<ID>52.11 Twitter (our account)</ID>
+	<Comment indent={10}>// ... and a bunch of other similar stuff</Comment>
+</PROACIDbox>
+
+---
+
+# Re-use, adapt, evolve
+
+As with everything on this site, you're free to re-use it or adapt it to suit your needs. And, as always, if you need a hand with anything, [reach out](/contact/).
+
+–j.

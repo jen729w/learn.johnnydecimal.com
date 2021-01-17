@@ -32,7 +32,7 @@ export const PROACIDbox = ({ children, classes, guide }) => {
 	const CATEGORY_MARGINLEFT = "10ch"
 	const CATEGORY_TEXTINDENT = "-3ch"
 
-	const ID_MARGINLEFT = "13ch"
+	const ID_MARGINLEFT = "16ch"
 	const ID_TEXTINDENT = "-6ch"
 
 	const MARGINSINDENTS = {
