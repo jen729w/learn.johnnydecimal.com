@@ -21,7 +21,7 @@ import {
 } from "../components/PROACIDbox"
 import { ConceptsIndexItem } from "../components/ConceptsIndex"
 import { BlogIndexItem } from "../components/BlogIndex"
-import { Image } from "../components/Image"
+import { Image } from "../components/image"
 
 // Provide common components here
 const shortcodes = {
