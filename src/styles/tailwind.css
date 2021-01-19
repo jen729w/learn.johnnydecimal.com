@@ -310,6 +310,9 @@ a.no-style-link:link {
 .blog-tag-new-system .blog-index-item:not(.new-system) {
 	@apply hidden;
 }
+.blog-tag-meta .blog-index-item:not(.meta) {
+	@apply hidden;
+}
 
 /* === END === === === === === === === === === === === === === === === ===   */
 
