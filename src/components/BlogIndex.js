@@ -33,7 +33,7 @@ export const BlogIndexItems = () => (
 			title="2021 J.D update"
 			date="20th January 2021"
 			summary="What's going on with J.D in 2021."
-			slug="/blog/20210119-2021-jd-update/"
+			slug="/blog/20210120-2021-jd-update/"
 			tags="meta"
 		/>
 		<BlogIndexItem
