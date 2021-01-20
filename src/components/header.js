@@ -24,6 +24,7 @@ const Header = () => {
 		currentUrl.includes("localhost")
 	) {
 		isNonProd = true
+		console.debug(`⛑ You're running in non-prod.`)
 	}
 	return (
 		<header
