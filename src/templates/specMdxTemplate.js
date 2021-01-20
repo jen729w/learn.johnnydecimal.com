@@ -21,6 +21,7 @@ import {
 } from "../components/PROACIDbox"
 import { ConceptsIndexItem } from "../components/ConceptsIndex"
 import { BlogIndexItem } from "../components/BlogIndex"
+import { Image } from "../components/image"
 
 // Provide common components here
 const shortcodes = {
@@ -37,6 +38,7 @@ const shortcodes = {
 	Comment,
 	ConceptsIndexItem,
 	BlogIndexItem,
+	Image,
 }
 
 export default function PageTemplate({ data: { mdx } }) {
