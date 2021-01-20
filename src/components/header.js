@@ -55,7 +55,7 @@ const Header = () => {
 					Non-prod
 				</div>
 			) : (
-				<div className="px-3 border-b-2 border-gray-400" />
+				<div className="px-3 border-b-2 border-gray-400"></div>
 			)}
 		</header>
 	)
