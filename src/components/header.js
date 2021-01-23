@@ -17,15 +17,6 @@ const isMainSite = ({ location }) => {
 }
 
 const Header = () => {
-	const currentUrl = typeof window !== "undefined" ? window.location.href : ""
-	let isNonProd = false
-	if (
-		currentUrl.includes("dev.johnnydecimal.com") ||
-		currentUrl.includes("localhost")
-	) {
-		isNonProd = true
-		console.debug(`⛑ You're running in non-prod.`)
-	}
 	return (
 		<header
 			className="grid grid-flow-row mt-2 mb-4 text-base font-medium sm:ml-4 sm:mb-6"
@@ -51,13 +42,7 @@ const Header = () => {
 			>
 				Blog
 			</Link>
-			{isNonProd ? (
-				<div className="px-3 tracking-widest text-center text-red-600 border-2 border-red-600">
-					Non-prod
-				</div>
-			) : (
-				<div className="px-3 border-b-2 border-gray-400"></div>
-			)}
+			<div className="px-3 border-b-2 border-gray-400"></div>
 		</header>
 	)
 }
