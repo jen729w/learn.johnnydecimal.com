@@ -291,11 +291,6 @@ a.no-style-link:link {
 	@apply text-sm text-gray-700;
 }
 
-/* == Blog <code>, can we style this like JD so we can do `this`? == */
-.blog-post code {
-	@apply px-1 whitespace-pre border border-yellow-700 rounded-sm bg-yellow-50 font-jdmono;
-}
-
 /* == The thing where you hide certain 'BlogIndexItem's depending on whether
 			they have a class assigned, that class corresponding to the #tag.
 
