@@ -170,7 +170,7 @@ const FourCompanyNoNumbers = () => (
 <span className="border-b border-blue-900">Marketing</span>
 {`                      AREA`}
 <br />
-{`  ...etc.                      ...etc.`}
+{`   ...etc.                      ...etc.`}
   </pre>
 )
 
@@ -230,7 +230,7 @@ const FiveCompanyWithNumbers = () => (
 <span className="border-b border-blue-900">30-39 Marketing</span>
 {`                AREA`}
 <br />
-{`  ...etc.                      ...etc.`}
+{`   ...etc.                      ...etc.`}
   </pre>
 )
 

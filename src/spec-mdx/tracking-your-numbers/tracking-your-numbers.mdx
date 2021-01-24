@@ -36,13 +36,13 @@ You don’t need to track what is _in_ each of your JD folders:
       11.01 My first ID`}
 		<br />
 		{`            `}
-		<span className="line-through">Document.doc</span>
+		<span className="line-through text-gray-700">Document.doc</span>
 		<br />
 		{`            `}
-		<span className="line-through">Picture.jpg</span>
+		<span className="line-through text-gray-700">Picture.jpg</span>
 		<br />
 		{`            `}
-		<span className="line-through">Spreadsheet.xls</span>
+		<span className="line-through text-gray-700">Spreadsheet.xls</span>
 		<br />
 		{`      11.02 My second ID`}
 	</pre>
@@ -50,7 +50,7 @@ You don’t need to track what is _in_ each of your JD folders:
 
 ## Your file system is not your index
 
-You might think that your folder structure—in Finder or Windows Explorer—is this index, but it isn’t.
+You might think that your folder structure — in Finder or Windows Explorer — is this index, but it isn’t.
 
 You will create Johnny.Decimal numbers to save things that aren’t files. That might be <Link to="/concepts/managing-email/">an email</Link>, <Link to="/concepts/keeping-notes/">a note</Link>, a physical object, or anything else. These numbers must be tracked centrally.
 
@@ -70,15 +70,12 @@ If your system also tells you where that item _is,_ then all the better.
 
 I’ll be honest, there isn’t a great solution to this yet. I’m in the process of writing something specifically to support this system<sup>1</sup>, but until then we have to make do with other tools.
 
-<div class="footnote-wrapper">
-	<ol class="footnote">
-		<li>
-			Sign up to <Link to="/contact/">the mailing list</Link> or follow{" "}
-			<a href="https://twitter.com/johnnydecimal">@johnnydecimal</a> on Twitter
-			for updates.
-		</li>
-	</ol>
-</div>
+<Footnote indent>
+	1. 2021 update: I still don't have a great solution to this and am in the
+	process of writing custom software. Follow <a href="/blog">the blog</a> or{" "}
+	<a href="https://twitter.com/johnnydecimal">@johnnydecimal</a> on Twitter for
+	updates.
+</Footnote>
 
 ## Use your notes
 
@@ -92,27 +89,22 @@ You can use any database system you like. <a href="https://airtable.com/invite/r
 
 I’ve created a template database which you can use as a starter. You can <a href="https://airtable.com/shr5vvlmaCV98G6z7">copy it from here</a>.
 
-<div class="footnote-wrapper">
-	<ol class="footnote" start="2">
-		<li>
-			That link earns me a $10 referral credit if you sign up. If you’d rather
-			not do that, that’s cool: just go to{" "}
-			<a href="https://airtable.com">airtable.com</a>. You can copy the template
-			database either way.
-		</li>
-	</ol>
-</div>
+<Footnote indent>
+	2. That link earns me a $10 referral credit if you sign up. If you’d rather
+	not do that, that’s cool: just go to{" "}
+	<a href="https://airtable.com">airtable.com</a>. You can copy the template
+	database either way.
+</Footnote>
 
 ## Excel or Google Sheets
 
 <div className="flex flex-col md:flex-row">
 	<div className="flex-shrink-0 mb-4 pr-4">
-		<img
+		<Image
 			src={GoogleSheets_simpleCompany}
 			alt="Screenshot of a spreadsheet showing columns with area, category, ID, and title."
 			width="412"
 			height="172"
-			className="screenshot"
 		/>
 	</div>
 	<p>

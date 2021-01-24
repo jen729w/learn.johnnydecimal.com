@@ -6,7 +6,8 @@ import PropTypes from "prop-types"
  *
  * marginLeft: how many characters in the hanging indent will start
  * textIndent: how many characters *to the left of that* will the number start
- *  */
+ *
+ */
 
 const Basebox = ({ children, guide = false }) => (
 	<div className="mb-4 text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
