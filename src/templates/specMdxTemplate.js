@@ -22,6 +22,7 @@ import {
 import { ConceptsIndexItem } from "../components/ConceptsIndex"
 import { BlogIndexItem } from "../components/BlogIndex"
 import { Image } from "../components/image"
+import { Footnote } from "../components/footnote"
 
 // Provide common components here
 const shortcodes = {
@@ -39,6 +40,7 @@ const shortcodes = {
 	ConceptsIndexItem,
 	BlogIndexItem,
 	Image,
+	Footnote,
 }
 
 export default function PageTemplate({ data: { mdx } }) {

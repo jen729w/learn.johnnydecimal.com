@@ -5,67 +5,49 @@
 body {
 	@apply text-lg;
 	/* @apply text-lg bg-offwhite; */
-	background: #fafafd;
+	background: #fbfbfd;
 }
 
-/* === Headers === === === === === === === === === === === === === === ===   */
-/* Tiny screen default */
+/* ===-===  STYLING OF MDX-GENERATED HTML ELEMENTS  ===-===-===-===-===-===-===
+* Instances where we use MDX to give us basic HTML elements, so we style those
+* elements here (vs. creating a custom component).
+* 
+* For example:
+* # My header
+*
+* becomes <h1>My header</h1>. Styling for that h1 is specified here.
+*
+* Everything here is specified as a child of a .post class. Both spec and blog
+* pages have this class applied (in `specMdxTemplate.js`).
+*/
+
+/* == Headers ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
 .post h1 {
 	@apply mb-3 text-4xl leading-tight border-b-4 border-offblack font-jdheader;
-}
-/* Increase font size on larger screens */
-@screen sm {
-	.post h1 {
-		@apply text-4xl;
-	}
 }
 
 .post h2 {
 	@apply mt-6 mb-3 mr-6 text-3xl leading-tight border-b-2 border-offblack font-jdheader;
 }
-/* Increase font size on larger screens */
-@screen sm {
-	.post h2 {
-		@apply text-3xl;
-	}
-}
 
 .post h3 {
 	@apply mt-6 mb-3 mr-10 text-2xl leading-tight border-b-2 border-gray-700 font-jdheader;
 }
-/* Increase font size on larger screens */
-@screen sm {
-	.post h3 {
-		@apply text-2xl;
-	}
-}
 
-/* === Paragraph + body text === === === === === === === === === === === === */
-/* TODO Okay here's where this `>` became important. Without it, a <p> in a
-				<div.footnote>, for example, takes this styline and you can't get rid
-				of it. So this is the next thing to do when you look at this on Monday.
-
-				I wonder if you can use something like `.footnote-wrapper *` and un-
-				style that class, so the <p> in there doesn't pick up the previous.
- */
-
-/* In all <p> that are any descendant of a .post, apply the margin. This
-	 ensures spacing between all elements regardless of whether they're nested
-	 in a <div> for some reason.
-
-	 Ooh this is a nice solution. You can add .style-override to any <p> and it'll
-	 be ignored.
- */
-.post p:not(.style-override) {
+/* == Paragraph + body text  ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
+/* Give all paragraphs a bit of margin, except .footnote-content. This class
+* is applied in the <Footnote> definition at `components/footnote.js`.
+*/
+.post p:not(.footnote-content) {
 	@apply mb-4 mr-2;
 }
 
+/* The default bold is a little too bold (700). */
 .post strong {
-	/* The default is a little too bold (700) */
 	@apply font-semibold;
 }
 
-/* === Lists === === === === === === === === === === === === === === === === */
+/* == Lists   ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
 .post ol {
 	@apply mb-4 ml-8 mr-6 list-decimal list-outside;
 }
@@ -74,29 +56,7 @@ body {
 	@apply mb-4 ml-8 mr-6 list-disc list-outside;
 }
 
-/* === Footnote === === === === === === === === === === === === === === ===  */
-.footnote-wrapper {
-	@apply py-2 my-6 mr-6 text-sm italic border border-b-2 border-l-4 border-gray-800 rounded shadow bg-gray-50;
-}
-@screen sm {
-	.footnote-wrapper {
-		@apply mr-20;
-	}
-}
-
-ol.footnote {
-	@apply px-4 m-0 ml-4;
-}
-
-ul.footnote {
-	@apply px-4 m-0 ml-4;
-}
-
-p.footnote {
-	@apply px-4 m-0 mb-0;
-}
-
-/* === Dividers === === === === === === === === === === === === === === ===  */
+/* == Dividers   ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
 .post hr {
 	border: 0;
 	height: 1px;
@@ -110,11 +70,13 @@ p.footnote {
 	}
 }
 
-/* === Spec links === === === === === === === === === === === === === === == */
+/* == Links   ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
+/* -- Spec posts: blue links */
 .spec-post a:link {
 	@apply border-b-2 border-blue-600;
 }
 
+/* html body div#___gatsby div#gatsby-focus-wrapper div.max-w-5xl.px-4.mx-auto.leading-relaxed.text-offblack.sm:px-8.font-jdbody div.flex.flex-col.sm:flex-row-reverse main.flex-grow.mb-8.sm:w-3/4 div.post.spec-post div.my-2.blog-index-item.example div a */
 .spec-post a:visited {
 	@apply border-b-2 border-gray-400;
 }
@@ -135,133 +97,7 @@ a.no-style-link:link {
 	@apply underline border-b-0;
 }
 
-/* ==  Table of contents == */
-nav.tableofcontents a:link {
-}
-nav.tableofcontents a:visited {
-}
-nav.tableofcontents a:hover {
-	@apply font-semibold;
-}
-nav.tableofcontents a:focus {
-	@apply pl-2 font-semibold border-2 rounded shadow-md outline-none border-offblack;
-}
-/* Remember, a:focus cascades to a:active. */
-nav.tableofcontents a:active {
-	@apply font-semibold text-blue-600 border-none shadow-none;
-}
-
-/* ==  Header == */
-a#spec-header:focus {
-	@apply bg-blue-600 border-blue-600 outline-none text-offwhite;
-}
-a#blog-header:focus {
-	@apply bg-yellow-600 border-yellow-600 outline-none text-offwhite;
-}
-
-/* === Decimal === === === === === === === === === === === === === === ===   */
-.jd-inline {
-	@apply px-1 whitespace-pre border border-blue-700 rounded-sm bg-blue-50 font-jdmono;
-	/* @apply px-1 whitespace-pre bg-blue-100 border border-blue-900 rounded-sm font-jdmono; */
-}
-
-.jd-block {
-	@apply inline-block px-4 py-2 text-sm whitespace-pre border-2 border-blue-700 rounded-sm shadow-md bg-blue-50 font-jdmono;
-}
-@screen sm {
-	.jd-block {
-		@apply text-base;
-	}
-}
-
-/* === Blinking cursor === === === === === === === === === === === === ===   */
-/* Stolen: https://codepen.io/ArtemGordinsky/pen/GnLBq */
-.blinking-cursor {
-	font-weight: 400;
-	font-size: 20px;
-	color: #ffffff;
-	-webkit-animation: 1s blink step-end infinite;
-	-moz-animation: 1s blink step-end infinite;
-	-ms-animation: 1s blink step-end infinite;
-	-o-animation: 1s blink step-end infinite;
-	animation: 1s blink step-end infinite;
-}
-
-@keyframes "blink" {
-	from,
-	to {
-		color: transparent;
-	}
-	50% {
-	}
-}
-
-@-moz-keyframes blink {
-	from,
-	to {
-		color: transparent;
-	}
-	50% {
-		color: orange;
-	}
-}
-
-@-webkit-keyframes "blink" {
-	from,
-	to {
-		color: transparent;
-	}
-	50% {
-		color: orange;
-	}
-}
-
-@-ms-keyframes "blink" {
-	from,
-	to {
-		color: transparent;
-	}
-	50% {
-		color: orange;
-	}
-}
-
-@-o-keyframes "blink" {
-	from,
-	to {
-		color: transparent;
-	}
-	50% {
-		color: orange;
-	}
-}
-
-/* === Images === === === === === === === === === === === === === === ===    */
-.gatsby-resp-image-wrapper {
-	@apply mb-6 border border-gray-400 rounded-sm shadow-md;
-}
-
-img.screenshot {
-	@apply border border-gray-500 rounded-sm shadow-md;
-}
-
-/* === Email subject === === === === === === === === === === === === === === */
-.emailSubject {
-	@apply p-1 mb-4 text-sm bg-gray-200 border border-gray-600 rounded-sm font-jdmono;
-	text-indent: -9ch;
-	padding-left: 10ch;
-	/* white-space: normal; */
-}
-@screen sm {
-	.emailSubject {
-		@apply text-base;
-	}
-}
-
-/* ===========================================================================
-	 ALL THE BLOG STUFF HERE
-	 ==========================================================================*/
-/* === Blog links === === === === === === === === === === === === === === == */
+/* -- Blog posts: yellow links */
 .blog-post a:link {
 	@apply border-b-2 border-yellow-600;
 }
@@ -282,26 +118,154 @@ img.screenshot {
 	@apply bg-yellow-600 border-b-2 border-yellow-600 text-offwhite;
 }
 
-a.no-style-link:link {
-	@apply underline border-b-0;
+/* -- Table of contents: all custom shizzle */
+nav.tableofcontents a:hover {
+	@apply font-semibold;
+}
+nav.tableofcontents a:focus {
+	@apply pl-2 font-semibold border-2 rounded shadow-md outline-none border-offblack;
+}
+/* Remember, a:focus cascades to a:active. (What does this do?!) */
+nav.tableofcontents a:active {
+	@apply font-semibold text-blue-600 border-none shadow-none;
 }
 
-/* == Blog blockquote (which is the date) == */
+/* == Using `code` backticks for inline JD blocks :-)   ==-==-==-==-==-==-== */
+.spec-post code {
+	@apply px-1 whitespace-pre border border-blue-700 rounded-sm bg-blue-50 font-jdmono;
+}
+.blog-post code {
+	@apply px-1 whitespace-pre border border-yellow-700 rounded-sm bg-yellow-50 font-jdmono;
+}
+
+/* == Blockquote on a blog post styles as the date   ==-==-==-==-==-==-==-== */
 .blog-post blockquote {
 	@apply text-sm text-gray-700;
 }
 
-/* == The thing where you hide certain 'BlogIndexItem's depending on whether
-			they have a class assigned, that class corresponding to the #tag.
+/* ===-=== STYLING OF GOOD OL' FASHIONED HTML ELEMENTS  ===-===-===-===-===-===
+* This is stuff where you've manually written HTML and applied a class.
+*/
 
-			1. On each new tag index page that you create, wrap <BlogIndexItems />
-			   in a div with a class of `blog-tag-{the tag}`.
-			2. The definition here then identifies just that div on just that page,
-				 and within that div it hides anything that does *not* include the class
-				 which is the tag.
-			3. That class gets loaded on to that div in the definition of
-			   <BlogIndexItem />.
+/* == JD inline blocks ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
+/* Yeah, there's still a few of these. They're the exception, where you need
+ * a larger block for some reason. See: the first introduction of the numbers
+ * on the home page.
  */
+.jd-inline {
+	@apply px-1 whitespace-pre border border-blue-700 rounded-sm bg-blue-50 font-jdmono;
+}
+
+/* == Site header (components/header.js) ==-==-==-==-==-==-==-==-==-==-==-== */
+a#spec-header:focus {
+	@apply bg-blue-600 border-blue-600 outline-none text-offwhite;
+}
+a#blog-header:focus {
+	@apply bg-yellow-600 border-yellow-600 outline-none text-offwhite;
+}
+
+/* == Multi-line JD blocks   ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
+.jd-block {
+	@apply inline-block px-4 py-2 text-sm whitespace-pre border-2 border-blue-700 rounded-sm shadow-md bg-blue-50 font-jdmono;
+}
+@screen sm {
+	.jd-block {
+		@apply text-base;
+	}
+}
+
+/* == Email subject examples ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
+.emailSubject {
+	@apply p-1 mb-4 text-sm bg-gray-200 border border-gray-600 rounded-sm font-jdmono;
+	text-indent: -9ch;
+	padding-left: 10ch;
+	/* white-space: normal; */
+}
+@screen sm {
+	.emailSubject {
+		@apply text-base;
+	}
+}
+
+/* ===-=== THE REAL CUSTOM SHIZZLE  ===-===-===-===-===-===-===-===-===-===-===
+* Styling for stuff that isn't even really HTML any more.
+*/
+
+/* == The blinking cursor in your Terminal window    ==-==-==-==-==-==-==-== */
+/* Stolen from: https://codepen.io/ArtemGordinsky/pen/GnLBq */
+.blinking-cursor {
+	font-weight: 400;
+	font-size: 20px;
+	color: #ffffff;
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: rgb(251, 191, 36);
+	}
+}
+
+@-moz-keyframes blink {
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: rgb(251, 191, 36);
+	}
+}
+
+@-webkit-keyframes "blink" {
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: rgb(251, 191, 36);
+	}
+}
+
+@-ms-keyframes "blink" {
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: rgb(251, 191, 36);
+	}
+}
+
+@-o-keyframes "blink" {
+	from,
+	to {
+		color: transparent;
+	}
+	50% {
+		color: rgb(251, 191, 36);
+	}
+}
+
+/* == Hiding certain BlogIndexItems for index pages  ==-==-==-==-==-==-==-== */
+/** The thing where you hide certain 'BlogIndexItem's depending on whether
+  * they have a class assigned, that class corresponding to the #tag.
+  *
+  * 1. On each new tag index page that you create, wrap <BlogIndexItems />
+  *    in a div with a class of `blog-tag-{the tag}`.
+  * 2. The definition here then identifies just that div on just that page,
+  *    and within that div it hides anything that does *not* include the class
+  *    which is the tag.
+  * 3. That class gets loaded on to that div in the definition of
+  *    <BlogIndexItem />.
+  */
 .blog-tag-new-system .blog-index-item:not(.new-system) {
 	@apply hidden;
 }
@@ -309,6 +273,20 @@ a.no-style-link:link {
 	@apply hidden;
 }
 
-/* === END === === === === === === === === === === === === === === === ===   */
+/* === END   ===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*=== */
 
 @tailwind utilities;
+
+/* === RETIRED - delete me when you're done == === === === === === === ===   */
+/*
+
+
+Don't know if this was even used? It wasn't pink-800 obvs, that was troubleshooting.
+.gatsby-resp-image-wrapper {
+	@apply mb-6 border border-pink-800 rounded-sm shadow-md;
+}
+
+img.screenshot {
+	@apply border border-gray-500 rounded-sm shadow-md;
+}
+*/
