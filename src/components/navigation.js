@@ -19,11 +19,7 @@ const Navigation = ({ backURL, backTitle, nextURL, nextTitle }) => (
 				</Link>
 			</div>
 		) : (
-			<div className="text-right">
-				<Link to="/" className="text-md">
-					↞ Home
-				</Link>
-			</div>
+			<div />
 		)}
 	</nav>
 )
