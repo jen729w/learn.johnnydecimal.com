@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const Navigation = ({ backURL, backTitle, nextURL, nextTitle }) => (
@@ -23,5 +24,12 @@ const Navigation = ({ backURL, backTitle, nextURL, nextTitle }) => (
 		)}
 	</nav>
 )
+
+Navigation.propTypes = {
+	backURL: PropTypes.string,
+	backTitle: PropTypes.string,
+	nextURL: PropTypes.string,
+	nextTitle: PropTypes.string,
+}
 
 export default Navigation

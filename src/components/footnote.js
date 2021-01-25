@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from "react"
+import PropTypes from "prop-types"
 
 /**
  * Footnote
@@ -28,4 +28,9 @@ export const Footnote = ({ children, indent = false }) => {
 			</p>
 		</div>
 	)
+}
+
+Footnote.propTypes = {
+	children: PropTypes.node.isRequired,
+	indent: PropTypes.bool,
 }

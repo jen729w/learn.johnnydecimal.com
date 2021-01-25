@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, title }) {
 				},
 				{
 					property: `og:image`,
-					content: `https://dev.johnnydecimal.com/icons/icon-192x192.png`,
+					content: `https://johnnydecimal.com/icons/icon-192x192.png`,
 				},
 				{
 					name: `twitter:card`,

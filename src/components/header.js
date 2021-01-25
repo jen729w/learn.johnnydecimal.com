@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const isMainSite = ({ location }) => {
@@ -45,14 +44,6 @@ const Header = () => {
 			<div className="px-3 border-b-2 border-gray-400"></div>
 		</header>
 	)
-}
-
-Header.propTypes = {
-	siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-	siteTitle: ``,
 }
 
 export default Header

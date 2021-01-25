@@ -18,9 +18,9 @@ import {
 	ID,
 	BlankRow,
 	Comment,
-} from "../components/PROACIDbox"
-import { ConceptsIndexItem } from "../components/ConceptsIndex"
-import { BlogIndexItem } from "../components/BlogIndex"
+} from "../components/proACIDbox"
+import { ConceptsIndexItem } from "../components/conceptsIndex"
+import { BlogIndexItem } from "../components/blogIndex"
 import { Image } from "../components/image"
 import { Footnote } from "../components/footnote"
 
