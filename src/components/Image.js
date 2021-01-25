@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from "react"
+import PropTypes from "prop-types"
 
 export const Image = ({
 	src,
@@ -19,3 +19,11 @@ export const Image = ({
 		</div>
 	</div>
 )
+
+Image.propTypes = {
+	src: PropTypes.string.isRequired,
+	alt: PropTypes.string.isRequired,
+	caption: PropTypes.string,
+	height: PropTypes.number,
+	width: PropTypes.number,
+}

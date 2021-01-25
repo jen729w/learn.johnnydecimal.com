@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from "react"
 import PropTypes from "prop-types"
 
@@ -9,6 +8,18 @@ import PropTypes from "prop-types"
  *
  */
 
+/**
+ * # `<Basebox>`
+ *
+ * This component supplies the base outer box - the main blue thing with the
+ * tinted header across the top. It is used by the other components on this
+ * page and is not exported.
+ *
+ * `{children}` is rendered in the main lower area.
+ *
+ * @param {Boolean} guide - If `true`, a guide (0123...) is printed at the top.
+ *
+ */
 const Basebox = ({ children, guide = false }) => (
 	<div className="mb-4 text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
 		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
@@ -22,8 +33,23 @@ const Basebox = ({ children, guide = false }) => (
 		<div className="p-2 text-sm sm:px-4 sm:text-base">{children}</div>
 	</div>
 )
+Basebox.propTypes = {
+	children: PropTypes.node.isRequired,
+	guide: PropTypes.bool,
+}
 
-export const PROACIDbox = ({ children, classes, guide }) => {
+/**
+ * # `<PROACIDbox>`
+ *
+ * This component supplies a full PRO.AC.ID box within which you can add
+ * Projects, Areas, etc.
+ *
+ * It differs from `<ACIDbox>` in the margins and indents it applies.
+ *
+ * @param {Boolean} guide - If `true`, a guide (0123...) is printed at the top.
+ *                          This is passed through to `<Basebox>`.
+ */
+export const PROACIDbox = ({ children, guide }) => {
 	const PROJECT_MARGINLEFT = "4ch"
 	const PROJECT_TEXTINDENT = "-4ch"
 
@@ -53,8 +79,23 @@ export const PROACIDbox = ({ children, classes, guide }) => {
 
 	return <Basebox guide={guide}>{childrenWithProps}</Basebox>
 }
+PROACIDbox.propTypes = {
+	children: PropTypes.node.isRequired,
+	guide: PropTypes.bool,
+}
 
-export const ACIDbox = ({ children, classes }) => {
+/**
+ * # `<ACIDbox>`
+ *
+ * This component supplies an AC.ID box within which you can add
+ * Areas, Categories, etc.
+ *
+ * It differs from `<PROACIDbox>` in the margins and indents it applies.
+ *
+ * @param {Boolean} guide - If `true`, a guide (0123...) is printed at the top.
+ *                          This is passed through to `<Basebox>`.
+ */
+export const ACIDbox = ({ children, guide }) => {
 	const AREA_MARGINLEFT = "6ch"
 	const AREA_TEXTINDENT = "-6ch"
 
@@ -77,15 +118,11 @@ export const ACIDbox = ({ children, classes }) => {
 		React.cloneElement(child, { MARGINSINDENTS: MARGINSINDENTS })
 	)
 
-	// return (
-	// 	<div className="text-base bg-blue-900 rounded-md font-jdmono text-offwhite">
-	// 		<div className="py-1 pr-2 text-sm text-right text-white bg-blue-600 rounded-t-md">
-	// 			J•D
-	// 		</div>
-	// 		<div className="p-2">{childrenWithProps}</div>
-	// 	</div>
-	// )
-	return <Basebox>{childrenWithProps}</Basebox>
+	return <Basebox guide={guide}>{childrenWithProps}</Basebox>
+}
+ACIDbox.propTypes = {
+	children: PropTypes.node.isRequired,
+	guide: PropTypes.bool,
 }
 
 export const Project = ({ children, classes, MARGINSINDENTS }) => {
@@ -106,6 +143,14 @@ export const Project = ({ children, classes, MARGINSINDENTS }) => {
 		</div>
 	)
 }
+Project.propTypes = {
+	children: PropTypes.node.isRequired,
+	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.shape({
+		PROJECT_MARGINLEFT: PropTypes.string.isRequired,
+		PROJECT_TEXTINDENT: PropTypes.string.isRequired,
+	}),
+}
 
 export const Area = ({ children, classes, MARGINSINDENTS }) => {
 	const { AREA_MARGINLEFT, AREA_TEXTINDENT } = MARGINSINDENTS
@@ -124,6 +169,14 @@ export const Area = ({ children, classes, MARGINSINDENTS }) => {
 			{children}
 		</div>
 	)
+}
+Area.propTypes = {
+	children: PropTypes.node.isRequired,
+	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.shape({
+		AREA_MARGINLEFT: PropTypes.string.isRequired,
+		AREA_TEXTINDENT: PropTypes.string.isRequired,
+	}),
 }
 
 export const Category = ({ children, classes, MARGINSINDENTS }) => {
@@ -147,6 +200,14 @@ export const Category = ({ children, classes, MARGINSINDENTS }) => {
 		</div>
 	)
 }
+Category.propTypes = {
+	children: PropTypes.node.isRequired,
+	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.shape({
+		CATEGORY_MARGINLEFT: PropTypes.string.isRequired,
+		CATEGORY_TEXTINDENT: PropTypes.string.isRequired,
+	}),
+}
 
 export const ID = ({ children, classes, MARGINSINDENTS }) => {
 	const { ID_MARGINLEFT, ID_TEXTINDENT } = MARGINSINDENTS
@@ -166,6 +227,14 @@ export const ID = ({ children, classes, MARGINSINDENTS }) => {
 		</div>
 	)
 }
+ID.propTypes = {
+	children: PropTypes.node.isRequired,
+	classes: PropTypes.string,
+	MARGINSINDENTS: PropTypes.shape({
+		ID_MARGINLEFT: PropTypes.string.isRequired,
+		ID_TEXTINDENT: PropTypes.string.isRequired,
+	}),
+}
 
 export const Comment = ({ children, classes, indent = 0 }) => (
 	<span
@@ -180,6 +249,10 @@ export const Comment = ({ children, classes, indent = 0 }) => (
 		{children}
 	</span>
 )
+Comment.propTypes = {
+	children: PropTypes.node.isRequired,
+	classes: PropTypes.string,
+	indent: PropTypes.number,
+}
 
-/* Hmm we shouldn't need this if our margins are all correct? */
 export const BlankRow = () => <div>&nbsp;</div>

@@ -41,7 +41,7 @@ Let's say you're a freelancer. You might have set up a system like this.
 
 A couple of problems are obvious:
 
-1. We are going to want to create folders within <JD>22.01 Job 1</JD> but the system says we shouldn't do that (and we shouldn't – don't be tempted!).
+1. We are going to want to create folders within `22.01 Job 1` but the system says we shouldn't do that (and we shouldn't – don't be tempted!).
 2. This only allows us to have 10 clients.
 
 We might try and fix it like this.
@@ -83,9 +83,9 @@ The extended system must retain the advantages of the original Johnny.Decimal sy
 
 I tried systems using letters rather than numbers and they didn't work. My initial attempt looked something like this:
 
-- <JD>HME.AC.ID</JD> = home system
-- <JD>DVO.AC.ID</JD> = the DevOps project at work
-- <JD>ETC.AC.ID</JD> = etc. for more projects
+- `HME.AC.ID` = home system
+- `DVO.AC.ID` = the DevOps project at work
+- `ETC.AC.ID` = etc. for more projects
 
 Now you just have to remember what those letters mean, and they don't add any semantic value to your system.
 
@@ -97,13 +97,13 @@ Here were my goals and constraints when introducing new numbers:
 2. It must allow for a sufficient number of additional projects.
 3. It must allow the user to organise those projects in some way (i.e. like you organise **categories** in to **areas**).
 
-The solution is to **add a three-number project code to the start of your numbers**, e.g. <JD>000.AC.ID</JD>. In the abstract I'll refer to this as [PRO.AC.ID](/concepts/acid-notation/). 😃
+The solution is to **add a three-number project code to the start of your numbers**, e.g. `000.AC.ID`. In the abstract I'll refer to this as [PRO.AC.ID](/concepts/acid-notation/). 😃
 
 ### 1. It must not confuse the system
 
 Three numbers is not two numbers.
 
-I think if I'd gone with <JD>PR.AC.ID</JD>, e.g. <JD>10.12.53</JD>, that would have been a bit much on the brain. The only thing in the J.D system with three numbers is a project code.
+I think if I'd gone with `PR.AC.ID`, e.g. `10.12.53`, that would have been a bit much on the brain. The only thing in the J.D system with three numbers is a project code.
 
 ### 2. It must allow for a sufficient number of additional projects
 
@@ -235,11 +235,11 @@ So what I mean is we go from something like this...
 
 # How I name my folders and files
 
-I don't use the project number in my area or category folders. This is because they tend to be fairly unique anyway, with the exception of my ubiquitous <JD>10-19 Administration</JD>.
+I don't use the project number in my area or category folders. This is because they tend to be fairly unique anyway, with the exception of my ubiquitous `10-19 Administration`.
 
 I **do** use the project number in my ID folders, and when I name files. There are a couple of reasons why I've found this to be right for me.
 
-1. When I use [Alfred](https://www.alfredapp.com/)<sup>1</sup>, which I do many times a day, I can type the full <JD>PRO.AC.ID</JD> number and it'll open the folder immediately.
+1. When I use [Alfred](https://www.alfredapp.com/)<sup>1</sup>, which I do many times a day, I can type the full `PRO.AC.ID` number and it'll open the folder immediately.
 2. When you view the _Open Recent_ menu — e.g. in Microsoft Excel — the filename shows the project name at the beginning. I find this really useful.
 
 <Footnote indent>
@@ -270,17 +270,14 @@ So this means that my system looks like this.
 <!-- Break the long string on mobile -->
 
 <div className="hidden sm:block">
-	Within that folder, if I saved an Excel file I would call that file{" "}
-	<JD>496.21.11 Whatever descriptive name I'd use.xlsx</JD>.
+	Within that folder, if I saved an Excel file I would call that file `496.21.11
+	Whatever descriptive name I'd use.xlsx`.
 </div>
 <div className="block sm:hidden text-base">
-	Within that folder, if I saved an Excel file I would call that file{" "}
-	<JD>
-		496.21.11 Whatever descriptive
-		<br />
-		name I'd use.xlsx
-	</JD>
-	.
+	Within that folder, if I saved an Excel file I would call that file `
+	496.21.11 Whatever descriptive
+	<br />
+	name I'd use.xlsx ` .
 </div>
 
 ---

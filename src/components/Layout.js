@@ -1,32 +1,16 @@
-/**
- * Layout: wraps the entire site.
- *
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import TOC from "./toc"
 import BlogTOC from "./BlogTOC"
+import Header from "./Header"
+import TOC from "./TOC"
 
 const Layout = ({ children, type = "spec" }) => {
-	const data = useStaticQuery(graphql`
-		query SiteTitleQuery {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`)
-
 	return (
 		// This div wraps the entire page
 		<div className="max-w-5xl px-4 mx-auto leading-relaxed text-offblack sm:px-8 font-jdbody">
 			{/* TODO: Pass better metadata to <Header>, e.g. page description. */}
-			<Header siteTitle={data.site.siteMetadata.title} />
+			<Header />
 			{/**
 			 * The main flexbox for nav + content. Moved the main content above to
 			 * preserve proper movement of focus on tab.

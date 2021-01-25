@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const JDNavLink = ({ children, to }) => (
@@ -11,6 +12,10 @@ const JDNavLink = ({ children, to }) => (
 		{children}
 	</Link>
 )
+JDNavLink.propTypes = {
+	children: PropTypes.node.isRequired,
+	to: PropTypes.string.isRequired,
+}
 
 const TOC = () => (
 	<nav className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none">

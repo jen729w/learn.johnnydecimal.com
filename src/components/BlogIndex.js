@@ -1,14 +1,7 @@
-/* eslint-disable react/prop-types */
 import React from "react"
+import PropTypes from "prop-types"
 
 export const BlogIndexItem = ({ title, date, summary, slug, tags }) => {
-	/*
-	let tagsHtml = ""
-	tags.split(" ").forEach(tag => {
-		tagsHtml += ` <a href="/blog/tags/${tag}/>#${tag}</a>`
-	})
-	*/
-
 	return (
 		<div className={`my-2 blog-index-item ${tags}`}>
 			<div>
@@ -52,3 +45,11 @@ export const BlogIndexItems = () => (
 		/>
 	</>
 )
+
+BlogIndexItem.propTypes = {
+	title: PropTypes.string.isRequired,
+	date: PropTypes.string.isRequired,
+	summary: PropTypes.string.isRequired,
+	slug: PropTypes.string.isRequired,
+	tags: PropTypes.string,
+}
