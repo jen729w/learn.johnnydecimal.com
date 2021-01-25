@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import BlogTOC from "./blogTOC"
-import Header from "./header"
-import TOC from "./toc"
+import BlogTOC from "./BlogTOC"
+import Header from "./Header"
+import TOC from "./TOC"
 
 const Layout = ({ children, type = "spec" }) => {
 	return (

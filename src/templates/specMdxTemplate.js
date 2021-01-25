@@ -1,14 +1,11 @@
-/* eslint-disable react/prop-types */
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Navigation from "../components/navigation"
-import SEO from "../components/seo"
-import JD from "../components/jdInline"
+import Layout from "../components/Layout"
+import Navigation from "../components/Navigation"
+import SEO from "../components/SEO"
 import {
 	PROACIDbox,
 	ACIDbox,
@@ -18,17 +15,16 @@ import {
 	ID,
 	BlankRow,
 	Comment,
-} from "../components/proACIDbox"
-import { ConceptsIndexItem } from "../components/conceptsIndex"
-import { BlogIndexItem } from "../components/blogIndex"
-import { Image } from "../components/image"
-import { Footnote } from "../components/footnote"
+} from "../components/PROACIDbox"
+import { ConceptsIndexItem } from "../components/ConceptsIndex"
+import { BlogIndexItem } from "../components/BlogIndex"
+import { Image } from "../components/Image"
+import { Footnote } from "../components/Footnote"
 
 // Provide common components here
 const shortcodes = {
 	Link,
 	Navigation,
-	JD,
 	PROACIDbox,
 	ACIDbox,
 	Project,

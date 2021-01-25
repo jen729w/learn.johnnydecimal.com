@@ -7,11 +7,11 @@ summary: "Within each category, each item has a unique ID. It comes after the de
 
 # IDs
 
-Let’s get on to the decimal. We have a category — let’s say <JD>22 Contracts</JD> — and we want to store some things there.
+Let’s get on to the decimal. We have a category — let’s say `22 Contracts` — and we want to store some things there.
 
-We create a Johnny.Decimal number by adding a decimal point to our category, and starting at number <JD>.01</JD>.
+We create a Johnny.Decimal number by adding a decimal point to our category, and starting at number `.01`.
 
-We start at <JD>.01</JD> and not just <JD>.1</JD> because of the way that computers sort files. Also it’s more consistent, and consistency is elegant.
+We start at `.01` and not just `.1` because of the way that computers sort files. Also it’s more consistent, and consistency is elegant.
 
 <span className="jd-inline text-xl sm:text-2xl mb-4 px-3 inline-block">
 	22.01
@@ -34,7 +34,7 @@ number.
 
 You create a full Johnny.Decimal number by choosing a category and **looking for the next available number after the decimal.**
 
-The thing to remember here is that the number after the decimal has _no meaning whatsoever:_ we just start at <JD>.01</JD> and work our way up.
+The thing to remember here is that the number after the decimal has _no meaning whatsoever:_ we just start at `.01` and work our way up.
 
 ## “What happens when I get to 99?”
 
@@ -44,10 +44,9 @@ You never will. And if you do, the category you defined was almost certainly too
 
 This system lets us give concise names to things, because we already know from the number which category they’re in.
 
-I created <JD>22.01 Cleaning contract</JD> because it’s short and
-reads well, but you could have gone with <JD>22.01 Cleaning</JD> if you’d preferred. You’re already in a folder called <JD>Contracts</JD>.
+I created `22.01 Cleaning contract` because it’s short and reads well, but you could have gone with `22.01 Cleaning` if you’d preferred. You’re already in a folder called `Contracts`.
 
-**Everything that starts with** <JD>22</JD> **is a contract**.
+**Everything that starts with** `22` **is a contract**.
 
 <Navigation
 	backURL={"/concepts/areas-categories/"}
