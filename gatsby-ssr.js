@@ -4,4 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+// Fixes the build warnings and the lack of styles in the RSS feed.
+// https://github.com/gatsbyjs/gatsby/issues/20543
+export { wrapRootElement } from "./src/wrap-root-element"
