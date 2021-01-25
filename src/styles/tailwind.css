@@ -36,7 +36,7 @@ body {
 
 /* == Paragraph + body text  ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-== */
 /* Give all paragraphs a bit of margin, except .footnote-content. This class
- * is applied in the <Footnote> definition at `components/footnote.js`.
+ * is applied in the <Footnote> definition at `components/Footnote.js`.
  */
 .post p:not(.footnote-content) {
 	@apply mb-4 mr-2;
