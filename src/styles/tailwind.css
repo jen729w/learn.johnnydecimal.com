@@ -271,6 +271,9 @@ a#blog-header:focus {
 .blog-tag-meta .blog-index-item:not(.meta) {
 	@apply hidden;
 }
+.blog-tag-faq .blog-index-item:not(.faq) {
+	@apply hidden;
+}
 
 /* === END   ===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*=== */
 
