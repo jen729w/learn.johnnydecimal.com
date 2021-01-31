@@ -16,6 +16,13 @@ export const BlogIndexItem = ({ title, date, summary, slug, tags }) => {
 export const BlogIndexItems = () => (
 	<>
 		<BlogIndexItem
+			title="‘Home > Insurance’, or ‘Insurance > Home’?"
+			slug="/blog/20210131-home-insurance-or-insurance-home/"
+			date="31st January 2021"
+			summary="Should I file it under 'Home > Insurance', or 'Insurance > Home'?"
+			tags="faq"
+		/>
+		<BlogIndexItem
 			title="Ideas for posts"
 			date="20th January 2021"
 			summary="My public notepad for things-I-need-to-write."
