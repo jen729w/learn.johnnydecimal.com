@@ -109,6 +109,7 @@ module.exports = {
 						query: `
 							{
 								allMdx(
+									filter: {slug: {regex: "/blog/2/"}},
 									sort: { order: DESC, fields: [frontmatter___date] },
 								) {
 									edges {
