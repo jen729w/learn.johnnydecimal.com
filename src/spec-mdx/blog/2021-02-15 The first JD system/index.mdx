@@ -1,0 +1,208 @@
+---
+title: "The first J.D system"
+slug: "/blog/20210215-the-first-jd-system/"
+date: "2021-02-15T15:00+10:00"
+summary: "A description of the very first J.D system, and how it came to be."
+tags: "new-system"
+---
+
+import fitzroy_street from "./img/fitzroy_street.jpg"
+
+# The first J.D system
+
+> 15th February 2021 | [#new-system](/blog/tags/new-system/)
+
+This post will describe the production of a new J.D system -- in fact, the first ever J.D system.
+
+Ten or so years ago a few friends and I produced a contemporary dance production -- Graeme Murphy's [Suite Synergy](https://duckduckgo.com/?q=%22suite+synergy%22+graeme+murphy&ia=web). I'd quit my job working IT for a major bank, we had a really cool office in [Fitzroy](https://duckduckgo.com/?t=ffab&q=fitzroy+melbourne&ia=web) which we rented from a startup [Tequila company](https://tequilatromba.com/product/), and my brain was full of ideas. (Tequila helps.)
+
+<Image
+	src={fitzroy_street}
+	alt="A photograph of the street where our office used to be."
+/>
+
+One of the things I've always hated about Windows is the ugly way that people print the path to a document. You've seen it: <code style="white-space: break-spaces;">c:\mydocu~1\suite-synergy\files\tickets\prices\melbourne.doc</code>. It's monstrous, and I was having none of it.
+
+Dropbox had just come along. Having a shared folder structure on a bunch of different Macs connected by nothing but a wifi network was unbelievable, but of course now you have to figure out where everyone has saved all of the stuff. With a small team, all ridiculously busy, we couldn't afford to be disorganised.
+
+I've always had an organised mind. I used to code tiny database software on my beloved [ZX Spectrum+](https://en.wikipedia.org/wiki/ZX_Spectrum#ZX_Spectrum+) so I could track the contents of my room. I was ten years old.
+
+The idea itself -- the structure, with the numbers -- was just there in my brain. I don't remember ever sitting and giving it any deep thought.
+
+Many of the advantages only became apparent later: reading someone a number to tell them where a thing is, for example. Much easier just to tell someone "forty-one oh three" over the phone than trying to walk them through a file structure. (Those examples aren't theoretical -- I use them, all the time.)
+
+---
+
+# The Suite Synergy system
+
+I'll give you the whole thing first, and go in to some detail after. Note that this doesn't show all of the IDs in the system -- that'd be massive. I've included some as examples, or where they show an interesting aspect of the system.
+
+_(By the way, I'm still playing with the formatting of this J.D box. I've added highlighting to the IDs -- what do you think?)_
+
+<ACIDbox>
+	<Area>00-09 Management & Infrastructure</Area>
+	<Category>01 Project Management</Category>
+	<Category>02 Infrastructure</Category>
+	<Category>03 Contracts & engagement</Category>
+	<Category>04 Finance</Category>
+	<ID>04.11 Invoices (external, for services purchased)</ID>
+	<Category>05 Travel</Category>
+	<Category>06 IT, Online & Telecoms</Category>
+	<ID>06.01 Office internet connection</ID>
+	<Category>07 Materials & assets</Category>
+	<ID>07.01 Business cards</ID>
+	<Category>08 Ticketing</Category>
+	<Category>09 Performance related</Category>
+	<BlankRow />
+	<Area>10-19 Meetings, People & Updates</Area>
+	<Category>11 Team meetings</Category>
+	<Category>12 Status updates</Category>
+	<ID>12.01 Weekly status updates</ID>
+	<Category>16 People stuff (internal)</Category>
+	<Category>17 people stuff (external)</Category>
+	<BlankRow />
+	<Area>20-29 Sponsorship & Funding</Area>
+	<Category>21 Sponsorship (seeking)</Category>
+	<Category>22 Client management (existing sponsors)</Category>
+	<Category>23 New pack for 2011 tour (Asia etc.)</Category>
+	<BlankRow />
+	<Area>30-39 Marketing & PR</Area>
+	<Category>30 Campaign management, framework & financials</Category>
+	<Category>31 Materials, assets, photos, words, printed items, etc</Category>
+	<ID>31.12 Logos</ID>
+	<Category>32 Branding</Category>
+	<Category>33 Marketing & advertising (managed by coruscade)</Category>
+	<Category>34 Marketing & advertising (managed externally)</Category>
+	<Category>35 Public Relations & Publicity</Category>
+	<Category>36 State tourism</Category>
+	<Comment indent={6}>// Australian state name abbreviations</Comment>
+	<ID>36.11 VIC</ID>
+	<ID>36.12 NSW</ID>
+	<ID>36.13 WA</ID>
+	<Category>37 Online & direct database communications</Category>
+	<BlankRow />
+	<Area>40-49 Venue</Area>
+	<Category>41 VIC - Arts Centre</Category>
+	<ID>41.11 Ticket gateway</ID>
+	<ID>41.12 Performance times</ID>
+	<ID>41.13 Contracts & appendices</ID>
+	<ID>41.14 Ticket prices</ID>
+	<ID>41.15 Additional ticketing channels</ID>
+	<ID>41.16 Ticket allocations</ID>
+	<Category>42 NSW - Star City</Category>
+	<ID>42.11 Ticket gateway</ID>
+	<ID>42.12 Performance times</ID>
+	<ID>42.13 Contracts & appendices</ID>
+	<ID>42.14 Ticket prices</ID>
+	<ID>42.15 Additional ticketing channels</ID>
+	<ID>42.16 Ticket allocations</ID>
+	<Category>42a NSW - Newcastle</Category>
+	<Comment indent={6}>
+		// Egregious rule-breaking here! Newcastle came along as a late addition.
+	</Comment>
+	<Category>43 WA - Burswood</Category>
+	<Comment indent={6}>
+		// ...and obviously every other folder looks the same as those above
+	</Comment>
+	<Category>44 VIC - Palais Theatre</Category>
+	<Category>45 QLD - Gold Coast</Category>
+	<Category>46 NT - Darwin</Category>
+	<Category>47 SA - Festival Theatre</Category>
+	<Category>48 National</Category>
+	<BlankRow />
+	<Area>50-59 Ticketing (non-venue)</Area>
+	<Category>51 Ticketek</Category>
+	<Category>52 Ticketmaster</Category>
+	<Category>53 Showbiz</Category>
+	<Category>54 Pinpoint</Category>
+	<BlankRow />
+	<Area>60-69 Production related</Area>
+	<Category>61 Logistics & Transport</Category>
+	<Category>62 Accommodation</Category>
+	<Category>63 Requirements</Category>
+	<BlankRow />
+	<Area>70-79 Documentation, research, media</Area>
+	<Category>71 Market Intelligence</Category>
+	<ID>71.01 Suite Synergy audience demographic</ID>
+	<ID>71.02 Dance industry attendance research</ID>
+	<Category>
+		72 Media file (all newspapers, newsletters, publications etc)
+	</Category>
+	<Category>73 Ticket price research</Category>
+	<Category>79 Other collected works</Category>
+	<BlankRow />
+	<Area>80-89 Events</Area>
+	<Category>81 Publicity events</Category>
+	<ID>81.01 MDC launch event</ID>
+	<Category>82 Sales events</Category>
+	<Category>83 Performances</Category>
+</ACIDbox>
+
+Looking back on that ten years later, I'm actually amazed at how good the first system was.
+
+Most interesting is my use of consistent numbers to refer to the same physical site, and the re-use of numbers within folders to create consistency once more.
+
+<ACIDbox>
+	<Area>30-39 Marketing & PR</Area>
+	<Category>36 State tourism</Category>
+	<ID>
+		36.11 VIC <Comment indent={7}>// 1 = VIC</Comment>
+	</ID>
+	<ID>
+		36.12 NSW <Comment indent={7}>// 2 = NSW</Comment>
+	</ID>
+	<ID>
+		36.13 WA <Comment indent={8}>// 3 = WA</Comment>
+	</ID>
+	<BlankRow />
+	<Area>40-49 Venue</Area>
+	<Category>
+		41 VIC - Arts Centre <Comment>// 1 = VIC</Comment>
+	</Category>
+	<Category>
+		42 NSW - Star City <Comment indent={2}>// 2 = NSW</Comment>
+	</Category>
+	<Category>
+		43 WA - Burswood <Comment indent={4}>// 3 = WA</Comment>
+	</Category>
+</ACIDbox>
+
+All we're doing here is standardising numbers, but if you have data that repeats like this, it's worth doing. Similarly, we repeat IDs within a category where we can:
+
+<ACIDbox>
+	<Area>40-49 Venue</Area>
+	<Category>41 VIC - Arts Centre</Category>
+	<ID>41.11 Ticket gateway</ID>
+	<ID>41.12 Performance times</ID>
+	<ID>41.13 Contracts & appendices</ID>
+	<ID>41.14 Ticket prices</ID>
+	<ID>41.15 Additional ticketing channels</ID>
+	<ID>41.16 Ticket allocations</ID>
+	<Category>42 NSW - Star City</Category>
+	<ID>42.11 Ticket gateway</ID>
+	<ID>42.12 Performance times</ID>
+	<ID>42.13 Contracts & appendices</ID>
+	<ID>42.14 Ticket prices</ID>
+	<ID>42.15 Additional ticketing channels</ID>
+	<ID>42.16 Ticket allocations</ID>
+</ACIDbox>
+
+There's a whole blog post to be written on this technique, it can be really powerful.
+
+---
+
+## Number the things that you stick on the wall
+
+So, now we have an alternative to the hideous Windows file path.
+
+1. Don't use Windows. ;-)
+2. Rather than a long file path, just put `41.14` in the footer. Now everyone knows where the file is when they need to update it<sup>1</sup>.
+
+<Footnote indent>
+	1. I think we changed the ticket price a hundred times. It's a really hard
+	decision.
+</Footnote>
+
+Funnily enough, a decade later and I could still have told you that `41` was the category for the Melbourne shows. Your brain remembers this stuff more than you think.
+
+j.

@@ -261,24 +261,11 @@ So this means that my system looks like this.
 		21 A great category
 		<Comment indent={7}>// or here</Comment>
 	</Category>
-	<ID>
-		496.21.11 My favourite ID
-		<Comment indent={1}>// but check me out!</Comment>
-	</ID>
+	<ID>496.21.11 My favourite ID</ID>
+	<Comment indent={14}>// but check me out!</Comment>
 </PROACIDbox>
 
-<!-- Break the long string on mobile -->
-
-<div className="hidden sm:block">
-	Within that folder, if I saved an Excel file I would call that file `496.21.11
-	Whatever descriptive name I'd use.xlsx`.
-</div>
-<div className="block sm:hidden text-base">
-	Within that folder, if I saved an Excel file I would call that file `
-	496.21.11 Whatever descriptive
-	<br />
-	name I'd use.xlsx ` .
-</div>
+Within that folder, if I saved an Excel file I would call that file <code style="white-space: break-spaces;">496.21.11 Whatever descriptive name I'd use.xlsx</code>.
 
 ---
 

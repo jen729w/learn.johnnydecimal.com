@@ -16,6 +16,13 @@ export const BlogIndexItem = ({ title, date, summary, slug, tags }) => {
 export const BlogIndexItems = () => (
 	<>
 		<BlogIndexItem
+			title="The first J.D system"
+			slug="/blog/20210215-the-first-jd-system/"
+			date="15th February 2021"
+			summary="A description of the very first J.D system, and how it came to be."
+			tags="new-system"
+		/>
+		<BlogIndexItem
 			title="‘Home > Insurance’, or ‘Insurance > Home’?"
 			slug="/blog/20210131-home-insurance-or-insurance-home/"
 			date="31st January 2021"
