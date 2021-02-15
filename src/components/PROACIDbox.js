@@ -223,7 +223,9 @@ export const ID = ({ children, classes, MARGINSINDENTS }) => {
 			className={`${classes}`}
 			style={{ marginLeft: ID_MARGINLEFT, textIndent: ID_TEXTINDENT }}
 		>
-			{children}
+			<span className="px-1 font-medium bg-blue-700 rounded-sm">
+				{children}
+			</span>
 		</div>
 	)
 }
