@@ -218,16 +218,34 @@ export const ID = ({ children, classes, MARGINSINDENTS }) => {
 		throw new Error("The ID component was not passed the relevant props.")
 	}
 
-	return (
-		<div
-			className={`${classes}`}
-			style={{ marginLeft: ID_MARGINLEFT, textIndent: ID_TEXTINDENT }}
-		>
-			<span className="px-1 font-medium bg-blue-700 rounded-sm">
-				{children}
-			</span>
-		</div>
-	)
+	// If `children` is a single string, it's just an ID and we can render it.
+	if (typeof children === "string") {
+		return (
+			<div
+				className={`${classes}`}
+				style={{ marginLeft: ID_MARGINLEFT, textIndent: ID_TEXTINDENT }}
+			>
+				<span className="px-1 font-medium bg-blue-700 rounded-sm">
+					{children}
+				</span>
+			</div>
+		)
+	} else {
+		// Otherwise it's an ID with a <Comment>, so render that differently
+		return (
+			<div
+				className={`${classes}`}
+				style={{ marginLeft: ID_MARGINLEFT, textIndent: ID_TEXTINDENT }}
+			>
+				<span className="px-1 font-medium bg-blue-700 rounded-sm">
+					{/* To make composing these easier, trim the space here... */}
+					{children[0].trim()}
+					{/* ...and pop it back on here. */}
+				</span>{" "}
+				{children[1]}
+			</div>
+		)
+	}
 }
 ID.propTypes = {
 	children: PropTypes.node.isRequired,
