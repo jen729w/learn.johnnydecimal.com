@@ -21,6 +21,7 @@ JDNavLink.propTypes = {
 const BlogTOC = () => (
 	<nav className="border border-gray-400 rounded-md shadow-md sm:mr-6 tableofcontents sm:shadow-none sm:border-b-0 sm:border-l-0 sm:border-t-0 sm:border-r-2 sm:rounded-none sm:text-base active:outline-none focus:outline-none">
 		<JDNavLink to="/blog/index/">Blog post index</JDNavLink>
+		<JDNavLink to="/blog/tags/">Blog tags index</JDNavLink>
 		<hr className="mx-2 my-1 border-r-2 border-gray-400" />
 		<JDNavLink to="/blog/tags/faq/">#faq</JDNavLink>
 		<JDNavLink to="/blog/tags/meta/">#meta</JDNavLink>
