@@ -20,7 +20,7 @@ const Header = () => {
 		<header
 			className="grid grid-flow-row mt-2 mb-4 text-base font-medium sm:ml-4 sm:mb-6"
 			style={{
-				gridTemplateColumns: "auto auto 1fr",
+				gridTemplateColumns: "auto auto auto 1fr",
 				justifyContent: "start",
 			}}
 		>
@@ -41,6 +41,15 @@ const Header = () => {
 			>
 				Blog
 			</Link>
+			<a
+				// activeClassName="border-b-2 border-yellow-700 text-yellow-700"
+				className="px-3 text-yellow-700 border-b-2 border-gray-400 blog-header"
+				href="https://forum.johnnydecimal.com"
+				id="forum-header"
+				style={{ background: "greenyellow" }}
+			>
+				Forum (new!)
+			</a>
 			<div className="px-3 border-b-2 border-gray-400"></div>
 		</header>
 	)
