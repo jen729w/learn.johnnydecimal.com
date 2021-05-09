@@ -11,6 +11,10 @@ I want anyone to be able to write JD software, and I want to be able to transfer
 1. Enable simple transfer of data between programs by having the 'database' just be a text file,
 2. which is as human-readable as possible; you mustn't *require* a program to maintain the file.
 
+I'm conscious that this defines a spec for a human-readable file, but that almost all software will actually hold the user's data in a structured database format. Some software may never actually display the user's data in the format described in this file: it may only ever be used for import/export. This influences some of the design decisions.
+
+I do *not* want to specify a structured database format, e.g. a JSON object or whatever. That's up to you, build what you need to make your app work. You just need to be able to import or export a file that looks like this.
+
 # Spec
 
 > Note: defined terms are **bold**, see 'Definitions' below.
@@ -154,7 +158,9 @@ On a line, all text following the characters `//` is treated as a comment
 
 ### /* Multi-line */
 
-Multi-line comments start with `/*` and end, either on the same or a later line, with `*/`.
+Multi-line comments start on a new line with `/*` and end, either on the same or a later line, with `*/`.
+
+> Note: note to be added here about the difficulty with multi-line comments starting on an existing line.
 
 ```
 00-09 Area
