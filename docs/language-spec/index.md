@@ -1,0 +1,297 @@
+# JD language spec
+
+> Status: draft.
+
+# What is this?
+
+I want anyone to be able to write JD software, and I want to be able to transfer data easily between this different software. So this file defines the official Johnny.Decimal language specification. If you write software that reads or writes a file that looks like this, it should work with any other software that does the same.
+
+## Goals
+
+1. Enable simple transfer of data between programs by having the 'database' just be a text file,
+2. which is as human-readable as possible; you mustn't *require* a program to maintain the file.
+
+# Spec
+
+> Note: defined terms are **bold**, see 'Definitions' below.
+
+## White space is irrelevant
+
+White space may be used to make the file more readable -- it is encouraged, and suggested rules are documented below -- but from a parsing perspective, white space is irrelevant and must be ignored.
+
+```
+  00-09 Area
+10-19 Area
+    20-29 Area     // Ugly but perfectly valid
+```
+
+White space at the start and end of the line, that is.
+
+```
+00-09Area          // Error: you still need the space here
+```
+
+In other words, if you `TRIM()` every line of your file, you lose no information.
+
+## Titles are mandatory
+
+You can't have a number with no title.
+
+```
+00-09 Area
+   00              // Error: no title
+```
+
+## Titles are UTF-16 and have no (practical) maximum length
+
+Treat them like the JavaScript [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) object. UTF-16 with no practical limit on size.
+
+Stylistically, however, very long (hundreds+ of characters) titles are discouraged. Move your thoughts to a note.
+
+# Parsing rules
+
+## Rules of order
+
+Everything must appear in numerical order.
+
+```
+10-19 Area
+00-09 Area         // Error: not in order
+```
+
+```
+00-09 Area
+   01 Category
+   00 Category     // Error: not in order
+```
+
+```
+00-09 Area
+   00 Category
+      00.01 ID
+      00.00 ID     // Error: not in order
+```
+
+## No duplicates
+
+No duplicates are allowed.
+
+```
+00-09 Area
+00-09 Area         // Error: duplicate
+```
+
+```
+00-09 Area
+   00 Category
+   00 Category     // Error: duplicate
+```
+
+```
+00-09 Area
+   00 Category
+      00.00 ID
+      00.00 ID     // Error: duplicate
+```
+
+## Rules of parenthood
+
+- Every category must have the correct area as a parent.
+- Every ID must have the correct category as a parent.
+
+```
+00-09
+   00 Category 00  // OK
+      00.00        // OK
+      99.00        // Error: parent category isn't 99
+   10 Category 10  // Error: parent area isn't 10-19
+```
+
+## Items may be skipped
+
+There is no obligation to include an item as long as the rules of order are upheld.
+
+```
+90-99 Area         // OK: we skipped areas 00-09 through 80-89
+```
+
+```
+00-09 Area
+   09 Category     // OK: we skipped categories 00 through 08
+```
+
+```
+00-09 Area
+   00 Category
+   00.99 ID        // OK: we skipped IDs 00 through 98
+```
+
+Note however that this does not allow you to violate the rules of parenthood.
+
+- A category must still have a matching parent area.
+- An ID must still have a matching parent category.
+
+```
+00 Category        // Error: no parent area
+```
+
+```
+00-09 Area
+   00.00 ID        // Error: no parent category
+```
+
+## Comments
+
+[JavaScript-style comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) are allowed.
+
+### // All text following
+
+On a line, all text following the characters `//` is treated as a comment
+
+```
+00-09 Area         // Look familiar?
+```
+
+### /* Multi-line */
+
+Multi-line comments start with `/*` and end, either on the same or a later line, with `*/`.
+
+```
+00-09 Area
+/* I am
+   a multi-line comment. */
+   00 Category
+```
+
+### The HTML comment is reserved for now
+
+I may use the `<!--HTML style comment-->` in the future as an indication to the parser that it should do something special. So it is reserved for now, don't use.
+
+## Dividers
+
+We ~~borrow~~ steal the horizontal rule definition from [Markdown](https://daringfireball.net/projects/markdown/syntax#hr).
+
+The following are all permitted and should be interpreted as a divider.
+
+```
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+```
+
+## Blank lines
+
+Permitted between **parsable items**. If you are writing a parser you should retain the user's blank lines (vs. ignoring them or squashing them in to one). They may be using them to make their file more readable.
+
+*Or*, do we just say that any blank lines = one blank line. They just get squashed. If you want more, use a multi-line comment. Open to suggestions.
+
+Managing blank lines between metadata sounds like a headache, so it's a soft error: the blank line will just be ignored, but there's no expectation that it will be *remembered*.
+
+## Metadata
+
+User-defined metadata is allowed under any **project**, **area**, **category**, or **ID**. It becomes the metadata for whichever item is its immediate parent.
+
+Metadata is shown as a dash, a space, a key name, a colon, a space, and a value. The key name may not contain any punctuation other than an underscore unless it is surrounded in "double quotes". The value can be UTF-16 string. (Treat it like a JavaScript object, basically.)
+
+Multiple entries are allowed.
+
+
+```
+00-09 Area
+      - Note: this is metadata. The key name is 'note', and the value
+              is this string of text that you are reading.
+      - Also_a_note: valid.
+      - "Key name with space": valid.
+      - 9waysToDoAThing: valid.
+      - Error-no-dashes: invalid.
+```
+
+```
+- Error: this metadata is invalid, it has no parent.
+00-09 Area
+```
+
+```
+00-09 Area
+      -Error:no space between the dash, the key, and the colon.
+```
+
+Comments are ignored in metadata. It already *is* a comment.
+
+```
+00-09 Area
+      - Comment: this metadata is the comment. So // this does nothing,
+                 and /* neither does this */. It's just a string.
+```
+
+The value of a piece of metadata may include a hard line break. The value should be parsed as the value until a line containing a **parsable item** or another piece of metadata is found.
+
+```
+00-09 Area
+      - Line_breaks: shine on,
+                     you crazy diamond.
+      00 Category
+```
+
+It is up to the parser, or the user's preferences, how to indent metadata. The author's preference is shown above.
+
+# Handling multiple projects
+
+The [multiple projects](https://johnnydecimal.com/concepts/multiple-projects/) syntax extends the basic system by prepending a three-digit project number.
+
+- Without: `12.34`
+- With: `678.12.34`
+
+The language handles this as follows.
+
+1. If you want to use the multiple-project syntax in a file, the first **parsable item** must be a project.
+2. If the first **parsable item** is not a project, no other projects are permitted in the file.
+
+Because once we're 'in' a project, the rest of the structure is just a plain old JD system, and is parsed as if the project did not exist. When we reach the next project number in the file (if there is one), the parser should 'reset' and treat the next section as a separate JD system.
+
+### Valid
+
+```
+000 Project
+    00-09 Area
+    // ...and so on
+001 Project
+    00-09 Area
+    // ...and so on
+```
+
+### Invalid
+
+```
+00-09 Area         // File didn't start with a project
+   00 Category
+   // ...and so on
+001 Project        // So a project later is an error
+    00-09 Area
+```
+
+### Be careful with out-of-order areas
+
+Don't false-positive an error in this situation.
+
+```
+000 Project
+    10-19 Area
+001 Project
+    00-09 Area     // OK: we reset when we hit project 001
+```
+
+# Definitions
+
+- `AC.ID`: we use `AC.ID` to refer to any number in a standard system: `a`rea, `c`ategory, `id`.
+- `PRO.AC.ID`: we use `PRO.AC.ID` to refer to any number in a multiple-project system: `pro`ject, `a`rea, `c`ategory, `id`.
+- Area: an area definition has the format `x0-x9` where `x` is the same digit.
+- Category: a category definition has the format `ac` where `a` and `c` are any digit. (See **`AC.ID`**.)
+- ID: an ID definition has the format `AC.ID` where `a`, `c`, `i`, and `d` are any digit. (See **`AC.ID`**.)
+- Parsable item: any JD item in the file, i.e. a project, area, category, or ID. In other words, *not* a comment or metadata.
