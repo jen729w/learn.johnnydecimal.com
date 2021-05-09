@@ -4,5 +4,10 @@
 		"comments": false,
 		"strings": false
 	},
-	"editor.wordBasedSuggestions": false
+	"editor.wordBasedSuggestions": false,
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#253207",
+		"titleBar.activeBackground": "#34460A",
+		"titleBar.activeForeground": "#F8FCED"
+	}
 }
