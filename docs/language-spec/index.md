@@ -342,6 +342,12 @@ Note that the project number may only appear before the ID.
 
 Or does it matter? Should we let people use this full numbering if they want to?
 
+# Implementing
+
+When implementing a JD system -- whether you're using this format as the user-facing system or not -- you should consider the JD index to be the canonical reference and ensure that it is written first.
+
+In other words, if your app creates a new folder in the user's file system, you should write the entry to the JD index *before* creating the folder on the file system.
+
 # Definitions
 
 - `AC.ID`: we use `AC.ID` to refer to any number in a standard system: `a`rea, `c`ategory, `id`.
