@@ -17,7 +17,9 @@ I want anyone to be able to write JD software, and I want to be able to transfer
 
 I'm conscious that this defines a spec for a human-readable file, but that almost all software will actually hold the user's data in a structured database format. Some software may never actually display the user's data in the format described in this file: it may only ever be used for import/export. This influences some of the design decisions.
 
-I do *not* want to specify a structured database format, e.g. a JSON object or whatever. That's up to you, build what you need to make your app work. You just need to be able to import or export a file that looks like this.
+I do *not* want to specify a structured database format, e.g. a JSON object or whatever. That's up to you, build what you need to make your app work. You just need to be able to import or export a file that looks like this in order to be 'Johnny.Decimal compliant'.
+
+I'll happily promote apps that comply with this standard.
 
 # Spec
 
