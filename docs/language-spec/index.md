@@ -1,6 +1,10 @@
 # JD language spec
 
+> Version: 0.0.1 (2021-05-10).
+
 > Status: draft.
+
+> Note: all comments are welcome. Pick this apart for me. Please use [this thread](https://forum.johnnydecimal.com/t/jd-index-text-format-ideas-and-comments-please/48/17) on the forum.
 
 # What is this?
 
@@ -160,7 +164,7 @@ On a line, all text following the characters `//` is treated as a comment
 
 Multi-line comments start on a new line with `/*` and end, either on the same or a later line, with `*/`.
 
-> Note: note to be added here about the difficulty with multi-line comments starting on an existing line.
+Given that you're likely storing your JD system in an actual database, this deviates from the JavaScript standard which allows a multi-line comment to *start* on any line, including one which contains content. That sounds like a nightmare for a database so is not permitted.
 
 ```
 00-09 Area
@@ -246,6 +250,14 @@ The value of a piece of metadata may include a hard line break. The value should
 ```
 
 It is up to the parser, or the user's preferences, how to indent metadata. The author's preference is shown above.
+
+### Reserved metadata keys
+
+The following keys should be reserved for use by the system. How they are handled is up to the program doing the handling.
+
+- `URI:` If an item has an external reference -- for example, a longer-form note in an external program -- that reference can be specified as the `URI` value. 
+    - In this example, a program may choose to show the longer-form note when the item is selected.
+    - e.g. `- URI: simplenote://note/d3764b2f295e492381e8f23a0a7230a9`
 
 # Handling multiple projects
 
