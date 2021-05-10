@@ -25,6 +25,10 @@ I'll happily promote apps that comply with this standard.
 
 > Note: defined terms are **bold**, see 'Definitions' below.
 
+## All errors are hard errors
+
+There's no 'warning' state if something wasn't quite right: you either pass in full, or you fail hard. This is intended to prevent loss of user data.
+
 ## White space is irrelevant
 
 White space may be used to make the file more readable -- it is encouraged, and suggested rules are documented below -- but from a parsing perspective, white space is irrelevant and must be ignored.
@@ -38,7 +42,8 @@ White space may be used to make the file more readable -- it is encouraged, and 
 White space at the start and end of the line, that is.
 
 ```
-00-09Area          // Error: you still need the space here
+00-09Area         
+    ^^             // Error: you still need the space here
 ```
 
 In other words, if you `TRIM()` every line of your file, you lose no information.
@@ -136,8 +141,6 @@ There is no obligation to include an item as long as the rules of order are uphe
    00.99 ID        // OK: we skipped IDs 00 through 98
 ```
 
-Note however that this does not allow you to violate the rules of parenthood.
-
 - A category must still have a matching parent area.
 - An ID must still have a matching parent category.
 
@@ -170,9 +173,14 @@ Given that you're likely storing your JD system in an actual database, this devi
 
 ```
 00-09 Area
-/* I am
-   a multi-line comment. */
+/* I am a perfectly valid
+   multi-line comment. */
    00 Category
+```
+
+```
+00-09 Area         /* Error: can't start on a
+                      line with JD content */
 ```
 
 ### The HTML comment is reserved for now
@@ -199,7 +207,11 @@ The following are all permitted and should be interpreted as a divider.
 
 ## Blank lines
 
+> Note: I'm not happy with this at all. Needs more thought...
+
 Permitted between **parsable items**. If you are writing a parser you should retain the user's blank lines (vs. ignoring them or squashing them in to one). They may be using them to make their file more readable.
+
+Similarly, don't arbitrarily insert blank lines, say around a divider. If the user didn't put it there, don't put it there.
 
 *Or*, do we just say that any blank lines = one blank line. They just get squashed. If you want more, use a multi-line comment. Open to suggestions.
 
@@ -209,19 +221,21 @@ Managing blank lines between metadata sounds like a headache, so it's a soft err
 
 User-defined metadata is allowed under any **project**, **area**, **category**, or **ID**. It becomes the metadata for whichever item is its immediate parent.
 
-Metadata is shown as a dash, a space, a key name, a colon, a space, and a value. The key name may not contain any punctuation other than an underscore unless it is surrounded in "double quotes". The value can be UTF-16 string. (Treat it like a JavaScript object, basically.)
+Metadata is shown as a dash, a space, a key name, a colon, a space, and a value. The key name may not contain any punctuation other than an underscore unless it is surrounded in "double quotes", in which case it can contain anything you like. The value can be a UTF-16 string. (Treat it like a JavaScript object, basically.)
+
+Key names are case-sensitive.
 
 Multiple entries are allowed.
 
-
 ```
 00-09 Area
-      - Note: this is metadata. The key name is 'note', and the value
+      - Note: this is metadata. The key name is 'Note', and the value
               is this string of text that you are reading.
-      - Also_a_note: valid.
-      - "Key name with space": valid.
-      - 9waysToDoAThing: valid.
-      - Error-no-dashes: invalid.
+      - Also_a_note: OK.
+      - "Key name with space": OK.
+      - 9waysToDoAThing: OK.
+      - Error-no-dashes: error.
+      - Error no spaces: error.
 ```
 
 ```
@@ -306,6 +320,27 @@ Don't false-positive an error in this situation.
 001 Project
     00-09 Area     // OK: we reset when we hit project 001
 ```
+
+### Thought: do we allow this?
+
+I sometimes use this pattern and think it should be allowed.
+
+```
+000 Project
+    00-09 Area
+       00 Category
+   000.00.00 ID    // Use the full PRO.AC.ID here
+```
+
+Note that the project number may only appear before the ID.
+
+```
+000 Project
+000.00-09 Area     // Error
+   000.00 Category // Error
+```
+
+Or does it matter? Should we let people use this full numbering if they want to?
 
 # Definitions
 
